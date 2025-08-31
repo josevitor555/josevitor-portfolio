@@ -39,6 +39,20 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Dark */
+  --color-dark-100: #09090B;
+  --color-dark-200: #18181B;
+  --color-dark-300: #27272A;
+  --color-dark-400: #52525B;
+  --color-dark-500: #71717A;
+
+  /* Light */
+  --color-light-100: #FAFAFA;
+  --color-light-200: #F4F4F5;
+  --color-light-300: #E4E4E7;
+  --color-accent-primary: #ffe0c2;
+  --color-accent-secondary: #ffcba4;
 }
 
 :root {
@@ -74,6 +88,20 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Dark */
+  --dark-100: var(--color-dark-100);
+  --dark-200: var(--color-dark-200);
+  --dark-300: var(--color-dark-300);
+  --dark-400: var(--color-dark-400);
+  --dark-500: var(--color-dark-500);
+  
+  /* Light */
+  --light-100: var(--color-light-100);
+  --light-200: var(--color-light-200);
+  --light-300: var(--color-light-300);
+  --accent-primary: var(--color-accent-primary);
+  --accent-secondary: var(--color-accent-secondary);
 }
 
 .dark {
@@ -108,6 +136,17 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+  --dark-100: var(--color-dark-100);
+  --dark-200: var(--color-dark-200);
+  --dark-300: var(--color-dark-300);
+  --dark-400: var(--color-dark-400);
+  --dark-500: var(--color-dark-500);
+  --light-100: var(--color-light-100);
+  --light-200: var(--color-light-200);
+  --light-300: var(--color-light-300);
+  --accent-primary: var(--color-accent-primary);
+  --accent-secondary: var(--color-accent-secondary);
 }
 
 @layer base {
@@ -117,4 +156,19 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 5px rgba(255, 224, 194, 0.5); }
+  100% { box-shadow: 0 0 20px rgba(255, 224, 194, 0.8); }
 }
