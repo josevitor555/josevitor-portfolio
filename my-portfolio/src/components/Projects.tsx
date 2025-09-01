@@ -134,7 +134,7 @@ const Projects = () => {
                                 <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <motion.a
                                         href={project.liveDemo}
-                                        className="p-2 bg-accent-primary hover:bg-blue-600 text-white rounded-lg transition-colors"
+                                        className="p-2 bg-accent-primary hover:bg-white text-white hover:text-black rounded-lg transition-colors"
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.9 }}
                                         aria-label="Live Demo"

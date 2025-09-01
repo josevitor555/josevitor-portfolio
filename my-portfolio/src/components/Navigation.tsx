@@ -96,6 +96,15 @@ const Navigation = () => {
                                 </motion.button>
                             ))}
 
+                            {/* Button Sign In */}
+                            <motion.button
+                                className="px-4 py-2 text-sm font-medium bg-gray-100 text-black rounded-full flex items-center gap-2"
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                <LogOut size={16} /> Sign In
+                            </motion.button>
+
                             {/* Avatar user */}
                             <Avatar className="h-8 w-8 ml-8">
                                 <AvatarFallback>JV</AvatarFallback>
@@ -133,14 +142,21 @@ const Navigation = () => {
                                         key={item.id}
                                         onClick={() => scrollToSection(item.id)}
                                         className={`block w-full text-left px-3 py-2 text-lg font-medium transition-colors duration-200 ${activeSection === item.id
-                                                ? 'text-accent-primary'
-                                                : 'text-gray-300 hover:text-white'
+                                            ? 'text-accent-primary'
+                                            : 'text-gray-300 hover:text-white'
                                             }`}
                                         whileHover={{ x: 10 }}
                                     >
                                         {item.label}
                                     </motion.button>
                                 ))}
+                                <motion.button
+                                    className="w-full text-left px-3 py-2 text-lg font-medium bg-gray-100 text-black rounded-full flex items-center justify-center gap-2 mt-4"
+                                    whileHover={{ scale: 1.02 }}
+                                    whileTap={{ scale: 0.98 }}
+                                >
+                                    <LogOut size={20} /> Sign In
+                                </motion.button>
                             </div>
                         </motion.div>
                     )}

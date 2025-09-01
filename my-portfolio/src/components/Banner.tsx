@@ -45,7 +45,7 @@ const Banner = () => {
         {[...Array(50)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-white/20 rounded-full"
+            className="absolute w-1 h-1 bg-white/80 rounded-full"
             initial={{
               x: Math.random() * window.innerWidth,
               y: Math.random() * window.innerHeight,
@@ -74,18 +74,18 @@ const Banner = () => {
 
           {/* Headline H1 Text */}
           <motion.h1
-            className="text-3xl text-gray-400 sm:text-5xl lg:text-4xl font-bold mb-2"
+            className="text-3xl text-gray-400 sm:text-5xl lg:text-4xl font-bold mb-8"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             Hi, I'm{' '}
-            <span className="text-light-100"> José Vitor </span>
+            <span className="text-gray-100"> José Vitor </span>
           </motion.h1>
 
           {/* Headline p text */}
           <motion.p
-            className="text-xl sm:text-lg text-gray-300 mb-6 max-w-2xl mx-auto"
+            className="text-2xl sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -95,7 +95,7 @@ const Banner = () => {
 
           {/* Buttons */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}

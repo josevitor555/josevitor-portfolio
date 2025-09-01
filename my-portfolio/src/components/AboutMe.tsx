@@ -28,8 +28,6 @@ const SkillCard = ({ icon: Icon, title, description, technologies, index }: Skil
         setMousePosition({ x: 0, y: 0 }); // Reset position on mouse leave
     };
 
-    const spotlightSize = 150; // Size of the spotlight effect
-
     const itemVariants = {
         hidden: { opacity: 0, y: 30 },
         visible: { opacity: 1, y: 0 }
