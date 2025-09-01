@@ -2,8 +2,16 @@
 // import React from 'react'
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Download, ChevronDown } from 'lucide-react';
+import Comp412 from './ui/comp-412';
+// import Comp296 from './ui/comp-296';
+// import React, { useState } from 'react';
 
 const Banner = () => {
+  // const [showChangelogNotification, setShowChangelogNotification] = useState(true);
+
+  // const handleCloseChangelog = () => {
+  //   setShowChangelogNotification(false);
+  // };
 
   // Social Links for Banner
   const socialLinks = [
@@ -18,6 +26,16 @@ const Banner = () => {
 
   return (
     <section id='home' className='min-h-screen flex items-center justify-center relative overflow-hidden'>
+
+      {/* Motion div in  */}
+      {/* <motion.div
+        className="absolute top-42 right-32 z-20"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: showChangelogNotification ? 1 : 0, y: showChangelogNotification ? 0 : 30 }}
+        transition={{ duration: 0.8 }}
+      >
+        {showChangelogNotification && <Comp296 onClose={handleCloseChangelog} />}
+      </motion.div> */}
 
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-dark-100 via-dark-200 to-dark-100"></div>
@@ -45,16 +63,18 @@ const Banner = () => {
           />
         ))}
       </div>
-
+      
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
 
+          {/* Headline H1 Text */}
           <motion.h1
-            className="text-4xl text-gray-400 sm:text-6xl lg:text-7xl font-bold mb-6"
+            className="text-3xl text-gray-400 sm:text-5xl lg:text-4xl font-bold mb-2"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -63,6 +83,7 @@ const Banner = () => {
             <span className="text-light-100"> José Vitor </span>
           </motion.h1>
 
+          {/* Headline p text */}
           <motion.p
             className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
@@ -72,15 +93,16 @@ const Banner = () => {
             Web Developer Pleno, passionate about creating beautiful, functional, and user-centered digital experiences.
           </motion.p>
 
+          {/* Buttons */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <motion.button
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-3 bg-accent-primary hover:bg-accent-secondary text-dark-100 font-medium rounded-lg transition-all duration-200 glow-border cursor-pointer"
+              className="px-8 py-2 bg-accent-primary hover:bg-accent-secondary text-dark-100 font-medium rounded-lg transition-all duration-200 glow-border cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -97,8 +119,9 @@ const Banner = () => {
             </motion.button>
           </motion.div>
 
+          {/* Social Links */}
           <motion.div
-            className="flex justify-center space-x-6"
+            className="flex justify-center space-x-4 space-y-0"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
@@ -115,6 +138,16 @@ const Banner = () => {
                 <link.icon size={24} />
               </motion.a>
             ))}
+          </motion.div>
+
+          {/* Trusted by */}
+          <motion.div
+            className="flex items-center justify-center mt-4"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            <Comp412 />
           </motion.div>
         </motion.div>
       </div>

@@ -66,7 +66,7 @@ const Navigation = () => {
         <motion.nav
             initial={{ y: -100 }}
             animate={{ y: 0 }}
-            className="fixed top-6 inset-x-6 z-50 glass-effect rounded-2xl border border-white/10"
+            className="fixed top-6 inset-x-6 z-50 bg-white/[0.05] backdrop-blur-3xl rounded-2xl border border-white/[0.3] shadow-lg"
         >
 
             <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -97,7 +97,7 @@ const Navigation = () => {
                             ))}
 
                             {/* Avatar user */}
-                            <Avatar className="h-8 w-8 ml-12">
+                            <Avatar className="h-8 w-8 ml-8">
                                 <AvatarImage src="https://i.pinimg.com/736x/2b/2b/5c/2b2b5c5a5bede0fe129429da992cc444.jpg" alt="@shadcn" />
                                 <AvatarFallback>JV</AvatarFallback>
                             </Avatar>

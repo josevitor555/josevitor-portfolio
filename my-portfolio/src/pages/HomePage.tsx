@@ -5,6 +5,7 @@
 // Components
 import Navigation from "@/components/Navigation";
 import Banner from "@/components/Banner";
+import AboutMe from "@/components/AboutMe";
 
 // Pages
 
@@ -16,6 +17,7 @@ const App = () => {
             <main>
                 {/* Others Section */}
                 <Banner />
+                <AboutMe />
             </main>
 
             {/* Footer Section */}
