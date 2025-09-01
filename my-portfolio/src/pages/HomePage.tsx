@@ -6,6 +6,7 @@
 import Navigation from "@/components/Navigation";
 import Banner from "@/components/Banner";
 import AboutMe from "@/components/AboutMe";
+import Projects from "@/components/Projects";
 
 // Pages
 
@@ -18,6 +19,7 @@ const App = () => {
                 {/* Others Section */}
                 <Banner />
                 <AboutMe />
+                <Projects />
             </main>
 
             {/* Footer Section */}

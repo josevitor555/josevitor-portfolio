@@ -64,7 +64,7 @@ const Banner = () => {
         ))}
       </div>
       
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-4xl mt-8 px-4 sm:px-6 lg:px-8 text-center">
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -85,7 +85,7 @@ const Banner = () => {
 
           {/* Headline p text */}
           <motion.p
-            className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto"
+            className="text-xl sm:text-lg text-gray-300 mb-6 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}

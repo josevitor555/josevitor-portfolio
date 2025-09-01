@@ -98,7 +98,6 @@ const Navigation = () => {
 
                             {/* Avatar user */}
                             <Avatar className="h-8 w-8 ml-8">
-                                <AvatarImage src="https://i.pinimg.com/736x/2b/2b/5c/2b2b5c5a5bede0fe129429da992cc444.jpg" alt="@shadcn" />
                                 <AvatarFallback>JV</AvatarFallback>
                             </Avatar>
                         </div>

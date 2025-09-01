@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Code, Database, Smartphone, Globe, Brain } from 'lucide-react';
+import { Code, Database, Globe, Brain } from 'lucide-react';
 import { Badge } from './ui/badge';
 
 interface SkillCardProps {
@@ -11,7 +11,7 @@ interface SkillCardProps {
     index: number;
 }
 
-const SkillCard: React.FC<SkillCardProps> = ({ icon: Icon, title, description, technologies, index }) => {
+const SkillCard = ({ icon: Icon, title, description, technologies, index }: SkillCardProps) => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const cardRef = useRef<HTMLDivElement>(null);
 
@@ -96,9 +96,9 @@ const AboutMe = () => {
         },
         {
             icon: Globe,
-            title: 'Cloud & DevOps',
-            description: 'I deploy and manage applications in the cloud, utilizing AWS, Docker, CI/CD, and Kubernetes.',
-            technologies: ['AWS', 'Docker', 'Kubernetes', 'Jenkins', 'Terraform']
+            title: 'Figma Designs',
+            description: 'I create prototypes, UI/UX designs, and mobile versions using Figma.',
+            technologies: ['Prototype', 'UI/UX', 'Mobile First']
         },
         {
             icon: Brain,
