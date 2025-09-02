@@ -9,60 +9,60 @@ const Articles = () => {
     const articles = [
         {
             id: 1,
-            title: 'Building Scalable React Applications with TypeScript',
-            excerpt: 'Learn how to structure large-scale React applications using TypeScript for better maintainability and developer experience.',
+            title: 'Construindo Aplicações React Escaláveis com TypeScript',
+            excerpt: 'Aprenda a estruturar aplicações React de grande escala usando TypeScript para melhor manutenibilidade e experiência do desenvolvedor.',
             date: '2024-01-15',
-            readTime: '8 min read',
+            readTime: '8 min de leitura',
             category: 'React',
             image: 'https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/1a1a1a/3b82f6?text=React+TypeScript',
             featured: true
         },
         {
             id: 2,
-            title: 'Modern CSS Techniques for Better UI Design',
-            excerpt: 'Explore advanced CSS features like Grid, Flexbox, and custom properties to create stunning user interfaces.',
+            title: 'Técnicas Modernas de CSS para Melhor Design de UI',
+            excerpt: 'Explore recursos avançados de CSS como Grid, Flexbox e propriedades personalizadas para criar interfaces de usuário impressionantes.',
             date: '2024-01-10',
-            readTime: '6 min read',
+            readTime: '6 min de leitura',
             category: 'CSS',
             image: 'https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/1a1a1a/8b5cf6?text=Modern+CSS',
             featured: true
         },
         {
             id: 3,
-            title: 'API Design Best Practices for RESTful Services',
-            excerpt: 'Guidelines and patterns for designing robust, scalable, and maintainable REST APIs that developers love to use.',
+            title: 'Melhores Práticas de Design de API para Serviços RESTful',
+            excerpt: 'Diretrizes e padrões para projetar APIs REST robustas, escaláveis e de fácil manutenção que os desenvolvedores adoram usar.',
             date: '2024-01-05',
-            readTime: '10 min read',
+            readTime: '10 min de leitura',
             category: 'Backend',
             image: 'https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/1a1a1a/10b981?text=API+Design',
             featured: false
         },
         {
             id: 4,
-            title: 'Performance Optimization in Modern Web Apps',
-            excerpt: 'Techniques and strategies to improve web application performance, from bundle optimization to runtime improvements.',
+            title: 'Otimização de Desempenho em Aplicações Web Modernas',
+            excerpt: 'Técnicas e estratégias para melhorar o desempenho de aplicações web, desde a otimização de pacotes até melhorias em tempo de execução.',
             date: '2023-12-28',
-            readTime: '12 min read',
+            readTime: '12 min de leitura',
             category: 'Performance',
             image: 'https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/1a1a1a/f59e0b?text=Performance',
             featured: false
         },
         {
             id: 5,
-            title: 'Getting Started with Microservices Architecture',
-            excerpt: 'Understanding the fundamentals of microservices and when to use them in your application architecture.',
+            title: 'Introdução à Arquitetura de Microsserviços',
+            excerpt: 'Compreendendo os fundamentos dos microsserviços e quando usá-los na arquitetura da sua aplicação.',
             date: '2023-12-20',
-            readTime: '15 min read',
+            readTime: '15 min de leitura',
             category: 'Architecture',
             image: 'https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/1a1a1a/ef4444?text=Microservices',
             featured: false
         },
         {
             id: 6,
-            title: 'The Future of Frontend Development',
-            excerpt: 'Exploring emerging trends and technologies that are shaping the future of frontend development.',
+            title: 'O Futuro do Desenvolvimento Frontend',
+            excerpt: 'Explorando tendências e tecnologias emergentes que estão moldando o futuro do desenvolvimento frontend.',
             date: '2023-12-15',
-            readTime: '7 min read',
+            readTime: '7 min de leitura',
             category: 'Trends',
             image: 'https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/1a1a1a/a855f7?text=Frontend+Future',
             featured: false
@@ -85,7 +85,7 @@ const Articles = () => {
     };
 
     const formatDate = (dateString: string) => {
-        return new Date(dateString).toLocaleDateString('en-US', {
+        return new Date(dateString).toLocaleDateString('pt-BR', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
@@ -104,12 +104,12 @@ const Articles = () => {
                 >
 
                     <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                        Latest <span className="gradient-text">Articles</span>
+                        Últimos <span className="gradient-text">Artigos</span>
                     </h2>
                     <div className="w-20 h-1 bg-white rounded-full mx-auto mb-8"></div>
 
                     <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                        I love sharing my knowledge and experiences through writing. Here are some of my recent articles.
+                        Adoro compartilhar meu conhecimento e experiências através da escrita. Aqui estão alguns dos meus artigos recentes.
                     </p>
 
                 </motion.div>
@@ -139,7 +139,7 @@ const Articles = () => {
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 {article.featured && (
                                     <div className="absolute top-4 left-4 px-2 py-1 bg-accent-primary text-white text-xs font-medium rounded">
-                                        Featured
+                                        Em Destaque
                                     </div>
                                 )}
                                 <div className="absolute top-4 right-4 px-2 py-1 bg-black/50 text-white text-xs rounded">
@@ -170,7 +170,7 @@ const Articles = () => {
                                     className="flex items-center gap-2 text-accent-primary font-medium text-sm group-hover:gap-3 transition-all duration-200"
                                     whileHover={{ x: 5 }}
                                 >
-                                    Read More
+                                    Ler Mais
                                     <ArrowRight size={14} />
                                 </motion.div>
                             </div>
@@ -193,7 +193,7 @@ const Articles = () => {
                         whileTap={{ scale: 0.95 }}
                     >
                         <BookOpen size={20} />
-                        View All Articles
+                        Ver Todos os Artigos
                     </motion.a>
 
                 </motion.div>

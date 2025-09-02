@@ -23,13 +23,13 @@ const Footer = () => {
                             José Vitor
                         </motion.div>
                         <p className="text-gray-400 text-sm">
-                            Full Stack Developer passionate about creating amazing digital experiences.
+                            Desenvolvedor Full Stack apaixonado por criar experiências digitais incríveis.
                         </p>
                     </div>
 
                     <div className="flex items-center gap-6">
                         <div className="flex items-center gap-1 text-gray-400 text-sm">
-                            Made with <Heart size={16} className="text-red-500 mx-1" /> by José Vitor
+                            Feito com <Heart size={16} className="text-red-500 mx-1" /> por José Vitor
                         </div>
 
                         <motion.button
@@ -45,7 +45,7 @@ const Footer = () => {
                 </div>
 
                 <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
-                    <p>&copy; {currentYear} José Vitor. All rights reserved.</p>
+                    <p>&copy; {currentYear} José Vitor. Todos os direitos reservados.</p>
                 </div>
             </div>
         </footer>

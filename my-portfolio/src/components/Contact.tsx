@@ -49,14 +49,14 @@ const Contact = () => {
             const json = await res.json();
 
             if (json.success) {
-                setSubmitStatus({ success: true, message: 'Your message has been sent successfully!' });
+                setSubmitStatus({ success: true, message: 'Sua mensagem foi enviada com sucesso!' });
                 setFormData({ name: '', email: '', subject: '', message: '' });
             } else {
-                setSubmitStatus({ success: false, message: json.message || 'An error occurred. Please try again.' });
+                setSubmitStatus({ success: false, message: json.message || 'Ocorreu um erro. Por favor, tente novamente.' });
             }
         } catch (error) {
             console.error('Form submission error:', error);
-            setSubmitStatus({ success: false, message: 'An unexpected error occurred. Please try again later.' });
+            setSubmitStatus({ success: false, message: 'Ocorreu um erro inesperado. Por favor, tente novamente mais tarde.' });
         } finally {
             setIsSubmitting(false);
         }
@@ -71,13 +71,13 @@ const Contact = () => {
         },
         {
             icon: Phone,
-            title: 'Phone',
+            title: 'Telefone',
             value: '+1 (555) 123-4567',
             href: 'tel:+15551234567'
         },
         {
             icon: MapPin,
-            title: 'Location',
+            title: 'Localização',
             value: 'Piauí, Brasil',
             href: '#'
         }
@@ -116,12 +116,12 @@ const Contact = () => {
                 >
 
                     <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                        Get In <span className="gradient-text">Touch</span>
+                        Entre em <span className="gradient-text">Contato</span>
                     </h2>
                     <div className="w-20 h-1 bg-white rounded-full mx-auto mb-8"></div>
 
                     <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                        I'm always open to discussing new opportunities and interesting projects. Let's connect!
+                        Estou sempre aberto a discutir novas oportunidades e projetos interessantes. Vamos nos conectar!
                     </p>
                 </motion.div>
 
@@ -135,7 +135,7 @@ const Contact = () => {
                     >
 
                         <div className='glass-effect rounded-2xl p-4 sm:p-6 md:p-8'>
-                            <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
+                            <h3 className="text-2xl font-semibold mb-6">Enviar uma Mensagem</h3>
                             {submitStatus && (
                                 <div
                                     className={`p-3 rounded-lg mb-4 text-center ${submitStatus.success ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
@@ -150,7 +150,7 @@ const Contact = () => {
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div>
                                         <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                                            Name
+                                            Nome
                                         </label>
                                         <input
                                             type="text"
@@ -160,7 +160,7 @@ const Contact = () => {
                                             onChange={handleChange}
                                             required
                                             className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-colors text-foreground placeholder-muted-foreground"
-                                            placeholder="Your name"
+                                            placeholder="Seu nome"
                                         />
                                     </div>
                                     <div>
@@ -175,14 +175,14 @@ const Contact = () => {
                                             onChange={handleChange}
                                             required
                                             className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-colors text-foreground placeholder-muted-foreground"
-                                            placeholder="your.email@example.com"
+                                            placeholder="seu.email@exemplo.com"
                                         />
                                     </div>
                                 </div>
 
                                 <div>
                                     <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
-                                        Subject
+                                        Assunto
                                     </label>
                                     <input
                                         type="text"
@@ -192,13 +192,13 @@ const Contact = () => {
                                         onChange={handleChange}
                                         required
                                         className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-colors text-foreground placeholder-muted-foreground"
-                                        placeholder="What's this about?"
+                                        placeholder="Sobre o que é?"
                                     />
                                 </div>
 
                                 <div>
                                     <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                                        Message
+                                        Mensagem
                                     </label>
                                     <textarea
                                         id="message"
@@ -208,7 +208,7 @@ const Contact = () => {
                                         required
                                         rows={6}
                                         className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-colors text-foreground placeholder-muted-foreground resize-none"
-                                        placeholder="Tell me about your message..."
+                                        placeholder="Fale-me sobre sua mensagem..."
                                     />
                                 </div>
 
@@ -222,12 +222,12 @@ const Contact = () => {
                                     {isSubmitting ? (
                                         <>
                                             <div className="w-5 h-5 border-2 border-border/30 border-t-primary rounded-full animate-spin"></div>
-                                            Sending...
+                                            Enviando...
                                         </>
                                     ) : (
                                         <>
                                             <Send size={20} />
-                                            Send Message
+                                            Enviar Mensagem
                                         </>
                                     )}
                                 </motion.button>
@@ -245,7 +245,7 @@ const Contact = () => {
                     >
 
                         <motion.div variants={itemVariants}>
-                            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+                            <h3 className="text-2xl font-semibold mb-6">Informações de Contato</h3>
                             <div className="space-y-6">
                                 {contactInfo.map((info, index) => (
                                     <motion.a
@@ -267,7 +267,7 @@ const Contact = () => {
                         </motion.div>
 
                         <motion.div variants={itemVariants}>
-                            <h4 className="text-xl font-semibold mb-4">Follow Me</h4>
+                            <h4 className="text-xl font-semibold mb-4">Siga-me</h4>
                             <div className="flex gap-4">
                                 {socialLinks.map((link, index) => (
                                     <motion.a
@@ -285,11 +285,11 @@ const Contact = () => {
                         </motion.div>
 
                         <motion.div variants={itemVariants} className="glass-effect rounded-xl p-6 border border-border">
-                            <h4 className="text-xl font-semibold mb-3">Let's Work Together</h4>
+                            <h4 className="text-xl font-semibold mb-3">Vamos Trabalhar Juntos</h4>
                             <p className="text-muted-foreground mb-4">
-                                I'm currently available for freelance work and full-time opportunities.
-                                Whether you're a company looking to hire, or you're a fellow developer
-                                wanting to collaborate, I'd love to hear from you.
+                                Estou atualmente disponível para trabalho freelancer e oportunidades de tempo integral.
+                                Se você é uma empresa procurando contratar, ou é um colega desenvolvedor
+                                querendo colaborar, adoraria ouvir de você.
                             </p>
                             <div className="flex flex-wrap gap-2">
                                 {['React', 'TypeScript', 'Node.js', 'Python', 'AWS'].map((skill) => (

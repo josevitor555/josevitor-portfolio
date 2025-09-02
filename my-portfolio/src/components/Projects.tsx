@@ -10,8 +10,8 @@ const Projects = () => {
     const projects = [
         {
             id: 1,
-            title: 'E-Commerce Dashboard',
-            description: 'A comprehensive admin dashboard for managing e-commerce operations with real-time analytics, inventory management, and order processing.',
+            title: 'Painel de E-Commerce',
+            description: 'Um painel administrativo abrangente para gerenciar operações de e-commerce com análises em tempo real, gerenciamento de estoque e processamento de pedidos.',
             image: 'https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://placehold.co/600x400/1a1a1a/3b82f6?text=E-Commerce+Dashboard',
             technologies: ['React', 'TypeScript', 'Node.js', 'MongoDB', 'Tailwind CSS'],
             liveDemo: '#',
@@ -20,8 +20,8 @@ const Projects = () => {
         },
         {
             id: 2,
-            title: 'Task Management App',
-            description: 'A collaborative task management application with real-time updates, team collaboration features, and advanced project tracking.',
+            title: 'Aplicativo de Gerenciamento de Tarefas',
+            description: 'Um aplicativo colaborativo de gerenciamento de tarefas com atualizações em tempo real, recursos de colaboração em equipe e acompanhamento avançado de projetos.',
             image: 'https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://placehold.co/600x400/1a1a1a/8b5cf6?text=Task+Manager',
             technologies: ['Next.js', 'PostgreSQL', 'Prisma', 'Socket.io', 'Chakra UI'],
             liveDemo: '#',
@@ -30,8 +30,8 @@ const Projects = () => {
         },
         {
             id: 3,
-            title: 'Weather App',
-            description: 'A beautiful weather application with location-based forecasts, interactive maps, and personalized weather alerts.',
+            title: 'Aplicativo de Clima',
+            description: 'Um belo aplicativo de clima com previsões baseadas em localização, mapas interativos e alertas meteorológicos personalizados.',
             image: 'https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://placehold.co/600x400/1a1a1a/10b981?text=Weather+App',
             technologies: ['React', 'OpenWeather API', 'Mapbox', 'Chart.js'],
             liveDemo: '#',
@@ -40,8 +40,8 @@ const Projects = () => {
         },
         {
             id: 4,
-            title: 'Portfolio Website',
-            description: 'A modern, responsive portfolio website built with React and Framer Motion for smooth animations.',
+            title: 'Site de Portfólio',
+            description: 'Um site de portfólio moderno e responsivo, construído com React e Framer Motion para animações suaves.',
             image: 'https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://placehold.co/600x400/1a1a1a/f59e0b?text=Portfolio+Site',
             technologies: ['React', 'Framer Motion', 'Tailwind CSS', 'Vite'],
             liveDemo: '#',
@@ -50,8 +50,8 @@ const Projects = () => {
         },
         {
             id: 5,
-            title: 'Social Media App',
-            description: 'A full-stack social media platform with real-time messaging, post sharing, and user authentication.',
+            title: 'Aplicativo de Mídia Social',
+            description: 'Uma plataforma de mídia social full-stack com mensagens em tempo real, compartilhamento de posts e autenticação de usuário.',
             image: 'https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://placehold.co/600x400/1a1a1a/ef4444?text=Social+App',
             technologies: ['React Native', 'Firebase', 'Redux', 'Expo'],
             liveDemo: '#',
@@ -60,8 +60,8 @@ const Projects = () => {
         },
         {
             id: 6,
-            title: 'AI Chat Interface',
-            description: 'An intelligent chat interface powered by AI with natural language processing and contextual responses.',
+            title: 'Interface de Chat com IA',
+            description: 'Uma interface de chat inteligente alimentada por IA com processamento de linguagem natural e respostas contextuais.',
             image: 'https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://placehold.co/600x400/1a1a1a/a855f7?text=AI+Chat',
             technologies: ['Python', 'FastAPI', 'OpenAI API', 'React'],
             liveDemo: '#',
@@ -100,11 +100,11 @@ const Projects = () => {
                 >
 
                     <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                        Featured <span className="gradient-text">Projects</span>
+                        Projetos em <span className="gradient-text">Destaque</span>
                     </h2>
                     <div className="w-20 h-1 bg-white rounded-full mx-auto mb-8"></div>
                     <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                        Here are some of my recent projects that showcase my skills and experience in web development.
+                        Aqui estão alguns dos meus projetos recentes que mostram minhas habilidades e experiência em desenvolvimento web.
                     </p>
 
                 </motion.div>
@@ -138,7 +138,7 @@ const Projects = () => {
                                         className="p-2 bg-accent-primary hover:bg-white text-white hover:text-black rounded-lg transition-colors"
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.9 }}
-                                        aria-label="Live Demo"
+                                        aria-label="Ver Demonstração"
                                     >
                                         <Eye size={16} />
                                     </motion.a>
@@ -147,14 +147,14 @@ const Projects = () => {
                                         className="p-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors"
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.9 }}
-                                        aria-label="GitHub Repository"
+                                        aria-label="Repositório GitHub"
                                     >
                                         <Github size={16} />
                                     </motion.a>
                                 </div>
                                 {project.featured && (
                                     <div className="absolute top-4 left-4 px-2 py-1 bg-accent-primary text-white text-xs font-medium rounded">
-                                        Featured
+                                        Em Destaque
                                     </div>
                                 )}
                             </div>
@@ -186,7 +186,7 @@ const Projects = () => {
                                         whileTap={{ scale: 0.98 }}
                                     >
                                         <ExternalLink size={14} />
-                                        Live Demo
+                                        Ver Demonstração
                                     </motion.a>
                                     <motion.a
                                         href={project.github}
@@ -216,7 +216,7 @@ const Projects = () => {
                         whileTap={{ scale: 0.95 }}
                     >
                         <Github size={20} />
-                        View All Projects on GitHub
+                        Ver Todos os Projetos no GitHub
                     </motion.a>
                 </motion.div>
             </div>

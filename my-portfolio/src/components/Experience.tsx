@@ -12,60 +12,60 @@ const Experience = () => {
         {
             id: 1,
             company: 'TechCorp Solutions',
-            position: 'Senior Full Stack Developer',
-            duration: '2022 - Present',
-            location: 'San Francisco, CA',
-            description: 'Leading development of scalable web applications using React, Node.js, and AWS. Mentoring junior developers and architecting microservices solutions for enterprise clients.',
+            position: 'Desenvolvedor Full Stack Sênior',
+            duration: '2022 - Atualmente',
+            location: 'São Francisco, CA',
+            description: 'Liderando o desenvolvimento de aplicações web escaláveis utilizando React, Node.js e AWS. Orientando desenvolvedores juniores e arquitetando soluções de microsserviços para clientes corporativos.',
             highlights: [
-                'Led a team of 5 developers to deliver 3 major projects ahead of schedule',
-                'Improved application performance by 40% through optimization strategies',
-                'Implemented CI/CD pipelines reducing deployment time by 60%',
-                'Architected microservices handling 1M+ requests per day'
+                'Liderei uma equipe de 5 desenvolvedores para entregar 3 grandes projetos antes do prazo',
+                'Melhorei o desempenho da aplicação em 40% através de estratégias de otimização',
+                'Implementei pipelines de CI/CD, reduzindo o tempo de implantação em 60%',
+                'Arquitei microsserviços lidando com mais de 1 milhão de requisições por dia'
             ],
             technologies: ['React', 'Node.js', 'AWS', 'TypeScript', 'Docker', 'PostgreSQL']
         },
         {
             id: 2,
             company: 'Startup Innovate',
-            position: 'Full Stack Developer',
+            position: 'Desenvolvedor Full Stack',
             duration: '2020 - 2022',
             location: 'Austin, TX',
-            description: 'Developed and maintained multiple client-facing applications in a fast-paced startup environment. Collaborated directly with clients to understand requirements and deliver solutions.',
+            description: 'Desenvolvi e mantive múltiplas aplicações voltadas para o cliente em um ambiente de startup acelerado. Colaborei diretamente com os clientes para entender os requisitos e entregar soluções.',
             highlights: [
-                'Built 8 custom web applications from scratch',
-                'Reduced client onboarding time by 50% through automation',
-                'Integrated 15+ third-party APIs and payment systems',
-                'Established coding standards and best practices for the team'
+                'Construí 8 aplicações web personalizadas do zero',
+                'Reduzi o tempo de integração de clientes em 50% através de automação',
+                'Integrei mais de 15 APIs de terceiros e sistemas de pagamento',
+                'Estabeleci padrões de codificação e melhores práticas para a equipe'
             ],
             technologies: ['Vue.js', 'Python', 'Django', 'MongoDB', 'Redis', 'Stripe API']
         },
         {
             id: 3,
             company: 'Digital Agency Pro',
-            position: 'Frontend Developer',
+            position: 'Desenvolvedor Frontend',
             duration: '2019 - 2020',
-            location: 'New York, NY',
-            description: 'Specialized in creating responsive, pixel-perfect websites for various clients across different industries. Worked closely with designers to bring creative visions to life.',
+            location: 'Nova Iorque, NY',
+            description: 'Especializado na criação de websites responsivos e pixel-perfect para diversos clientes em diferentes indústrias. Trabalhei em estreita colaboração com designers para dar vida a visões criativas.',
             highlights: [
-                'Delivered 25+ responsive websites with 100% client satisfaction',
-                'Implemented advanced animations and interactions using GSAP',
-                'Optimized websites achieving 90+ Google PageSpeed scores',
-                'Collaborated with design team to improve UI/UX workflows'
+                'Entreguei mais de 25 websites responsivos com 100% de satisfação do cliente',
+                'Implementei animações e interações avançadas usando GSAP',
+                'Otimizei websites alcançando pontuações acima de 90 no Google PageSpeed',
+                'Colaborei com a equipe de design para melhorar os fluxos de trabalho de UI/UX'
             ],
             technologies: ['JavaScript', 'SCSS', 'GSAP', 'WordPress', 'jQuery', 'Bootstrap']
         },
         {
             id: 4,
             company: 'FreelanceHub',
-            position: 'Web Developer',
+            position: 'Desenvolvedor Web',
             duration: '2018 - 2019',
-            location: 'Remote',
-            description: 'Worked as a freelance web developer, helping small businesses establish their online presence through custom websites and e-commerce solutions.',
+            location: 'Remoto',
+            description: 'Trabalhei como desenvolvedor web freelancer, ajudando pequenas empresas a estabelecer sua presença online através de websites personalizados e soluções de e-commerce.',
             highlights: [
-                'Completed 30+ freelance projects with 5-star ratings',
-                'Specialized in e-commerce solutions using Shopify and WooCommerce',
-                'Provided ongoing maintenance and support for 20+ websites',
-                'Built long-term relationships with repeat clients'
+                'Completei mais de 30 projetos freelancer com avaliações 5 estrelas',
+                'Especializado em soluções de e-commerce usando Shopify e WooCommerce',
+                'Forneci manutenção e suporte contínuos para mais de 20 websites',
+                'Construí relacionamentos de longo prazo com clientes recorrentes'
             ],
             technologies: ['HTML/CSS', 'JavaScript', 'PHP', 'Shopify', 'WooCommerce', 'MySQL']
         }
@@ -87,12 +87,12 @@ const Experience = () => {
                 >
 
                     <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                        Professional <span className="gradient-text">Experience</span>
+                        Experiência <span className="gradient-text">Profissional</span>
                     </h2>
                     <div className="w-20 h-1 bg-white rounded-full mx-auto mb-8"></div>
 
                     <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                        My journey as a developer, from freelancing to leading teams at innovative companies.
+                        Minha jornada como desenvolvedor, do trabalho freelancer à liderança de equipes em empresas inovadoras.
                     </p>
                 </motion.div>
 
@@ -160,7 +160,7 @@ const Experience = () => {
                                                 </p>
 
                                                 <div>
-                                                    <h4 className="text-sm font-medium text-white mb-2">Key Achievements:</h4>
+                                                    <h4 className="text-sm font-medium text-white mb-2">Principais Conquistas:</h4>
                                                     <ul className="space-y-1">
                                                         {experience.highlights.map((highlight, highlightIndex) => (
                                                             <li key={highlightIndex} className="text-sm text-gray-400 flex items-start gap-2">
@@ -172,7 +172,7 @@ const Experience = () => {
                                                 </div>
 
                                                 <div>
-                                                    <h4 className="text-sm font-medium text-white mb-2">Technologies Used:</h4>
+                                                    <h4 className="text-sm font-medium text-white mb-2">Tecnologias Utilizadas:</h4>
                                                     <div className="flex flex-wrap gap-2">
                                                         {experience.technologies.map((tech, techIndex) => (
                                                             <Badge
@@ -203,9 +203,9 @@ const Experience = () => {
                 >
 
                     <div className="glass-effect border border-gray-700/50 rounded-xl p-6">
-                        <h3 className="text-xl font-semibold mb-2">Interested in Working Together?</h3>
+                        <h3 className="text-xl font-semibold mb-2">Interessado em Trabalhar Juntos?</h3>
                         <p className="text-gray-400 mb-4">
-                            I'm always open to discussing new opportunities and exciting projects.
+                            Estou sempre aberto a discutir novas oportunidades e projetos empolgantes.
                         </p>
                         <motion.button
                             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
@@ -213,7 +213,7 @@ const Experience = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            Let's Talk
+                            Vamos Conversar
                         </motion.button>
                     </div>
                 </motion.div>

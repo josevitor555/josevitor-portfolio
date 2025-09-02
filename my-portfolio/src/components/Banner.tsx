@@ -76,18 +76,18 @@ const Banner = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Hi, I'm{' '}
+            Olá, eu sou{' '}
             <span className="text-gray-100"> José Vitor </span>
           </motion.h1>
 
           {/* Headline p text */}
           <motion.p
-            className="text-2xl sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
+            className="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Web Developer Pleno, passionate about creating beautiful, functional, and user-centered digital experiences.
+            Desenvolvedor Web Pleno, apaixonado por criar experiências digitais bonitas, funcionais e centradas no usuário.
           </motion.p>
 
           {/* Buttons */}
@@ -103,7 +103,7 @@ const Banner = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              View My Work
+              Ver Meus Projetos
             </motion.button>
 
             <motion.button
@@ -112,7 +112,7 @@ const Banner = () => {
               whileTap={{ scale: 0.95 }}
             >
               <Download size={20} />
-              Download CV
+              Baixar CV
             </motion.button>
           </motion.div>
 

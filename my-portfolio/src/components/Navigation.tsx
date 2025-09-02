@@ -19,12 +19,12 @@ const Navigation = () => {
 
     // Navigation items
     const navItems = [
-        { id: 'home', label: 'Home' },
-        { id: 'about', label: 'About' },
-        { id: 'projects', label: 'Projects' },
-        { id: 'articles', label: 'Articles' },
-        { id: 'experience', label: 'Experience' },
-        { id: 'contact', label: 'Contact' },
+        { id: 'home', label: 'Início' },
+        { id: 'about', label: 'Sobre' },
+        { id: 'projects', label: 'Projetos' },
+        { id: 'articles', label: 'Artigos' },
+        { id: 'experience', label: 'Experiência' },
+        { id: 'contact', label: 'Contato' },
     ];
 
     useEffect(() => {
@@ -102,7 +102,7 @@ const Navigation = () => {
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                <LogOut size={16} /> Sign In
+                                <LogOut size={16} /> Entrar
                             </motion.button>
 
                             {/* Avatar user */}
@@ -155,7 +155,7 @@ const Navigation = () => {
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
                                 >
-                                    <LogOut size={20} /> Sign In
+                                    <LogOut size={20} /> Entrar
                                 </motion.button>
                             </div>
                         </motion.div>

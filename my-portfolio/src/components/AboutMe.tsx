@@ -51,7 +51,7 @@ const SkillCard = ({ icon: Icon, title, description, technologies, index }: Skil
                     transition: 'opacity 0.3s ease-out',
                 }}
             ></div>
-            <motion.div 
+            <motion.div
                 className="mb-4 relative z-10"
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.3 }}
@@ -82,26 +82,26 @@ const AboutMe = () => {
     const skills = [
         {
             icon: Code,
-            title: 'Frontend Development',
-            description: 'I develop interactive and responsive web applications using React, TypeScript, Next.js, and Tailwind CSS.',
+            title: 'Desenvolvimento Frontend',
+            description: 'Desenvolvo aplicações web interativas e responsivas utilizando React, TypeScript, Next.js e Tailwind CSS.',
             technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Vue.js']
         },
         {
             icon: Database,
-            title: 'Backend Development',
-            description: 'I work with building robust APIs and managing databases using Node.js, Python, PostgreSQL, and MongoDB.',
+            title: 'Desenvolvimento Backend',
+            description: 'Trabalho com a construção de APIs robustas e gerenciamento de bancos de dados utilizando Node.js, Python, PostgreSQL e MongoDB.',
             technologies: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB', 'Express.js']
         },
         {
             icon: Globe,
-            title: 'Figma Designs',
-            description: 'I create prototypes, UI/UX designs, and mobile versions using Figma.',
+            title: 'Designs no Figma',
+            description: 'Crio protótipos, designs de UI/UX e versões mobile utilizando Figma.',
             technologies: ['Prototype', 'UI/UX', 'Mobile First']
         },
         {
             icon: Brain,
-            title: 'AI Development',
-            description: 'I develop artificial intelligence and machine learning solutions with Python, TensorFlow, PyTorch, and OpenAI.',
+            title: 'Desenvolvimento de IA',
+            description: 'Desenvolvo soluções de inteligência artificial e aprendizado de máquina com Python, TensorFlow, PyTorch e OpenAI.',
             technologies: ['Python', 'TensorFlow', 'PyTorch', 'OpenAI', 'Langchain']
         }
     ];
@@ -128,10 +128,10 @@ const AboutMe = () => {
                 >
 
                     <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                        About <span className="gradient-text">Me</span>
+                        Sobre <span className="gradient-text">Mim</span>
                     </h2>
                     <div className="w-20 h-1 bg-white mx-auto mb-0"></div>
-                    
+
                 </motion.div>
 
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
@@ -143,23 +143,23 @@ const AboutMe = () => {
                     >
                         <div className="space-y-8">
                             <p className="text-lg text-gray-300 leading-relaxed">
-                            I'm a full-time web developer with 7 years of experience. I graduated with a technical degree in 2023, following the pandemic. I resumed my studies in the field a year later, studying Systems Analysis and Development at the same educational institution (IFPI).
+                                Sou um desenvolvedor web com 7 anos de experiência. Concluí um curso técnico em 2023, após a pandemia. Retomei meus estudos na área um ano depois, cursando Análise e Desenvolvimento de Sistemas na mesma instituição de ensino (IFPI). Prevista para ser encerrada em 2026.
                             </p>
                             <p className="text-lg text-gray-300 leading-relaxed">
-                                As the years go by, I work on projects not only personally but also with other people. This gives me the necessary practical knowledge to continue working in the field.
+                                Com o passar dos anos, trabalho em projetos não apenas pessoais, mas também com outras pessoas como colegas e professores. Isso me proporciona o conhecimento prático necessário para continuar atuando na área em desenvolvimento de sooftware.
                             </p>
                             <div className="flex flex-wrap gap-4 pt-4">
                                 <div className="text-center">
                                     <div className="text-2xl font-bold text-accent-primary">50+</div>
-                                    <div className="text-sm text-gray-400">Projects Completed</div>
+                                    <div className="text-sm text-gray-400">Projetos Concluídos</div>
                                 </div>
                                 <div className="text-center">
                                     <div className="text-2xl font-bold text-accent-primary">5+</div>
-                                    <div className="text-sm text-gray-400">Years Experience</div>
+                                    <div className="text-sm text-gray-400">Anos de Experiência</div>
                                 </div>
                                 <div className="text-center">
                                     <div className="text-2xl font-bold text-accent-primary">25+</div>
-                                    <div className="text-sm text-gray-400">Happy Clients</div>
+                                    <div className="text-sm text-gray-400">Clientes Satisfeitos</div>
                                 </div>
                             </div>
                         </div>
@@ -177,8 +177,8 @@ const AboutMe = () => {
                             <div className="w-64 h-64 rounded-full bg-gradient-to-br from-accent-primary to-accent-secondary opacity-20"></div>
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="text-center">
-                                    <img src="https://i.pinimg.com/736x/69/7d/b7/697db7fae9dcdc5de38b8d8452068d40.jpg" alt="Profile photo" className="w-80 h-80 rounded-lg mx-auto mb-4 object-cover" />
-                                    <p className="text-gray-400">Profile Photo</p>
+                                    <img src="https://i.pinimg.com/736x/69/8d/99/698d99ca1e2b367d426e445fa51d3824.jpg" alt="Profile photo" className="w-80 h-80 rounded-lg mx-auto mb-4 object-cover" />
+                                    <p className="text-gray-400">Foto de Perfil</p>
                                 </div>
                             </div>
                         </div>

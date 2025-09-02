@@ -32,8 +32,8 @@ export default function Component() {
         />
       </div>
       <p className="text-light-100 px-2 text-xs">
-        Trusted by <strong className="text-light-300 font-medium">60K+</strong>{" "}
-        developers.
+        Confiado por <strong className="text-light-300 font-medium">60K+</strong>{" "}
+        desenvolvedores.
       </p>
     </div>
   )
