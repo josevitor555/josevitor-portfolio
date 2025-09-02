@@ -39,10 +39,10 @@ const Banner = () => {
 
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
-        {[...Array(200)].map((_, i) => (
+        {[...Array(60)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-white/100 rounded-full"
+            className="absolute w-1 h-1 bg-white/80 rounded-full"
             initial={{
               x: Math.random() * window.innerWidth,
               y: Math.random() * window.innerHeight,
