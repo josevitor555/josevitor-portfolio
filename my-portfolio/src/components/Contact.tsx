@@ -105,7 +105,7 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className='py-20 bg-dark-100'>
+        <section id="contact" className='py-20 bg-background'>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -120,7 +120,7 @@ const Contact = () => {
                     </h2>
                     <div className="w-20 h-1 bg-white rounded-full mx-auto mb-8"></div>
 
-                    <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                         I'm always open to discussing new opportunities and interesting projects. Let's connect!
                     </p>
                 </motion.div>
@@ -134,7 +134,7 @@ const Contact = () => {
                         transition={{ duration: 0.6 }}
                     >
 
-                        <div className='glass-effect rounded-2xl p-8'>
+                        <div className='glass-effect rounded-2xl p-4 sm:p-6 md:p-8'>
                             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
                             {submitStatus && (
                                 <div
@@ -146,10 +146,10 @@ const Contact = () => {
                             )}
 
                             {/* Form */}
-                            <form onSubmit={handleSubmit} className="space-y-6 rounded-lg border border-gray-600 p-10">
+                            <form onSubmit={handleSubmit} className="space-y-6 rounded-lg border border-gray-600 p-6 sm:p-8 md:p-10">
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div>
-                                        <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                                        <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                                             Name
                                         </label>
                                         <input
@@ -159,12 +159,12 @@ const Contact = () => {
                                             value={formData.name}
                                             onChange={handleChange}
                                             required
-                                            className="w-full px-4 py-3 bg-dark-200 border border-gray-600 rounded-lg focus:ring-2 focus:ring-accent-primary focus:border-transparent transition-colors text-white placeholder-gray-400"
+                                            className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-colors text-foreground placeholder-muted-foreground"
                                             placeholder="Your name"
                                         />
                                     </div>
                                     <div>
-                                        <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                                        <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                                             Email
                                         </label>
                                         <input
@@ -174,14 +174,14 @@ const Contact = () => {
                                             value={formData.email}
                                             onChange={handleChange}
                                             required
-                                            className="w-full px-4 py-3 bg-dark-200 border border-gray-600 rounded-lg focus:ring-2 focus:ring-accent-primary focus:border-transparent transition-colors text-white placeholder-gray-400"
+                                            className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-colors text-foreground placeholder-muted-foreground"
                                             placeholder="your.email@example.com"
                                         />
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
+                                    <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
                                         Subject
                                     </label>
                                     <input
@@ -191,13 +191,13 @@ const Contact = () => {
                                         value={formData.subject}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-4 py-3 bg-dark-200 border border-gray-600 rounded-lg focus:ring-2 focus:ring-accent-primary focus:border-transparent transition-colors text-white placeholder-gray-400"
+                                        className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-colors text-foreground placeholder-muted-foreground"
                                         placeholder="What's this about?"
                                     />
                                 </div>
 
                                 <div>
-                                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                                         Message
                                     </label>
                                     <textarea
@@ -207,7 +207,7 @@ const Contact = () => {
                                         onChange={handleChange}
                                         required
                                         rows={6}
-                                        className="w-full px-4 py-3 bg-dark-200 border border-gray-600 rounded-lg focus:ring-2 focus:ring-accent-primary focus:border-transparent transition-colors text-white placeholder-gray-400 resize-none"
+                                        className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-colors text-foreground placeholder-muted-foreground resize-none"
                                         placeholder="Tell me about your message..."
                                     />
                                 </div>
@@ -215,13 +215,13 @@ const Contact = () => {
                                 <motion.button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="w-full px-6 py-3 bg-white cursor-pointer hover:bg-white disabled:bg-gray-600 text-dark-100 text-black font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
+                                    className="w-full px-6 py-3 bg-primary text-primary-foreground cursor-pointer hover:bg-primary/90 disabled:bg-muted font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
                                     {isSubmitting ? (
                                         <>
-                                            <div className="w-5 h-5 border-2 border-dark-100/30 border-t-dark-100 rounded-full animate-spin"></div>
+                                            <div className="w-5 h-5 border-2 border-border/30 border-t-primary rounded-full animate-spin"></div>
                                             Sending...
                                         </>
                                     ) : (
@@ -258,8 +258,8 @@ const Contact = () => {
                                             <info.icon className="w-6 h-6 text-accent-primary" />
                                         </div>
                                         <div>
-                                            <div className="text-sm text-gray-400">{info.title}</div>
-                                            <div className="font-medium">{info.value}</div>
+                                            <div className="text-sm text-muted-foreground">{info.title}</div>
+                                            <div className="font-medium text-foreground">{info.value}</div>
                                         </div>
                                     </motion.a>
                                 ))}
@@ -278,15 +278,15 @@ const Contact = () => {
                                         whileTap={{ scale: 0.9 }}
                                         aria-label={link.label}
                                     >
-                                        <link.icon className="w-5 h-5 text-gray-400 group-hover:text-accent-primary transition-colors" />
+                                        <link.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
                                     </motion.a>
                                 ))}
                             </div>
                         </motion.div>
 
-                        <motion.div variants={itemVariants} className="glass-effect rounded-xl p-6 border border-gray-100">
+                        <motion.div variants={itemVariants} className="glass-effect rounded-xl p-6 border border-border">
                             <h4 className="text-xl font-semibold mb-3">Let's Work Together</h4>
-                            <p className="text-gray-400 mb-4">
+                            <p className="text-muted-foreground mb-4">
                                 I'm currently available for freelance work and full-time opportunities.
                                 Whether you're a company looking to hire, or you're a fellow developer
                                 wanting to collaborate, I'd love to hear from you.
