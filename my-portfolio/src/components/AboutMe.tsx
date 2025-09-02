@@ -170,14 +170,14 @@ const AboutMe = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="relative"
+                        className="relative mb-10"
                     >
 
                         <div className="aspect-square rounded-2xl bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20 glass-effect p-8 flex items-center justify-center">
                             <div className="w-64 h-64 rounded-full bg-gradient-to-br from-accent-primary to-accent-secondary opacity-20"></div>
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="text-center">
-                                    <div className="w-32 h-32 rounded-full bg-gray-600 mx-auto mb-4"></div>
+                                    <img src="https://i.pinimg.com/736x/69/7d/b7/697db7fae9dcdc5de38b8d8452068d40.jpg" alt="Profile photo" className="w-80 h-80 rounded-lg mx-auto mb-4 object-cover" />
                                     <p className="text-gray-400">Profile Photo</p>
                                 </div>
                             </div>

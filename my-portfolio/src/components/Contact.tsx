@@ -66,8 +66,8 @@ const Contact = () => {
         {
             icon: Mail,
             title: 'Email',
-            value: 'john.doe@example.com',
-            href: 'mailto:john.doe@example.com'
+            value: 'jose.vitor@example.com',
+            href: 'mailto:jose.vitor@example.com'
         },
         {
             icon: Phone,
@@ -78,7 +78,7 @@ const Contact = () => {
         {
             icon: MapPin,
             title: 'Location',
-            value: 'San Francisco, CA',
+            value: 'Piauí, Brasil',
             href: '#'
         }
     ];
