@@ -7,6 +7,10 @@ import Navigation from "@/components/Navigation";
 import Banner from "@/components/Banner";
 import AboutMe from "@/components/AboutMe";
 import Projects from "@/components/Projects";
+import Articles from "@/components/Articles";
+import Experience from "@/components/Experience";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 // Pages
 
@@ -20,6 +24,10 @@ const App = () => {
                 <Banner />
                 <AboutMe />
                 <Projects />
+                <Articles />
+                <Experience />
+                <Contact />
+                <Footer />
             </main>
 
             {/* Footer Section */}

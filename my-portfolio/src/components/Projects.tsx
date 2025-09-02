@@ -86,10 +86,11 @@ const Projects = () => {
     }
 
     return (
-        <section id="projects" className='py-20 bg-dark-100'>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="projects" className='relative py-20 bg-dark-100'>
 
-                {/* Titile and subtitle */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+                {/* Title and subtitle */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -121,7 +122,7 @@ const Projects = () => {
                         <motion.div
                             key={project.id}
                             variants={itemVariants}
-                            className="group glass-effect rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300"
+                            className="group glass-effect rounded-xl overflow-hidden border border-white/20 hover:bg-white/10 transition-all duration-300"
                             whileHover={{ y: -5 }}
                         >
                             <div className="relative overflow-hidden">
