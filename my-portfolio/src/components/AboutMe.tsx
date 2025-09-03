@@ -130,7 +130,7 @@ const AboutMe = () => {
                     <h2 className="text-3xl sm:text-4xl font-bold mb-4">
                         Sobre <span className="gradient-text">Mim</span>
                     </h2>
-                    <div className="w-20 h-1 bg-white mx-auto mb-0"></div>
+                    <div className="w-20 h-1 rounded-full bg-white mx-auto mb-0"></div>
 
                 </motion.div>
 
@@ -143,10 +143,10 @@ const AboutMe = () => {
                     >
                         <div className="space-y-8">
                             <p className="text-lg text-gray-300 leading-relaxed">
-                                Sou um desenvolvedor web com 7 anos de experiência. Concluí um curso técnico em 2023, após a pandemia. Retomei meus estudos na área um ano depois, cursando Análise e Desenvolvimento de Sistemas na mesma instituição de ensino (IFPI). Prevista para ser encerrada em 2026.
+                                Sou um desenvolvedor web com 6 anos de experiência. Concluí um curso técnico em 2023, após a pandemia. Retomei meus estudos na área um ano depois, cursando Análise e Desenvolvimento de Sistemas na mesma instituição de ensino (IFPI). Prevista para ser encerrada em 2026.
                             </p>
                             <p className="text-lg text-gray-300 leading-relaxed">
-                                Com o passar dos anos, trabalho em projetos não apenas pessoais, mas também com outras pessoas como colegas e professores. Isso me proporciona o conhecimento prático necessário para continuar atuando na área em desenvolvimento de sooftware.
+                                Com o passar dos anos, trabalho em projetos não apenas pessoais, mas também com outras pessoas como colegas e professores. Isso me proporciona o conhecimento prático necessário para continuar atuando na área em desenvolvimento de software.
                             </p>
                             <div className="flex flex-wrap gap-4 pt-4">
                                 <div className="text-center">

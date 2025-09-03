@@ -25,38 +25,45 @@ const Contact = () => {
         }));
     };
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsSubmitting(true);
         setSubmitStatus(null);
 
-        const accessKey = '845a2812-a0f1-4ee8-a424-465c92a26ee0';
-        const payload = {
-            ...formData,
-            access_key: accessKey,
-        };
+        const formElement = e.currentTarget;
+        const formDataToSend = new FormData(formElement);
+        formDataToSend.append("access_key", "845a2812-a0f1-4ee8-a424-465c92a26ee0");
 
         try {
-            const res = await fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    Accept: 'application/json',
-                },
-                body: JSON.stringify(payload),
+            const res = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formDataToSend,
             });
 
             const json = await res.json();
+            console.log(json); // debug
 
             if (json.success) {
-                setSubmitStatus({ success: true, message: 'Sua mensagem foi enviada com sucesso!' });
-                setFormData({ name: '', email: '', subject: '', message: '' });
+                setSubmitStatus({
+                    success: true,
+                    message: "Sua mensagem foi enviada com sucesso!",
+                });
+                formElement.reset(); // limpa inputs
+                setFormData({ name: "", email: "", subject: "", message: "" }); // limpa estados
             } else {
-                setSubmitStatus({ success: false, message: json.message || 'Ocorreu um erro. Por favor, tente novamente.' });
+                setSubmitStatus({
+                    success: false,
+                    message:
+                        json.message || "Ocorreu um erro. Por favor, tente novamente.",
+                });
             }
         } catch (error) {
-            console.error('Form submission error:', error);
-            setSubmitStatus({ success: false, message: 'Ocorreu um erro inesperado. Por favor, tente novamente mais tarde.' });
+            console.error("Form submission error:", error);
+            setSubmitStatus({
+                success: false,
+                message:
+                    "Ocorreu um erro inesperado. Por favor, tente novamente mais tarde.",
+            });
         } finally {
             setIsSubmitting(false);
         }

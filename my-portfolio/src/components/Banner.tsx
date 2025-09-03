@@ -1,12 +1,17 @@
 // Imports
 // import React from 'react'
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Download, ChevronDown } from 'lucide-react';
+import { Github, Linkedin, Mail, Download, ChevronDown, Volume2, VolumeX } from 'lucide-react';
 import Comp412 from './ui/comp-412';
 // import Comp296 from './ui/comp-296';
 // import React, { useState } from 'react';
 
-const Banner = () => {
+interface BannerProps {
+  isPlaying: boolean;
+  setIsPlaying: (playing: boolean) => void;
+}
+
+const Banner = ({ isPlaying, setIsPlaying }:BannerProps) => {
   // const [showChangelogNotification, setShowChangelogNotification] = useState(true);
 
   // const handleCloseChangelog = () => {
@@ -27,22 +32,12 @@ const Banner = () => {
   return (
     <section id='home' className='min-h-screen flex items-center justify-center relative overflow-hidden'>
 
-      {/* Motion div in  */}
-      {/* <motion.div
-        className="absolute top-42 right-32 z-20"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: showChangelogNotification ? 1 : 0, y: showChangelogNotification ? 0 : 30 }}
-        transition={{ duration: 0.8 }}
-      >
-        {showChangelogNotification && <Comp296 onClose={handleCloseChangelog} />}
-      </motion.div> */}
-
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
-        {[...Array(60)].map((_, i) => (
+        {[...Array(100)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-white/80 rounded-full"
+            className="absolute w-1 h-1 bg-white/60 rounded-full"
             initial={{
               x: Math.random() * window.innerWidth,
               y: Math.random() * window.innerHeight,
@@ -60,7 +55,7 @@ const Banner = () => {
           />
         ))}
       </div>
-      
+
       <div className="relative z-10 max-w-4xl mt-8 px-4 sm:px-6 lg:px-8 text-center">
 
         <motion.div
@@ -78,9 +73,18 @@ const Banner = () => {
           >
             Olá, eu sou{' '}
             <span className="text-gray-100"> José Vitor </span>
+            <motion.button
+              onClick={() => setIsPlaying(!isPlaying)}
+              className="ml-2 p-1 rounded-full text-gray-400 hover:text-accent-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-75"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              aria-label={isPlaying ? 'Pausar música' : 'Tocar música'}
+            >
+              {isPlaying ? <Volume2 size={24} /> : <VolumeX size={24} />}
+            </motion.button>
           </motion.h1>
 
-          {/* Headline p text */}
+          {/* Headline p Text */}
           <motion.p
             className="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 30 }}

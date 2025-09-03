@@ -98,7 +98,7 @@ const Navigation = () => {
 
                             {/* Button Sign In */}
                             <motion.button
-                                className="px-4 py-2 text-sm font-medium bg-gray-100 text-black rounded-full flex items-center gap-2"
+                                className="px-4 py-2 text-sm font-medium cursor-pointer bg-gray-100 text-black rounded-full flex items-center gap-2"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
@@ -151,7 +151,7 @@ const Navigation = () => {
                                     </motion.button>
                                 ))}
                                 <motion.button
-                                    className="w-full text-left px-3 py-2 text-lg font-medium bg-gray-100 text-black rounded-full flex items-center justify-center gap-2 mt-4"
+                                    className="w-full text-left px-3 py-2 text-lg font-medium cursor-pointer bg-gray-100 text-black rounded-full flex items-center justify-center gap-2 mt-4"
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
                                 >

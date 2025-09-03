@@ -23,7 +23,7 @@ const Footer = () => {
                             José Vitor
                         </motion.div>
                         <p className="text-gray-400 text-sm">
-                            Desenvolvedor Full Stack apaixonado por criar experiências digitais incríveis.
+                            Desenvolvedor Front-End Pleno apaixonado por criar experiências digitais incríveis.
                         </p>
                     </div>
 

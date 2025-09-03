@@ -14,14 +14,19 @@ import Footer from "@/components/Footer";
 
 // Pages
 
-const App = () => {
+interface HomePageProps {
+  isPlaying: boolean;
+  setIsPlaying: (playing: boolean) => void;
+}
+
+const HomePage: React.FC<HomePageProps> = ({ isPlaying, setIsPlaying }) => {
 
     return (
         <div className="min-h-screen bg-dark-100">
             <Navigation />
             <main>
                 {/* Others Section */}
-                <Banner />
+                <Banner isPlaying={isPlaying} setIsPlaying={setIsPlaying} />
                 <AboutMe />
                 <Projects />
                 <Articles />
@@ -35,4 +40,4 @@ const App = () => {
     )
 }
 
-export default App;
+export default HomePage;

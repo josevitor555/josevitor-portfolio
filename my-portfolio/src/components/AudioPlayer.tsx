@@ -1,0 +1,30 @@
+import { useRef, useEffect } from 'react';
+
+interface AudioPlayerProps {
+  isPlaying: boolean;
+}
+
+const AudioPlayer = ({ isPlaying }:AudioPlayerProps) => {
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = 0.1; // Volume baixo
+      audioRef.current.loop = true; // Tocar em loop
+
+      if (isPlaying) {
+        audioRef.current.play().catch(error => {
+          console.log('Erro ao tentar reproduzir áudio:', error);
+        });
+      } else {
+        audioRef.current.pause();
+      }
+    }
+  }, [isPlaying]);
+
+  return (
+    <audio ref={audioRef} src="/audios/lofi.mp3" />
+  );
+};
+
+export default AudioPlayer;

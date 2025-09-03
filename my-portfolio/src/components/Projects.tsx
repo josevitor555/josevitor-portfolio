@@ -134,17 +134,8 @@ const Projects = () => {
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <motion.a
-                                        href={project.liveDemo}
-                                        className="p-2 bg-accent-primary hover:bg-white text-white hover:text-black rounded-lg transition-colors"
-                                        whileHover={{ scale: 1.1 }}
-                                        whileTap={{ scale: 0.9 }}
-                                        aria-label="Ver Demonstração"
-                                    >
-                                        <Eye size={16} />
-                                    </motion.a>
-                                    <motion.a
                                         href={project.github}
-                                        className="p-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors"
+                                        className="p-2 bg-accent-primary hover:bg-white text-white hover:text-black rounded-lg transition-colors"
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.9 }}
                                         aria-label="Repositório GitHub"
@@ -158,7 +149,7 @@ const Projects = () => {
                                     </div>
                                 )}
                             </div>
-
+                            
                             <div className="p-6">
                                 <h3 className="text-xl font-semibold mb-2 group-hover:text-accent-primary transition-colors">
                                     {project.title}
@@ -186,15 +177,7 @@ const Projects = () => {
                                         whileTap={{ scale: 0.98 }}
                                     >
                                         <ExternalLink size={14} />
-                                        Ver Demonstração
-                                    </motion.a>
-                                    <motion.a
-                                        href={project.github}
-                                        className="px-4 py-2 border border-gray-600 hover:bg-gray-700 text-gray-300 hover:text-white text-sm font-medium rounded-lg transition-colors flex items-center justify-center"
-                                        whileHover={{ scale: 1.02 }}
-                                        whileTap={{ scale: 0.98 }}
-                                    >
-                                        <Github size={14} />
+                                        Ver Código Fonte
                                     </motion.a>
                                 </div>
                             </div>
