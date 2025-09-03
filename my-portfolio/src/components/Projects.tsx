@@ -1,6 +1,6 @@
 // Imports
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Eye } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 
 // Shadcn components
 import { Badge } from './ui/badge';
@@ -149,7 +149,7 @@ const Projects = () => {
                                     </div>
                                 )}
                             </div>
-                            
+
                             <div className="p-6">
                                 <h3 className="text-xl font-semibold mb-2 group-hover:text-accent-primary transition-colors">
                                     {project.title}
