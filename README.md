@@ -41,3 +41,4 @@ E ao lado direito, minhas informações como emaill, telefone e localização - 
 Enfim, esse portfólio é só uma ponte da faculdade para o mercado de trabalho, mas não somente isso como também compartilho algumas experiências,
 falando mal de alguém ou stack na sessão de artigos.
 
+E caso você queira ver o livedemo estar aqui (Lembrando que alguns projetos e artigos são fictícios, só servem para enfeito mesmo): https://josevitor-portfolio.onrender.com/
