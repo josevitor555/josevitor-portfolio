@@ -42,3 +42,4 @@ Enfim, esse portfólio é só uma ponte da faculdade para o mercado de trabalho,
 falando mal de alguém ou stack na sessão de artigos.
 
 E caso você queira ver o livedemo estar aqui (Lembrando que alguns projetos e artigos são fictícios, só servem para enfeito mesmo): https://josevitor-portfolio.onrender.com/
+Pois ainda estar em fase de desenvolvimento e com tempo eu posso criar um sistema de autenticação com MongoDB ou Firebase Auth.
