@@ -23,7 +23,7 @@ const AudioPlayer = ({ isPlaying }:AudioPlayerProps) => {
   }, [isPlaying]);
 
   return (
-    <audio ref={audioRef} src="/audios/lofi.mp3" />
+    <audio ref={audioRef} src="/audios/space.mp3" />
   );
 };
 
