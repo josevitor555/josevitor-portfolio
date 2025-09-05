@@ -11,7 +11,7 @@ interface BannerProps {
   setIsPlaying: (playing: boolean) => void;
 }
 
-const Banner = ({ isPlaying, setIsPlaying }:BannerProps) => {
+const Banner = ({ isPlaying, setIsPlaying }: BannerProps) => {
   // const [showChangelogNotification, setShowChangelogNotification] = useState(true);
 
   // const handleCloseChangelog = () => {
@@ -34,7 +34,7 @@ const Banner = ({ isPlaying, setIsPlaying }:BannerProps) => {
 
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
-        {[...Array(40)].map((_, i) => (
+        {[...Array(60)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-white/80 rounded-full"
@@ -116,7 +116,7 @@ const Banner = ({ isPlaying, setIsPlaying }:BannerProps) => {
               whileTap={{ scale: 0.95 }}
             >
               <Download size={20} />
-              Baixar CV
+              Baixar Currículo
             </motion.button>
           </motion.div>
 

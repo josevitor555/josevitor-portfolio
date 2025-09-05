@@ -48,8 +48,8 @@ const Contact = () => {
                     success: true,
                     message: "Sua mensagem foi enviada com sucesso!",
                 });
-                formElement.reset(); // limpa inputs
-                setFormData({ name: "", email: "", subject: "", message: "" }); // limpa estados
+                formElement.reset();
+                setFormData({ name: "", email: "", subject: "", message: "" });
             } else {
                 setSubmitStatus({
                     success: false,
@@ -132,7 +132,7 @@ const Contact = () => {
                     </p>
                 </motion.div>
 
-                <div className="grid lg:grid-cols-2 gap-12">
+                <div className="grid lg:grid-cols-2 gap-14">
                     {/* Contact form */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
@@ -166,7 +166,7 @@ const Contact = () => {
                                             value={formData.name}
                                             onChange={handleChange}
                                             required
-                                            className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-colors text-foreground placeholder-muted-foreground"
+                                            className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-colors text-foreground placeholder-muted-foreground"
                                             placeholder="Seu nome"
                                         />
                                     </div>
@@ -181,7 +181,7 @@ const Contact = () => {
                                             value={formData.email}
                                             onChange={handleChange}
                                             required
-                                            className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-colors text-foreground placeholder-muted-foreground"
+                                            className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-colors text-foreground placeholder-muted-foreground"
                                             placeholder="seu.email@exemplo.com"
                                         />
                                     </div>
@@ -198,7 +198,7 @@ const Contact = () => {
                                         value={formData.subject}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-colors text-foreground placeholder-muted-foreground"
+                                        className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-colors text-foreground placeholder-muted-foreground"
                                         placeholder="Sobre o que é?"
                                     />
                                 </div>
@@ -214,7 +214,7 @@ const Contact = () => {
                                         onChange={handleChange}
                                         required
                                         rows={6}
-                                        className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-colors text-foreground placeholder-muted-foreground resize-none"
+                                        className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-colors text-foreground placeholder-muted-foreground resize-none"
                                         placeholder="Fale-me sobre sua mensagem..."
                                     />
                                 </div>
@@ -264,7 +264,7 @@ const Contact = () => {
                                         <div className="w-12 h-12 bg-accent-primary/20 rounded-lg flex items-center justify-center group-hover:bg-accent-primary/30 transition-colors">
                                             <info.icon className="w-6 h-6 text-accent-primary" />
                                         </div>
-                                        <div>
+                                        <div className="border-l-2 border-border pl-4">
                                             <div className="text-sm text-muted-foreground">{info.title}</div>
                                             <div className="font-medium text-foreground">{info.value}</div>
                                         </div>

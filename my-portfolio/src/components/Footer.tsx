@@ -45,7 +45,10 @@ const Footer = () => {
                 </div>
 
                 <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
-                    <p>&copy; {currentYear} José Vitor. Todos os direitos reservados.</p>
+                    <p>&copy; {currentYear} josevitor555. Todos os direitos reservados.</p>
+
+                    {/* In developement */}
+                    <p className="mt-2">Ainda em Fase de Desenvolvimento. Algumas funcionalidades podem não estar disponíveis.</p>
                 </div>
             </div>
         </footer>

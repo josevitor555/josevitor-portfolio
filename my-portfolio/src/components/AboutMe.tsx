@@ -149,15 +149,15 @@ const AboutMe = () => {
                                 Com o passar dos anos, trabalho em projetos não apenas pessoais, mas também com outras pessoas como colegas e professores. Isso me proporciona o conhecimento prático necessário para continuar atuando na área em desenvolvimento de software.
                             </p>
                             <div className="flex flex-wrap gap-4 pt-4">
-                                <div className="text-center">
+                                <div className="text-center border border-white/10 rounded-xl p-4">
                                     <div className="text-2xl font-bold text-accent-primary">50+</div>
                                     <div className="text-sm text-gray-400">Projetos Concluídos</div>
                                 </div>
-                                <div className="text-center">
+                                <div className="text-center border border-white/10 rounded-xl p-4">
                                     <div className="text-2xl font-bold text-accent-primary">5+</div>
                                     <div className="text-sm text-gray-400">Anos de Experiência</div>
                                 </div>
-                                <div className="text-center">
+                                <div className="text-center border border-white/10 rounded-xl p-4">
                                     <div className="text-2xl font-bold text-accent-primary">25+</div>
                                     <div className="text-sm text-gray-400">Clientes Satisfeitos</div>
                                 </div>
@@ -178,7 +178,10 @@ const AboutMe = () => {
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="text-center">
                                     <img src="https://i.pinimg.com/736x/69/8d/99/698d99ca1e2b367d426e445fa51d3824.jpg" alt="Profile photo" className="w-80 h-80 rounded-lg mx-auto mb-4 object-cover" />
-                                    <p className="text-gray-400">Foto de Perfil</p>
+                                    <div className="flex flex-col items-center">
+                                        <p className="text-gray-400 mb-2"> Foto de Perfil </p>
+                                        <div className="w-16 h-1 bg-white rounded-full"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -9,8 +9,8 @@ const AudioPlayer = ({ isPlaying }:AudioPlayerProps) => {
 
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.volume = 0.1; // Volume baixo
-      audioRef.current.loop = true; // Tocar em loop
+      audioRef.current.volume = 0.1;
+      audioRef.current.loop = true;
 
       if (isPlaying) {
         audioRef.current.play().catch(error => {
