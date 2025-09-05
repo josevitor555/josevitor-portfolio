@@ -40,3 +40,7 @@ Enfim, esse portfólio é só uma ponte da faculdade para o mercado de trabalho,
 falando mal de alguém ou stack na sessão de artigos.
 
 Link para o live demo: https://josevitor-portfolio.onrender.com/
+
+Observação importante: Todos esses projetos e artigos são dados ficitícios, ou seja,
+não desenvolvi nenhum projeto real ou artigo, apenas alguns para fins de aprendizado e portfólio.
+No entanto, vou adaptar o portfólio para refletir minhas experiências reais e projetos reais.
