@@ -44,3 +44,6 @@ Link para o live demo: https://josevitor-portfolio.onrender.com/
 Observação importante: Todos esses projetos e artigos são dados ficitícios, ou seja,
 não desenvolvi nenhum projeto real ou artigo, apenas alguns para fins de aprendizado e portfólio.
 No entanto, vou adaptar o portfólio para refletir minhas experiências reais e projetos reais.
+
+Observação 2: O formulário de contato ainda estar em desenvolvimento, portanto,
+não será possível você enviar mensagens por meio dele.
