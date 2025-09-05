@@ -12,6 +12,7 @@ const Navigation = () => {
     // States
     const [isOpen, setIsOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
+    const [isScrolled, setIsScrolled] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -28,17 +29,24 @@ const Navigation = () => {
     ];
 
     useEffect(() => {
-        if (!isHomePage) return;
-
         const handleScroll = () => {
-            const sections = navItems.map(item => document.getElementById(item.id));
-            const scrollPosition = window.scrollY + 100;
+            const scrollY = window.scrollY;
+            const scrollThreshold = 80;
+            
+            // Update scroll state for header animation
+            setIsScrolled(scrollY > scrollThreshold);
+            
+            // Handle section highlighting only on home page
+            if (isHomePage) {
+                const sections = navItems.map(item => document.getElementById(item.id));
+                const scrollPosition = scrollY + 100;
 
-            for (let i = sections.length - 1; i >= 0; i--) {
-                const section = sections[i];
-                if (section && section.offsetTop <= scrollPosition) {
-                    setActiveSection(navItems[i].id);
-                    break;
+                for (let i = sections.length - 1; i >= 0; i--) {
+                    const section = sections[i];
+                    if (section && section.offsetTop <= scrollPosition) {
+                        setActiveSection(navItems[i].id);
+                        break;
+                    }
                 }
             }
         };
@@ -62,15 +70,45 @@ const Navigation = () => {
     // Here handle SignOut
     // ...
 
+    // Animation variants for header scroll response
+    const getHeaderStyle = () => {
+        if (isScrolled) {
+            return {
+                top: "1.5rem", // top-2 (8px)
+                left: "1.5rem", // inset-x-2 (8px)
+                right: "1.5rem",
+                borderRadius: "1rem", // rounded-xl (12px)
+            };
+        }
+        return {
+            top: "1.5rem", // top-6 (24px)
+            left: "1.5rem", // inset-x-6 (24px)
+            right: "1.5rem",
+            borderRadius: "1rem", // rounded-2xl (16px)
+        };
+    };
+
     return (
         <motion.nav
             initial={{ y: -100 }}
-            animate={{ y: 0 }}
-            className="fixed top-6 inset-x-6 z-50 bg-white/[0.05] backdrop-blur-3xl rounded-2xl border border-white/[0.3] shadow-lg"
+            animate={{
+                y: 0,
+                ...getHeaderStyle()
+            }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="fixed z-50 bg-white/[0.05] backdrop-blur-3xl border border-white/[0.3] shadow-lg"
         >
 
             <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-16">
+                <motion.div 
+                    className="flex justify-between items-center"
+                    animate={{
+                        height: isScrolled ? "3.5rem" : "4rem", // h-14 vs h-16
+                        paddingTop: isScrolled ? "0.75rem" : "1rem",
+                        paddingBottom: isScrolled ? "0.75rem" : "1rem"
+                    }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                >
                     <motion.div
                         className="text-xl font-bold gradient-text"
                         whileHover={{ scale: 1.05 }}
@@ -85,10 +123,11 @@ const Navigation = () => {
                                 <motion.button
                                     key={item.id}
                                     onClick={() => scrollToSection(item.id)}
-                                    className={`px-3 py-2 text-base cursor-pointer font-medium transition-colors duration-200 ${activeSection === item.id
-                                        ? 'text-accent-primary'
-                                        : 'text-gray-300 hover:text-white'
-                                        }`}
+                                    className={`px-3 py-2 text-base cursor-pointer font-medium transition-colors duration-200 ${
+                                        activeSection === item.id
+                                            ? 'text-accent-primary'
+                                            : 'text-gray-300 hover:text-white'
+                                    }`}
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
@@ -125,7 +164,7 @@ const Navigation = () => {
 
                         </motion.button>
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Mobile Navigation Menu */}
                 <AnimatePresence>
@@ -141,10 +180,11 @@ const Navigation = () => {
                                     <motion.button
                                         key={item.id}
                                         onClick={() => scrollToSection(item.id)}
-                                        className={`block w-full text-left px-3 py-2 text-lg font-medium transition-colors duration-200 ${activeSection === item.id
-                                            ? 'text-accent-primary'
-                                            : 'text-gray-300 hover:text-white'
-                                            }`}
+                                        className={`block w-full text-left px-3 py-2 text-lg font-medium transition-colors duration-200 ${
+                                            activeSection === item.id
+                                                ? 'text-accent-primary'
+                                                : 'text-gray-300 hover:text-white'
+                                        }`}
                                         whileHover={{ x: 10 }}
                                     >
                                         {item.label}
