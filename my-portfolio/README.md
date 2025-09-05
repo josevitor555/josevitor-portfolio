@@ -6,8 +6,6 @@ aqui, compartilho não somente meus projetos como também estou em tornando  um 
 #### Imagem do banner
 <img width="959" height="455" alt="Captura de tela 2025-09-03 211033" src="https://github.com/user-attachments/assets/1bc3f1a4-4405-4452-9944-a1624f09aa67" />
 
----
-
 ### Sobre as sessões:
 
 Aqui, vou compartilhar quais sessões e dizer o que elas são
@@ -24,7 +22,7 @@ demandada por um professor, cobrindo toda a arquitetura de um CRUD básico
 
 #### 3. Projetos
 Nesta sessão, venho compartilhando alguns dos projetos tanto pessoais como em conjunto com outras pesssoas,
-desde aqueles que já estão a muito tempo até os mais recentes (Featured).
+desde aqueles que já estão a muito tempo até os mais recenets (Featured)
 
 #### 4. Artigos
 Aqui não só me destaco como desenvolvedor, mas sim como escritor que ainda estar engatinhando e colocando as minhas
@@ -40,6 +38,3 @@ E ao lado direito, minhas informações como emaill, telefone e localização - 
 ### Conclusão
 Enfim, esse portfólio é só uma ponte da faculdade para o mercado de trabalho, mas não somente isso como também compartilho algumas experiências,
 falando mal de alguém ou stack na sessão de artigos.
-
-E caso você queira ver o livedemo estar aqui (Lembrando que alguns projetos e artigos são fictícios, só servem para enfeito mesmo): https://josevitor-portfolio.onrender.com/
-Pois ainda estar em fase de desenvolvimento e com tempo eu posso criar um sistema de autenticação com MongoDB ou Firebase Auth.
