@@ -33,8 +33,7 @@ Uma timeline interativa (accordion) destacando as empresas e profissionais com q
 Formulário destinado a mensagens personalizadas, onde é possível enviar nome, e-mail, assunto e conteúdo da mensagem. Ao lado, são exibidas minhas informações de contato, como e-mail, telefone e localização, para facilitar a comunicação e oportunidades.
 
 ### Conclusão
-Enfim, esse portfólio é só uma ponte da faculdade para o mercado de trabalho, mas não somente isso como também compartilho algumas experiências,
-falando mal de alguém ou stack na sessão de artigos.
+Este portfólio é uma ponte entre a universidade e o mercado de trabalho. Além de apresentar projetos e experiências, também serve como espaço de compartilhamento de ideias, aprendizados e reflexões sobre tecnologia.
 
 ---
 
