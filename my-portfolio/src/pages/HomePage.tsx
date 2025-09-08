@@ -1,16 +1,14 @@
 // Shadcn components
 
-// import './index.css'
-
 // Components
 import Navigation from "@/components/Navigation";
 import Banner from "@/components/Banner";
 import AboutMe from "@/components/AboutMe";
 import Projects from "@/components/Projects";
-import Articles from "@/components/Articles";
 import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import FigmaDesigns from "@/components/FigmaDesign";
 
 // Pages
 
@@ -29,7 +27,7 @@ const HomePage: React.FC<HomePageProps> = ({ isPlaying, setIsPlaying }) => {
                 <Banner isPlaying={isPlaying} setIsPlaying={setIsPlaying} />
                 <AboutMe />
                 <Projects />
-                <Articles />
+                <FigmaDesigns />
                 <Experience />
                 <Contact />
                 <Footer />

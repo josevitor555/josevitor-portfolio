@@ -60,7 +60,7 @@ const SkillCard = ({ icon: Icon, title, description, technologies, index }: Skil
             </motion.div>
 
             <h3 className="text-xl font-semibold mb-2 relative z-10">{title}</h3>
-            <p className="text-gray-400 text-sm mb-4 relative z-10">{description}</p>
+            <p className="text-gray-100 text-sm mb-4 relative z-10">{description}</p>
 
             <div className="flex flex-wrap gap-1 relative z-10">
                 {technologies.map((tech, techIndex) => (
@@ -101,8 +101,8 @@ const AboutMe = () => {
         {
             icon: Brain,
             title: 'Desenvolvimento de IA',
-            description: 'Desenvolvo soluções de inteligência artificial e aprendizado de máquina com Python, TensorFlow, PyTorch e OpenAI.',
-            technologies: ['Python', 'TensorFlow', 'PyTorch', 'OpenAI', 'Langchain']
+            description: 'Desenvolvo soluções de assistentes inteligentes com IA e APIs da OpenAI e Google Gemini em aplicações web.',
+            technologies: ['Python', 'Gemini', 'OpenAI', 'N8N Automation', 'JavScript']
         }
     ];
 
@@ -158,7 +158,7 @@ const AboutMe = () => {
                                     <div className="text-sm text-gray-400">Anos de Experiência</div>
                                 </div>
                                 <div className="text-center border border-white/10 rounded-xl p-4">
-                                    <div className="text-2xl font-bold text-accent-primary">25+</div>
+                                    <div className="text-2xl font-bold text-accent-primary">25</div>
                                     <div className="text-sm text-gray-400">Clientes Satisfeitos</div>
                                 </div>
                             </div>

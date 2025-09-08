@@ -26,7 +26,7 @@ const Banner = ({ isPlaying, setIsPlaying }: BannerProps) => {
 
   const handleAudioToggle = () => {
     setIsPlaying(!isPlaying);
-    
+
     // Show music notification when starting to play
     if (!isPlaying) {
       setShowMusicNotification(true);
