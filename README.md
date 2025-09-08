@@ -4,7 +4,8 @@ Durante algum tempo, de lá pra cá, pensei serialmente em construir um portfól
 aqui, compartilho não somente meus projetos como também estou em tornando  um escritor pouco-a-pouco, treinando para o tcc claro (hehe).
 
 #### Imagem do banner
-<img width="959" height="455" alt="Captura de tela 2025-09-03 211033" src="https://github.com/user-attachments/assets/1bc3f1a4-4405-4452-9944-a1624f09aa67" />
+<img width="956" height="455" alt="Captura de tela 2025-09-05 181654" src="https://github.com/user-attachments/assets/132f1e3f-f4c6-4e44-b802-b464b38071c1" />
+
 
 ### Sobre as sessões:
 
