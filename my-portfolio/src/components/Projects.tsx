@@ -197,7 +197,7 @@ const Projects = () => {
                     className="text-center mt-12"
                 >
                     <motion.a
-                        href="#"
+                        href="https://github.com/josevitor555"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-6 py-3 border border-accent-primary text-accent-primary hover:bg-accent-primary hover:text-white font-medium rounded-lg transition-all duration-200"

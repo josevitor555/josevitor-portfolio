@@ -22,7 +22,7 @@ const Footer = () => {
                         >
                             José Vitor
                         </motion.div>
-                        <p className="text-gray-400 text-sm">
+                        <p className="text-white text-sm">
                             Desenvolvedor Front-End Pleno apaixonado por criar experiências digitais incríveis.
                         </p>
                     </div>
@@ -45,10 +45,10 @@ const Footer = () => {
                 </div>
 
                 <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
-                    <p>&copy; {currentYear} josevitor555. Todos os direitos reservados.</p>
+                    <p className='text-sm text-white'>&copy; {currentYear} josevitor555. Todos os direitos reservados.</p>
 
                     {/* In developement */}
-                    <p className="mt-2">Ainda em Fase de Desenvolvimento. Algumas funcionalidades podem não estar disponíveis.</p>
+                    <p className="mt-2 text-sm text-white">Ainda em Fase de Desenvolvimento. Algumas funcionalidades podem não estar disponíveis.</p>
                 </div>
             </div>
         </footer>

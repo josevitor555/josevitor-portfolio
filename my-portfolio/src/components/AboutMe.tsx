@@ -102,7 +102,7 @@ const AboutMe = () => {
             icon: Brain,
             title: 'Desenvolvimento de IA',
             description: 'Desenvolvo soluções de assistentes inteligentes com IA e APIs da OpenAI e Google Gemini em aplicações web.',
-            technologies: ['Python', 'Gemini', 'OpenAI', 'N8N Automation', 'JavScript']
+            technologies: ['Python', 'Gemini', 'OpenAI', 'N8N Automation', 'JavaScript']
         }
     ];
 
@@ -150,7 +150,7 @@ const AboutMe = () => {
                             </p>
                             <div className="flex flex-wrap gap-4 pt-4">
                                 <div className="text-center border border-white/10 rounded-xl p-4">
-                                    <div className="text-2xl font-bold text-accent-primary">50+</div>
+                                    <div className="text-2xl font-bold text-accent-primary">10+</div>
                                     <div className="text-sm text-gray-400">Projetos Concluídos</div>
                                 </div>
                                 <div className="text-center border border-white/10 rounded-xl p-4">
@@ -158,8 +158,8 @@ const AboutMe = () => {
                                     <div className="text-sm text-gray-400">Anos de Experiência</div>
                                 </div>
                                 <div className="text-center border border-white/10 rounded-xl p-4">
-                                    <div className="text-2xl font-bold text-accent-primary">25</div>
-                                    <div className="text-sm text-gray-400">Clientes Satisfeitos</div>
+                                    <div className="text-2xl font-bold text-accent-primary">50+</div>
+                                    <div className="text-sm text-gray-400">Seguidores no LinkedIn</div>
                                 </div>
                             </div>
                         </div>

@@ -23,7 +23,7 @@ const Navigation = () => {
         { id: 'home', label: 'Início' },
         { id: 'about', label: 'Sobre' },
         { id: 'projects', label: 'Projetos' },
-        { id: 'articles', label: 'Artigos' },
+        { id: 'figma', label: 'Figma' },
         { id: 'experience', label: 'Experiência' },
         { id: 'contact', label: 'Contato' },
     ];
@@ -96,7 +96,7 @@ const Navigation = () => {
                 ...getHeaderStyle()
             }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed z-50 bg-white/[0.05] backdrop-blur-3xl border border-white/[0.3] shadow-lg"
+            className="fixed z-50 bg-white/[0.05] backdrop-blur-3xl border border-white/[0.3]"
         >
 
             <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">

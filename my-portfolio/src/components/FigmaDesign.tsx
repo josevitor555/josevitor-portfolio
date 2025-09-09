@@ -105,7 +105,7 @@ const FigmaDesigns = () => {
     };
 
     return (
-        <section id="articles" className='py-20 bg-dark-200/50'>
+        <section id="figma" className='py-20 bg-dark-200/50'>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -149,7 +149,6 @@ const FigmaDesigns = () => {
                                         src={design.image}
                                         alt={design.title}
                                         className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
-                                    {/* <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div> */}
                                     {design.featured && (
                                         <div className="absolute top-4 left-4 px-2 py-1 bg-white text-gray-950 text-xs font-medium rounded">
                                             Em Destaque
@@ -181,7 +180,7 @@ const FigmaDesigns = () => {
 
                                     <div className="flex flex-wrap gap-2 mb-6">
                                         {design.tags.map((tag, index) => (
-                                            <span 
+                                            <span
                                                 key={index}
                                                 className="px-2 py-1 bg-accent-primary/20 text-accent-primary text-xs rounded-full border border-accent-primary/30"
                                             >
