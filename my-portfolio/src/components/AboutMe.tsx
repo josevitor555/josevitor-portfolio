@@ -151,15 +151,19 @@ const AboutMe = () => {
                             <div className="flex flex-wrap gap-4 pt-4">
                                 <div className="text-center border border-white/10 rounded-xl p-4">
                                     <div className="text-2xl font-bold text-accent-primary">10+</div>
-                                    <div className="text-sm text-gray-400">Projetos Concluídos</div>
+                                    <div className="text-sm text-white">Projetos Concluídos</div>
                                 </div>
                                 <div className="text-center border border-white/10 rounded-xl p-4">
                                     <div className="text-2xl font-bold text-accent-primary">5+</div>
-                                    <div className="text-sm text-gray-400">Anos de Experiência</div>
+                                    <div className="text-sm text-white">Anos de Experiência</div>
                                 </div>
                                 <div className="text-center border border-white/10 rounded-xl p-4">
                                     <div className="text-2xl font-bold text-accent-primary">50+</div>
-                                    <div className="text-sm text-gray-400">Seguidores no LinkedIn</div>
+                                    <div className="text-sm text-white">Seguidores no LinkedIn</div>
+                                </div>
+                                <div className="text-center border border-white/10 rounded-xl p-4">
+                                    <div className="text-2xl font-bold text-accent-primary">50+</div>
+                                    <div className="text-sm text-white">Seguidores no GitHub</div>
                                 </div>
                             </div>
                         </div>
