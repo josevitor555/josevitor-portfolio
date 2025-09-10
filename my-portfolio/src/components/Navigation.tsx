@@ -74,16 +74,16 @@ const Navigation = () => {
     const getHeaderStyle = () => {
         if (isScrolled) {
             return {
-                top: "1.5rem", // top-2 (8px)
-                left: "1.5rem", // inset-x-2 (8px)
+                top: "1.5rem", // top-6 (24px)
+                left: "1.5rem", // inset-x-6 (24px)
                 right: "1.5rem",
                 borderRadius: "1rem", // rounded-xl (12px)
             };
         }
         return {
             top: "1.5rem", // top-6 (24px)
-            left: "1.5rem", // inset-x-6 (24px)
-            right: "1.5rem",
+            left: "0.5rem", // inset-x-2 (8px) - wider when not scrolled
+            right: "0.5rem",
             borderRadius: "1rem", // rounded-2xl (16px)
         };
     };
