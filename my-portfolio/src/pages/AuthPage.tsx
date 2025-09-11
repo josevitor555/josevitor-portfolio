@@ -184,7 +184,7 @@ const AuthPage = ({ isModal = false, onClose }: AuthPageProps) => {
                             setError(null);
                             setMessage(null);
                         }}
-                        className="text-accent-primary hover:text-accent-secondary transition-colors duration-200"
+                        className="text-accent-primary hover:text-accent-secondary transition-colors duration-200 cursor-pointer"
                     >
                         {isSignUp 
                             ? (t('auth.alreadyHaveAccount') || 'Already have an account? Sign in') 

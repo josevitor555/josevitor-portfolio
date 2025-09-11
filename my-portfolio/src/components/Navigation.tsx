@@ -1,5 +1,5 @@
 // Imports
-import { Menu, X, LogOut, LogIn, ChevronDown, Globe } from 'lucide-react';
+import { Menu, X, LogOut, ChevronDown, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useEffect, useState, useRef } from 'react';
@@ -349,7 +349,7 @@ const Navigation = () => {
                 </AnimatePresence>
             </div>
         </motion.nav>
-    )
+    );
 }
 
 export default Navigation
