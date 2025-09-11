@@ -37,6 +37,80 @@ export const translations: TranslationData = {
     en: 'Login'
   },
 
+  // Authentication Section
+  'auth.createAccount': {
+    pt: 'Criar Conta',
+    en: 'Create Account'
+  },
+  'auth.welcomeBack': {
+    pt: 'Bem-vindo de Volta',
+    en: 'Welcome Back'
+  },
+  'auth.joinCommunity': {
+    pt: 'Junte-se à comunidade',
+    en: 'Join the community'
+  },
+  'auth.signInToContinue': {
+    pt: 'Entre para continuar',
+    en: 'Sign in to continue'
+  },
+  'auth.name': {
+    pt: 'Nome',
+    en: 'Name'
+  },
+  'auth.namePlaceholder': {
+    pt: 'Seu nome completo',
+    en: 'Your full name'
+  },
+  'auth.email': {
+    pt: 'E-mail',
+    en: 'Email'
+  },
+  'auth.emailPlaceholder': {
+    pt: 'seu.email@exemplo.com',
+    en: 'your.email@example.com'
+  },
+  'auth.password': {
+    pt: 'Senha',
+    en: 'Password'
+  },
+  'auth.passwordPlaceholder': {
+    pt: '••••••••',
+    en: '••••••••'
+  },
+  'auth.signIn': {
+    pt: 'Entrar',
+    en: 'Sign In'
+  },
+  'auth.signUp': {
+    pt: 'Cadastrar',
+    en: 'Sign Up'
+  },
+  'auth.loading': {
+    pt: 'Carregando...',
+    en: 'Loading...'
+  },
+  'auth.signupSuccess': {
+    pt: 'Conta criada com sucesso!',
+    en: 'Account created successfully!'
+  },
+  'auth.signinSuccess': {
+    pt: 'Bem-vindo de volta!',
+    en: 'Welcome back!'
+  },
+  'auth.error': {
+    pt: 'Algo deu errado. Tente novamente.',
+    en: 'Something went wrong. Please try again.'
+  },
+  'auth.alreadyHaveAccount': {
+    pt: 'Já tem uma conta? Entre',
+    en: 'Already have an account? Sign in'
+  },
+  'auth.dontHaveAccount': {
+    pt: 'Não tem uma conta? Cadastre-se',
+    en: "Don't have an account? Sign up"
+  },
+
   // Banner Section
   'banner.greeting': {
     pt: 'Olá, eu sou',

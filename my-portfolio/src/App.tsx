@@ -5,7 +5,9 @@ import { useState } from 'react';
 import { LanguageProvider } from './contexts/LanguageContext';
 
 // Pages
-import MyApp from './pages/HomePage'
+import MyApp from './pages/HomePage';
+import AuthPage from './pages/AuthPage';
+
 // import AuthPage from './pages/Auth'
 // import NotFoundPage from './pages/NotFoundPage'
 
@@ -21,7 +23,7 @@ const App = () => {
         <AudioPlayer isPlaying={isPlaying} />
         <Routes>
           <Route path="/" element={<MyApp isPlaying={isPlaying} setIsPlaying={setIsPlaying} />} />
-          {/* <Route path="/auth" element={<AuthPage />} /> */}
+          <Route path="/auth" element={<AuthPage />} />
 
           {/* Page not found */}
           {/* <Route path="*" element={<NotFoundPage />} /> */}

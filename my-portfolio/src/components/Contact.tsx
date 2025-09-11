@@ -300,7 +300,7 @@ const Contact = () => {
                                 {t('contact.workTogetherDesc')}
                             </p>
                             <div className="flex flex-wrap gap-2">
-                                {['React', 'TypeScript', 'Node.js', 'Python', 'AWS'].map((skill) => (
+                                {['React', 'TypeScript', 'JavaScript', 'Node.js', 'Python', 'MySQL', 'MongoDB'].map((skill) => (
                                     <Badge
                                         key={skill}
                                         variant="default"

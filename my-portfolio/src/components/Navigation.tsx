@@ -1,5 +1,5 @@
 // Imports
-import { Menu, X, LogOut, ChevronDown, Globe } from 'lucide-react';
+import { Menu, X, LogOut, LogIn, ChevronDown, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useEffect, useState, useRef } from 'react';
@@ -15,12 +15,17 @@ const Navigation = () => {
     const [activeSection, setActiveSection] = useState('home');
     const [isScrolled, setIsScrolled] = useState(false);
     const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
+
     const { language, setLanguage, t } = useLanguage();
+
     const navigate = useNavigate();
+
     const location = useLocation();
     const languageDropdownRef = useRef<HTMLDivElement>(null);
 
     const isHomePage = location.pathname === "/";
+
+    // const { user, signOut, loading } = useAuth();
 
     // Navigation items
     const navItems = [
@@ -86,6 +91,11 @@ const Navigation = () => {
     const handleLanguageChange = (newLanguage: 'pt' | 'en') => {
         setLanguage(newLanguage);
         setIsLanguageDropdownOpen(false);
+    };
+
+    const handleLoginClick = () => {
+        navigate('/auth');
+        setIsOpen(false); // Close mobile menu if open
     };
 
     const languageOptions = [
@@ -154,8 +164,8 @@ const Navigation = () => {
                                     key={item.id}
                                     onClick={() => scrollToSection(item.id)}
                                     className={`px-3 py-2 text-base cursor-pointer font-medium transition-colors duration-200 ${activeSection === item.id
-                                            ? 'text-accent-primary'
-                                            : 'text-gray-300 hover:text-white'
+                                        ? 'text-accent-primary'
+                                        : 'text-gray-300 hover:text-white'
                                         }`}
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
@@ -166,6 +176,7 @@ const Navigation = () => {
 
                             {/* Button Sign In */}
                             <motion.button
+                                onClick={handleLoginClick}
                                 className="px-4 py-2 text-sm font-medium cursor-pointer bg-gray-100 text-black rounded-full flex items-center gap-2"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
@@ -203,15 +214,15 @@ const Navigation = () => {
                                             animate={{ opacity: 1, y: 0, scale: 1 }}
                                             exit={{ opacity: 0, y: -10, scale: 0.95 }}
                                             transition={{ duration: 0.2 }}
-                                            className="absolute top-14 right-0 mt-2 w-40 bg-white/[0.05] backdrop-blur-3xl border border-white/[0.3] rounded-lg shadow-lg z-50"
+                                            className="absolute top-14 right-0 mt-2 w-40 bg-white/[0.05] backdrop-blur-3xl border border-white/[0.3] rounded-sm shadow-lg z-50"
                                         >
                                             {languageOptions.map((languageOption) => (
                                                 <motion.button
                                                     key={languageOption.code}
                                                     onClick={() => handleLanguageChange(languageOption.code)}
                                                     className={`w-full flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg hover:bg-white/[0.1] ${language === languageOption.code
-                                                            ? 'text-accent-primary bg-white/[0.05]'
-                                                            : 'text-gray-300 hover:text-white'
+                                                        ? 'text-accent-primary bg-white/[0.05]'
+                                                        : 'text-gray-300 hover:text-white'
                                                         }`}
                                                     whileHover={{ x: 4 }}
                                                 >
@@ -262,8 +273,8 @@ const Navigation = () => {
                                         key={item.id}
                                         onClick={() => scrollToSection(item.id)}
                                         className={`block w-full text-left px-3 py-2 text-lg font-medium transition-colors duration-200 ${activeSection === item.id
-                                                ? 'text-accent-primary'
-                                                : 'text-gray-300 hover:text-white'
+                                            ? 'text-accent-primary'
+                                            : 'text-gray-300 hover:text-white'
                                             }`}
                                         whileHover={{ x: 10 }}
                                     >
@@ -304,8 +315,8 @@ const Navigation = () => {
                                                         key={languageOption.code}
                                                         onClick={() => handleLanguageChange(languageOption.code)}
                                                         className={`w-full flex items-center gap-3 px-4 py-3 text-lg font-medium transition-colors duration-200 hover:bg-white/[0.1] ${language === languageOption.code
-                                                                ? 'text-accent-primary bg-white/[0.05]'
-                                                                : 'text-gray-300 hover:text-white'
+                                                            ? 'text-accent-primary bg-white/[0.05]'
+                                                            : 'text-gray-300 hover:text-white'
                                                             }`}
                                                         whileHover={{ x: 8 }}
                                                     >
@@ -325,6 +336,7 @@ const Navigation = () => {
                                 </div>
 
                                 <motion.button
+                                    onClick={handleLoginClick}
                                     className="w-full text-left px-3 py-2 text-lg font-medium cursor-pointer bg-gray-100 text-black rounded-full flex items-center justify-center gap-2 mt-4"
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
