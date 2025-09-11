@@ -5,6 +5,7 @@ import { Github, Linkedin, Mail, Download, ChevronDown, Volume2, VolumeX } from 
 import Comp412 from './ui/comp-412';
 import Comp296 from './ui/com-296'; // Using existing component
 import { useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 // import React, { useState } from 'react';
 
@@ -17,6 +18,7 @@ const Banner = ({ isPlaying, setIsPlaying }: BannerProps) => {
 
   // States
   const [showMusicNotification, setShowMusicNotification] = useState(false);
+  const { t } = useLanguage();
 
   // Music information
   const currentTrack = {
@@ -106,15 +108,15 @@ const Banner = ({ isPlaying, setIsPlaying }: BannerProps) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Olá, eu sou{' '}
-              <span className="text-gray-100"> José Vitor </span>
+              {t('banner.greeting')}{' '}
+              <span className="text-gray-100"> {t('banner.name')} </span>
 
               <motion.button
                 onClick={handleAudioToggle} // Updated to use new handler
                 className="ml-2 p-1 rounded-full text-gray-400 hover:text-accent-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-75"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                aria-label={isPlaying ? 'Pausar música' : 'Tocar música'}
+                aria-label={isPlaying ? t('banner.pauseMusic') : t('banner.playMusic')}
               >
                 {isPlaying ? <Volume2 size={24} /> : <VolumeX size={24} />}
               </motion.button>
@@ -127,7 +129,7 @@ const Banner = ({ isPlaying, setIsPlaying }: BannerProps) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Desenvolvedor Web Pleno, apaixonado por criar experiências digitais bonitas, funcionais e centradas no usuário.
+              {t('banner.description')}
             </motion.p>
 
             {/* Buttons */}
@@ -143,7 +145,7 @@ const Banner = ({ isPlaying, setIsPlaying }: BannerProps) => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Ver Meus Projetos
+                {t('banner.viewProjects')}
               </motion.button>
 
               <motion.button
@@ -152,7 +154,7 @@ const Banner = ({ isPlaying, setIsPlaying }: BannerProps) => {
                 whileTap={{ scale: 0.95 }}
               >
                 <Download size={20} />
-                Baixar Currículo
+                {t('banner.downloadResume')}
               </motion.button>
             </motion.div>
 

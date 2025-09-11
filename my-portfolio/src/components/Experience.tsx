@@ -2,8 +2,11 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Briefcase, Calendar, MapPin } from 'lucide-react';
 import { Badge } from './ui/badge';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Experience = () => {
+
+    const { t } = useLanguage();
 
     // Open Accordion state
     const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -11,61 +14,61 @@ const Experience = () => {
     const experiences = [
         {
             id: 1,
-            company: 'TechCorp Solutions',
-            position: 'Desenvolvedor Full Stack Sênior',
-            duration: '2022 - Atualmente',
-            location: 'São Francisco, CA',
-            description: 'Liderando o desenvolvimento de aplicações web escaláveis utilizando React, Node.js e AWS. Orientando desenvolvedores juniores e arquitetando soluções de microsserviços para clientes corporativos.',
+            company: t('experience.company1'),
+            position: t('experience.position1'),
+            duration: t('experience.duration1'),
+            location: t('experience.location1'),
+            description: t('experience.description1'),
             highlights: [
-                'Liderei uma equipe de 5 desenvolvedores para entregar 3 grandes projetos antes do prazo',
-                'Melhorei o desempenho da aplicação em 40% através de estratégias de otimização',
-                'Implementei pipelines de CI/CD, reduzindo o tempo de implantação em 60%',
-                'Arquitei microsserviços lidando com mais de 1 milhão de requisições por dia'
+                t('experience.highlight1.1'),
+                t('experience.highlight1.2'),
+                t('experience.highlight1.3'),
+                t('experience.highlight1.4')
             ],
             technologies: ['React', 'Node.js', 'AWS', 'TypeScript', 'Docker', 'PostgreSQL']
         },
         {
             id: 2,
-            company: 'Startup Innovate',
-            position: 'Desenvolvedor Full Stack',
-            duration: '2020 - 2022',
-            location: 'Austin, TX',
-            description: 'Desenvolvi e mantive múltiplas aplicações voltadas para o cliente em um ambiente de startup acelerado. Colaborei diretamente com os clientes para entender os requisitos e entregar soluções.',
+            company: t('experience.company2'),
+            position: t('experience.position2'),
+            duration: t('experience.duration2'),
+            location: t('experience.location2'),
+            description: t('experience.description2'),
             highlights: [
-                'Construí 8 aplicações web personalizadas do zero',
-                'Reduzi o tempo de integração de clientes em 50% através de automação',
-                'Integrei mais de 15 APIs de terceiros e sistemas de pagamento',
-                'Estabeleci padrões de codificação e melhores práticas para a equipe'
+                t('experience.highlight2.1'),
+                t('experience.highlight2.2'),
+                t('experience.highlight2.3'),
+                t('experience.highlight2.4')
             ],
             technologies: ['Vue.js', 'Python', 'Django', 'MongoDB', 'Redis', 'Stripe API']
         },
         {
             id: 3,
-            company: 'Digital Agency Pro',
-            position: 'Desenvolvedor Frontend',
-            duration: '2019 - 2020',
-            location: 'Nova Iorque, NY',
-            description: 'Especializado na criação de websites responsivos e pixel-perfect para diversos clientes em diferentes indústrias. Trabalhei em estreita colaboração com designers para dar vida a visões criativas.',
+            company: t('experience.company3'),
+            position: t('experience.position3'),
+            duration: t('experience.duration3'),
+            location: t('experience.location3'),
+            description: t('experience.description3'),
             highlights: [
-                'Entreguei mais de 25 websites responsivos com 100% de satisfação do cliente',
-                'Implementei animações e interações avançadas usando GSAP',
-                'Otimizei websites alcançando pontuações acima de 90 no Google PageSpeed',
-                'Colaborei com a equipe de design para melhorar os fluxos de trabalho de UI/UX'
+                t('experience.highlight3.1'),
+                t('experience.highlight3.2'),
+                t('experience.highlight3.3'),
+                t('experience.highlight3.4')
             ],
             technologies: ['JavaScript', 'SCSS', 'GSAP', 'WordPress', 'jQuery', 'Bootstrap']
         },
         {
             id: 4,
-            company: 'FreelanceHub',
-            position: 'Desenvolvedor Web',
-            duration: '2018 - 2019',
-            location: 'Remoto',
-            description: 'Trabalhei como desenvolvedor web freelancer, ajudando pequenas empresas a estabelecer sua presença online através de websites personalizados e soluções de e-commerce.',
+            company: t('experience.company4'),
+            position: t('experience.position4'),
+            duration: t('experience.duration4'),
+            location: t('experience.location4'),
+            description: t('experience.description4'),
             highlights: [
-                'Completei mais de 30 projetos freelancer com avaliações 5 estrelas',
-                'Especializado em soluções de e-commerce usando Shopify e WooCommerce',
-                'Forneci manutenção e suporte contínuos para mais de 20 websites',
-                'Construí relacionamentos de longo prazo com clientes recorrentes'
+                t('experience.highlight4.1'),
+                t('experience.highlight4.2'),
+                t('experience.highlight4.3'),
+                t('experience.highlight4.4')
             ],
             technologies: ['HTML/CSS', 'JavaScript', 'PHP', 'Shopify', 'WooCommerce', 'MySQL']
         }
@@ -87,12 +90,12 @@ const Experience = () => {
                 >
 
                     <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                        Experiência <span className="gradient-text">Profissional</span>
+                        {t('experience.title')} <span className="gradient-text">{t('experience.titleHighlight')}</span>
                     </h2>
                     <div className="w-20 h-1 bg-white rounded-full mx-auto mb-8"></div>
 
                     <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                        Minha jornada como desenvolvedor, do trabalho freelancer à liderança de equipes em empresas inovadoras.
+                        {t('experience.subtitle')}
                     </p>
                 </motion.div>
 
@@ -160,10 +163,10 @@ const Experience = () => {
                                                 </p>
 
                                                 <div>
-                                                    <h4 className="text-sm font-medium text-white mb-2">Principais Conquistas:</h4>
+                                                    <h4 className="text-sm font-medium text-white mb-2">{t('experience.achievements')}</h4>
                                                     <ul className="space-y-1">
                                                         {experience.highlights.map((highlight, highlightIndex) => (
-                                                            <li key={highlightIndex} className="text-sm text-gray-400 flex items-start gap-2">
+                                                            <li key={highlightIndex} className="text-sm text-white flex items-start gap-2">
                                                                 <span className="w-1.5 h-1.5 bg-white rounded-full mt-2 flex-shrink-0"></span>
                                                                 {highlight}
                                                             </li>
@@ -172,7 +175,7 @@ const Experience = () => {
                                                 </div>
 
                                                 <div>
-                                                    <h4 className="text-sm font-medium text-white mb-2">Tecnologias Utilizadas:</h4>
+                                                    <h4 className="text-sm font-medium text-white mb-2">{t('experience.technologies')}</h4>
                                                     <div className="flex flex-wrap gap-2">
                                                         {experience.technologies.map((tech, techIndex) => (
                                                             <Badge
@@ -203,9 +206,9 @@ const Experience = () => {
                 >
 
                     <div className="glass-effect border border-gray-700/50 rounded-xl p-6">
-                        <h3 className="text-xl font-semibold mb-2">Interessado em Trabalhar Juntos?</h3>
-                        <p className="text-gray-400 mb-4">
-                            Estou sempre aberto a discutir novas oportunidades e projetos empolgantes.
+                        <h3 className="text-xl font-semibold mb-2">{t('experience.workTogether')}</h3>
+                        <p className="text-white mb-4">
+                            {t('experience.workTogetherDesc')}
                         </p>
                         <motion.button
                             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
@@ -213,7 +216,7 @@ const Experience = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            Vamos Conversar
+                            {t('experience.letsTalk')}
                         </motion.button>
                     </div>
                 </motion.div>

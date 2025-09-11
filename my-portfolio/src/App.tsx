@@ -2,6 +2,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import AudioPlayer from './components/AudioPlayer';
 import { useState } from 'react';
+import { LanguageProvider } from './contexts/LanguageContext';
 
 // Pages
 import MyApp from './pages/HomePage'
@@ -15,16 +16,18 @@ const App = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <Router>
-      <AudioPlayer isPlaying={isPlaying} />
-      <Routes>
-        <Route path="/" element={<MyApp isPlaying={isPlaying} setIsPlaying={setIsPlaying} />} />
-        {/* <Route path="/auth" element={<AuthPage />} /> */}
+    <LanguageProvider>
+      <Router>
+        <AudioPlayer isPlaying={isPlaying} />
+        <Routes>
+          <Route path="/" element={<MyApp isPlaying={isPlaying} setIsPlaying={setIsPlaying} />} />
+          {/* <Route path="/auth" element={<AuthPage />} /> */}
 
-        {/* Page not found */}
-        {/* <Route path="*" element={<NotFoundPage />} /> */}
-      </Routes>
-    </Router>
+          {/* Page not found */}
+          {/* <Route path="*" element={<NotFoundPage />} /> */}
+        </Routes>
+      </Router>
+    </LanguageProvider>
   );
 }
 

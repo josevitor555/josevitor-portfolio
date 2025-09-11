@@ -1,83 +1,86 @@
 // import React from 'react'
 import { motion } from 'framer-motion';
 import { Eye, Users, ArrowRight, Figma } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 
 const FigmaDesigns = () => {
 
-    // Some Figma designs
+    const { t } = useLanguage();
+
+    // Some Figma designs with translation keys
     const designs = [
         {
             id: 1,
-            title: 'E-commerce Mobile App Design',
-            excerpt: 'Design completo de aplicativo móvel para e-commerce com foco na experiência do usuário e conversão.',
+            titleKey: 'figma.design1.title',
+            descriptionKey: 'figma.design1.description',
             views: '2.1k',
             likes: '340',
-            category: 'Mobile App',
+            categoryKey: 'figma.category.mobileApp',
             image: 'https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/1a1a1a/3b82f6?text=E-commerce+App',
             figmaUrl: 'https://figma.com/design/example1',
             featured: true,
-            tags: ['Stripe Payment', 'Shopping Cart', 'Product Catalog', 'User Reviews', 'Wishlist']
+            tagKeys: ['figma.tag.stripePayment', 'figma.tag.shoppingCart', 'figma.tag.productCatalog', 'figma.tag.userReviews', 'figma.tag.wishlist']
         },
         {
             id: 2,
-            title: 'Dashboard Analytics SaaS',
-            excerpt: 'Interface moderna para dashboard de analytics com visualizações de dados complexas e interações intuitivas.',
+            titleKey: 'figma.design2.title',
+            descriptionKey: 'figma.design2.description',
             views: '1.8k',
             likes: '275',
-            category: 'Web App',
+            categoryKey: 'figma.category.webApp',
             image: 'https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/1a1a1a/8b5cf6?text=Analytics+Dashboard',
             figmaUrl: 'https://figma.com/design/example2',
             featured: true,
-            tags: ['Charts & Graphs', 'Real-time Data', 'KPI Metrics', 'Data Visualization', 'Export Reports']
+            tagKeys: ['figma.tag.chartsGraphs', 'figma.tag.realTimeData', 'figma.tag.kpiMetrics', 'figma.tag.dataVisualization', 'figma.tag.exportReports']
         },
         {
             id: 3,
-            title: 'Banking App Redesign',
-            excerpt: 'Redesign completo de aplicativo bancário focando em segurança, usabilidade e design moderno.',
+            titleKey: 'figma.design3.title',
+            descriptionKey: 'figma.design3.description',
             views: '3.2k',
             likes: '520',
-            category: 'Mobile App',
+            categoryKey: 'figma.category.mobileApp',
             image: 'https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/1a1a1a/10b981?text=Banking+App',
             figmaUrl: 'https://figma.com/design/example3',
             featured: false,
-            tags: ['Biometric Auth', 'Money Transfer', 'Transaction History', 'Security Features', 'Balance Overview']
+            tagKeys: ['figma.tag.biometricAuth', 'figma.tag.moneyTransfer', 'figma.tag.transactionHistory', 'figma.tag.securityFeatures', 'figma.tag.balanceOverview']
         },
         {
             id: 4,
-            title: 'Design System & Component Library',
-            excerpt: 'Sistema de design completo com biblioteca de componentes reutilizáveis para múltiplas plataformas.',
+            titleKey: 'figma.design4.title',
+            descriptionKey: 'figma.design4.description',
             views: '1.5k',
             likes: '180',
-            category: 'Design System',
+            categoryKey: 'figma.category.designSystem',
             image: 'https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/1a1a1a/f59e0b?text=Design+System',
             figmaUrl: 'https://figma.com/design/example4',
             featured: false,
-            tags: ['Design Tokens', 'Component Library', 'Style Guide', 'UI Kit', 'Documentation']
+            tagKeys: ['figma.tag.designTokens', 'figma.tag.componentLibrary', 'figma.tag.styleGuide', 'figma.tag.uiKit', 'figma.tag.documentation']
         },
         {
             id: 5,
-            title: 'Travel Booking Platform',
-            excerpt: 'Plataforma completa de reservas de viagem com busca avançada, filtros e processo de checkout otimizado.',
+            titleKey: 'figma.design5.title',
+            descriptionKey: 'figma.design5.description',
             views: '2.7k',
             likes: '410',
-            category: 'Web App',
+            categoryKey: 'figma.category.webApp',
             image: 'https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/1a1a1a/ef4444?text=Travel+Platform',
             figmaUrl: 'https://figma.com/design/example5',
             featured: false,
-            tags: ['Flight Search', 'Hotel Booking', 'Date Picker', 'Price Comparison', 'Trip Planning']
+            tagKeys: ['figma.tag.flightSearch', 'figma.tag.hotelBooking', 'figma.tag.datePicker', 'figma.tag.priceComparison', 'figma.tag.tripPlanning']
         },
         {
             id: 6,
-            title: 'Food Delivery App UI/UX',
-            excerpt: 'Interface intuitiva para app de delivery com foco na experiência de pedido rápido e acompanhamento em tempo real.',
+            titleKey: 'figma.design6.title',
+            descriptionKey: 'figma.design6.description',
             views: '1.9k',
             likes: '320',
-            category: 'Mobile App',
+            categoryKey: 'figma.category.mobileApp',
             image: 'https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/1a1a1a/a855f7?text=Food+Delivery',
             figmaUrl: 'https://figma.com/design/example6',
             featured: false,
-            tags: ['Order Tracking', 'Restaurant Menu', 'Food Categories', 'Delivery Timer', 'Rating System']
+            tagKeys: ['figma.tag.orderTracking', 'figma.tag.restaurantMenu', 'figma.tag.foodCategories', 'figma.tag.deliveryTimer', 'figma.tag.ratingSystem']
         }
     ];
 
@@ -97,11 +100,11 @@ const FigmaDesigns = () => {
     };
 
     const formatViews = (views: string) => {
-        return `${views} visualizações`;
+        return `${views} ${t('figma.views')}`;
     };
 
     const formatLikes = (likes: string) => {
-        return `${likes} curtidas`;
+        return `${likes} ${t('figma.likes')}`;
     };
 
     return (
@@ -116,12 +119,12 @@ const FigmaDesigns = () => {
                 >
 
                     <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                        Designs no <span className="gradient-text">Figma</span>
+                        {t('figma.title')} <span className="gradient-text">{t('figma.titleHighlight')}</span>
                     </h2>
                     <div className="w-20 h-1 bg-white rounded-full mx-auto mb-8"></div>
 
                     <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                        Explore meus projetos de design criados no Figma. Cada design representa uma solução criativa para problemas reais de UX/UI.
+                        {t('figma.subtitle')}
                     </p>
 
                 </motion.div>
@@ -147,15 +150,15 @@ const FigmaDesigns = () => {
                                 <div className="relative overflow-hidden">
                                     <img
                                         src={design.image}
-                                        alt={design.title}
+                                        alt={t(design.titleKey)}
                                         className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
                                     {design.featured && (
                                         <div className="absolute top-4 left-4 px-2 py-1 bg-white text-gray-950 text-xs font-medium rounded">
-                                            Em Destaque
+                                            {t('figma.featured')}
                                         </div>
                                     )}
                                     <div className="absolute top-4 right-4 px-2 py-1 bg-black/50 text-white text-xs rounded">
-                                        {design.category}
+                                        {t(design.categoryKey)}
                                     </div>
                                 </div>
 
@@ -172,19 +175,19 @@ const FigmaDesigns = () => {
                                     </div>
 
                                     <h3 className="text-xl font-semibold mb-3 group-hover:text-accent-primary transition-colors line-clamp-2">
-                                        {design.title}
+                                        {t(design.titleKey)}
                                     </h3>
                                     <p className="text-gray-100 text-sm mb-4 line-clamp-3">
-                                        {design.excerpt}
+                                        {t(design.descriptionKey)}
                                     </p>
 
                                     <div className="flex flex-wrap gap-2 mb-6">
-                                        {design.tags.map((tag, index) => (
+                                        {design.tagKeys.map((tagKey, index) => (
                                             <span
                                                 key={index}
                                                 className="px-2 py-1 bg-accent-primary/20 text-accent-primary text-xs rounded-full border border-accent-primary/30"
                                             >
-                                                {tag}
+                                                {t(tagKey)}
                                             </span>
                                         ))}
                                     </div>
@@ -193,7 +196,7 @@ const FigmaDesigns = () => {
                                         className="flex items-center gap-2 text-accent-primary font-medium text-sm group-hover:gap-3 transition-all duration-200"
                                         whileHover={{ x: 5 }}
                                     >
-                                        Ver no Figma
+                                        {t('figma.viewInFigma')}
                                         <ArrowRight size={14} />
                                     </motion.div>
                                 </div>
@@ -218,7 +221,7 @@ const FigmaDesigns = () => {
                             whileTap={{ scale: 0.95 }}
                         >
                             <Figma size={20} />
-                            Ver Perfil no Figma
+                            {t('figma.viewProfile')}
                         </motion.a>
 
                     </motion.div>

@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Code, Database, Globe, Brain } from 'lucide-react';
 import { Badge } from './ui/badge';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface SkillCardProps {
     icon: React.ElementType;
@@ -78,30 +79,32 @@ const SkillCard = ({ icon: Icon, title, description, technologies, index }: Skil
 
 const AboutMe = () => {
 
+    const { t } = useLanguage();
+
     // Skills
     const skills = [
         {
             icon: Code,
-            title: 'Desenvolvimento Frontend',
-            description: 'Desenvolvo aplicações web interativas e responsivas utilizando React, TypeScript, Next.js e Tailwind CSS.',
+            title: t('skills.frontend.title'),
+            description: t('skills.frontend.description'),
             technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Vue.js']
         },
         {
             icon: Database,
-            title: 'Desenvolvimento Backend',
-            description: 'Trabalho com a construção de APIs robustas e gerenciamento de bancos de dados utilizando Node.js, Python, PostgreSQL e MongoDB.',
+            title: t('skills.backend.title'),
+            description: t('skills.backend.description'),
             technologies: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB', 'Express.js']
         },
         {
             icon: Globe,
-            title: 'Designs no Figma',
-            description: 'Crio protótipos, designs de UI/UX e versões mobile utilizando Figma.',
+            title: t('skills.figma.title'),
+            description: t('skills.figma.description'),
             technologies: ['Prototype', 'UI/UX', 'Mobile First']
         },
         {
             icon: Brain,
-            title: 'Desenvolvimento de IA',
-            description: 'Desenvolvo soluções de assistentes inteligentes com IA e APIs da OpenAI e Google Gemini em aplicações web.',
+            title: t('skills.ai.title'),
+            description: t('skills.ai.description'),
             technologies: ['Python', 'Gemini', 'OpenAI', 'N8N Automation', 'JavaScript']
         }
     ];
@@ -128,7 +131,7 @@ const AboutMe = () => {
                 >
 
                     <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                        Sobre <span className="gradient-text">Mim</span>
+                        {t('about.title')} <span className="gradient-text">{t('about.titleHighlight')}</span>
                     </h2>
                     <div className="w-20 h-1 rounded-full bg-white mx-auto mb-0"></div>
 
@@ -143,27 +146,23 @@ const AboutMe = () => {
                     >
                         <div className="space-y-8">
                             <p className="text-lg text-gray-300 leading-relaxed">
-                                Sou um desenvolvedor web com 6 anos de experiência. Concluí um curso técnico em 2023, após a pandemia. Retomei meus estudos na área um ano depois, cursando Análise e Desenvolvimento de Sistemas na mesma instituição de ensino (IFPI). Prevista para ser encerrada em 2026.
+                                {t('about.description1')}
                             </p>
                             <p className="text-lg text-gray-300 leading-relaxed">
-                                Com o passar dos anos, trabalho em projetos não apenas pessoais, mas também com outras pessoas como colegas e professores. Isso me proporciona o conhecimento prático necessário para continuar atuando na área em desenvolvimento de software.
+                                {t('about.description2')}
                             </p>
                             <div className="flex flex-wrap gap-4 pt-4">
                                 <div className="text-center border border-white/10 rounded-xl p-4">
                                     <div className="text-2xl font-bold text-accent-primary">10+</div>
-                                    <div className="text-sm text-white">Projetos Concluídos</div>
+                                    <div className="text-sm text-white">{t('about.projectsCompleted')}</div>
                                 </div>
                                 <div className="text-center border border-white/10 rounded-xl p-4">
                                     <div className="text-2xl font-bold text-accent-primary">5+</div>
-                                    <div className="text-sm text-white">Anos de Experiência</div>
+                                    <div className="text-sm text-white">{t('about.yearsExperience')}</div>
                                 </div>
                                 <div className="text-center border border-white/10 rounded-xl p-4">
                                     <div className="text-2xl font-bold text-accent-primary">50+</div>
-                                    <div className="text-sm text-white">Seguidores no LinkedIn</div>
-                                </div>
-                                <div className="text-center border border-white/10 rounded-xl p-4">
-                                    <div className="text-2xl font-bold text-accent-primary">50+</div>
-                                    <div className="text-sm text-white">Seguidores no GitHub</div>
+                                    <div className="text-sm text-white">{t('about.githubFollowers')}</div>
                                 </div>
                             </div>
                         </div>
@@ -183,7 +182,7 @@ const AboutMe = () => {
                                 <div className="text-center">
                                     <img src="https://i.pinimg.com/736x/7c/4e/e1/7c4ee174cd776bab0ef7915e6e12c079.jpg" alt="Profile photo" className="w-80 h-80 rounded-lg mx-auto mb-4 object-cover" />
                                     <div className="flex flex-col items-center">
-                                        <p className="text-gray-400 mb-2"> Foto de Perfil </p>
+                                        <p className="text-gray-400 mb-2"> {t('about.profilePhoto')} </p>
                                         <div className="w-16 h-1 bg-white rounded-full"></div>
                                     </div>
                                 </div>
