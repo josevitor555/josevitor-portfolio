@@ -14,6 +14,7 @@ export interface Project {
   liveDemo: string;
   technologies: string[];
   featured: boolean;
+  paidSource?: boolean;
 }
 
 export const projectsData: Project[] = [
@@ -31,7 +32,8 @@ export const projectsData: Project[] = [
     github: "https://github.com/josevitor555/black_thunder.git",
     liveDemo: "#",
     technologies: ["React", "TypeScript", "JavaScript", "MongoDB for Manager Task", "MySQL for Register", "JWT for Auth", "Framer Motion"],
-    featured: true
+    featured: true,
+    paidSource: true
   },
   {
     id: "2",
@@ -47,7 +49,8 @@ export const projectsData: Project[] = [
     github: "https://github.com/josevitor555/TheMiranda.git",
     liveDemo: "#",
     technologies: ["React", "Node.js", "MySQL for Register", "JWT for Auth", "JavaScript", "TypeScript", "Tailwind CSS", "Gemini Models"],
-    featured: false
+    featured: false,
+    paidSource: true
   },
   {
     id: "3",
@@ -63,7 +66,8 @@ export const projectsData: Project[] = [
     github: "https://github.com/josevitor555/DegustaZap.git",
     liveDemo: "#", // Ex: https://taskmanager-demo.com
     technologies: ["React", "Express.js", "Node.js", "PostgreSQL", "TypeScript", "JavaScript", "Python", "Django"],
-    featured: false
+    featured: true,
+    paidSource: true
   },
   {
     id: "4",
@@ -79,7 +83,8 @@ export const projectsData: Project[] = [
     github: "https://github.com/josevitor555/shiny-adventure.git",
     liveDemo: "#",
     technologies: ["JavaScript", "CSS", "HTML", "Gemini API"],
-    featured: false
+    featured: false,
+    paidSource: true
   },
   {
     id: "5",
@@ -95,7 +100,8 @@ export const projectsData: Project[] = [
     github: "https://github.com/josevitor555/mathematicando.git",
     liveDemo: "#",
     technologies: ["React", "MongoDB for Register", "JWT for Auth", "Node.js", "Express.js", "TailwindCSS", "Vite", "TypeScript", "JavaScript"],
-    featured: true
+    featured: true,
+    paidSource: true
   },
   {
     id: "6",

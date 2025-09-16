@@ -250,6 +250,14 @@ export const translations: TranslationData = {
     pt: 'Em Desenvolvimento',
     en: 'In Development'
   },
+  'projects.paidSource': {
+    pt: 'Código Pago',
+    en: 'Paid Source'
+  },
+  'projects.purchaseSource': {
+    pt: 'Comprar Código Fonte',
+    en: 'Purchase Source Code'
+  },
   'projects.projectStatus': {
     pt: 'Status do Projeto',
     en: 'Project Status'
@@ -830,5 +838,67 @@ export const translations: TranslationData = {
   'dev.alert.understood': {
     pt: 'Entendi',
     en: 'Understood'
+  },
+
+  // Payment Modal (comp-329)
+  'payment.title': {
+    pt: 'Confirmar e pagar',
+    en: 'Confirm and pay'
+  },
+  'payment.description': {
+    pt: 'Pague com segurança e cancele a qualquer momento.',
+    en: 'Pay securely and cancel any time.'
+  },
+  'payment.monthly': {
+    pt: 'Mensal',
+    en: 'Monthly'
+  },
+  'payment.yearly': {
+    pt: 'Anual',
+    en: 'Yearly'
+  },
+  'payment.popular': {
+    pt: 'Popular',
+    en: 'Popular'
+  },
+  'payment.monthlyPrice': {
+    pt: 'R$ 159/mês',
+    en: '$32/month'
+  },
+  'payment.yearlyPrice': {
+    pt: 'R$ 1590/ano',
+    en: '$320/year'
+  },
+  'payment.nameOnCard': {
+    pt: 'Nome no cartão',
+    en: 'Name on card'
+  },
+  'payment.cardDetails': {
+    pt: 'Detalhes do cartão',
+    en: 'Card Details'
+  },
+  'payment.addCoupon': {
+    pt: '+ Adicionar cupom',
+    en: '+ Add coupon'
+  },
+  'payment.couponCode': {
+    pt: 'Código do cupom',
+    en: 'Coupon code'
+  },
+  'payment.couponPlaceholder': {
+    pt: 'Digite seu código',
+    en: 'Enter your code'
+  },
+  'payment.subscribe': {
+    pt: 'Assinar',
+    en: 'Subscribe'
+  },
+  'payment.disclaimer': {
+    pt: 'Os pagamentos não são reembolsáveis. Cancele a qualquer momento.',
+    en: 'Payments are non-refundable. Cancel anytime.'
+  },
+  'payment.checkout': {
+    pt: 'Finalizar Compra',
+    en: 'Checkout'
   }
 };
