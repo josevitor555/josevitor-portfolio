@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, MapPin, Send, Github, Linkedin, Twitter, Instagram } from 'lucide-react';
 import { Badge } from './ui/badge';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -76,14 +76,14 @@ const Contact = () => {
         {
             icon: Mail,
             title: t('contact.email.title'),
-            value: 'jose.vitor@example.com',
+            value: 'josevitordesousa123@gmail.com',
             href: 'mailto:jose.vitor@example.com'
         },
         {
-            icon: Phone,
-            title: t('contact.phone.title'),
-            value: '+1 (555) 123-4567',
-            href: 'tel:+15551234567'
+            icon: Github,
+            title: t('contact.github.title'),
+            value: 'github.com/josevitor555',
+            href: 'https://github.com/josevitor555'
         },
         {
             icon: MapPin,
@@ -94,7 +94,7 @@ const Contact = () => {
     ];
 
     const socialLinks = [
-        { icon: Github, href: '#', label: 'GitHub' },
+        { icon: Instagram, href: '#', label: 'Instagram' },
         { icon: Linkedin, href: '#', label: 'LinkedIn' },
         { icon: Twitter, href: '#', label: 'Twitter' },
     ];

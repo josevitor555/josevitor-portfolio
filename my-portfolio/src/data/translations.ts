@@ -432,6 +432,10 @@ export const translations: TranslationData = {
     pt: 'Telefone',
     en: 'Phone'
   },
+  'contact.github.title': {
+    pt: 'GitHub',
+    en: 'GitHub'
+  },
   'contact.location.title': {
     pt: 'Localização',
     en: 'Location'
@@ -812,5 +816,19 @@ export const translations: TranslationData = {
   'footer.inDevelopment': {
     pt: 'Este site está em desenvolvimento contínuo.',
     en: 'This website is under continuous development.'
+  },
+
+  // Development Alert
+  'dev.alert.title': {
+    pt: 'Aplicação em Desenvolvimento',
+    en: 'Application in Development'
+  },
+  'dev.alert.description': {
+    pt: 'Esta aplicação ainda está em fase de desenvolvimento. Algumas funcionalidades como enviar mensagens, registro de usuários e outras features podem não estar funcionais ou podem apresentar comportamentos inesperados. Obrigado pela compreensão!',
+    en: 'This application is still in development phase. Some features like sending messages, user registration and other functionalities may not be working or may present unexpected behaviors. Thank you for understanding!'
+  },
+  'dev.alert.understood': {
+    pt: 'Entendi',
+    en: 'Understood'
   }
 };
