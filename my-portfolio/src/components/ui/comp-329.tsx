@@ -49,7 +49,7 @@ export default function Component({ children }: { children?: React.ReactNode }) 
       <DialogContent>
         <div className="mb-2 flex flex-col gap-2">
           <div
-            className="flex size-11 shrink-0 items-center justify-center rounded-full border"
+            className="flex size-11 mb-4 shrink-0 items-center justify-center rounded-full border"
             aria-hidden="true"
           >
             <StoreIcon className="opacity-80" size={16} />
