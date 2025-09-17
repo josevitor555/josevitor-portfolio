@@ -45,8 +45,8 @@ const Banner = ({ isPlaying, setIsPlaying }: BannerProps) => {
 
   // Social Links for Banner
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
+    { icon: Github, href: 'https://github.com/josevitor555', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/jos%C3%A9-vitor-sousa2003/', label: 'LinkedIn' },
     { icon: Mail, href: '#contact', label: 'Email' },
   ];
 

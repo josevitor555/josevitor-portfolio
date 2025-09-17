@@ -180,7 +180,7 @@ const AboutMe = () => {
                             <div className="w-64 h-64 rounded-full bg-gradient-to-br from-accent-primary to-accent-secondary opacity-20"></div>
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="text-center">
-                                    <img src="https://i.pinimg.com/736x/7c/4e/e1/7c4ee174cd776bab0ef7915e6e12c079.jpg" alt="Profile photo" className="w-80 h-80 rounded-lg mx-auto mb-4 object-cover" />
+                                    <img src="https://i.pinimg.com/736x/45/94/b1/4594b10a8f9f87482b19fe45ec1160cb.jpg" alt="Profile photo" className="w-80 h-80 rounded-lg mx-auto mb-4 object-cover" />
                                     <div className="flex flex-col items-center">
                                         <p className="text-gray-400 mb-2"> {t('about.profilePhoto')} </p>
                                         <div className="w-16 h-1 bg-white rounded-full"></div>

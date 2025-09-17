@@ -15,6 +15,7 @@ export interface Project {
   technologies: string[];
   featured: boolean;
   paidSource?: boolean;
+  pricing?: number;
 }
 
 export const projectsData: Project[] = [
@@ -33,7 +34,8 @@ export const projectsData: Project[] = [
     liveDemo: "#",
     technologies: ["React", "TypeScript", "JavaScript", "MongoDB for Manager Task", "MySQL for Register", "JWT for Auth", "Framer Motion"],
     featured: true,
-    paidSource: true
+    paidSource: true,
+    pricing: 150.00
   },
   {
     id: "2",
@@ -50,7 +52,8 @@ export const projectsData: Project[] = [
     liveDemo: "#",
     technologies: ["React", "Node.js", "MySQL for Register", "JWT for Auth", "JavaScript", "TypeScript", "Tailwind CSS", "Gemini Models"],
     featured: false,
-    paidSource: true
+    paidSource: true,
+    pricing: 250.00
   },
   {
     id: "3",
@@ -67,7 +70,7 @@ export const projectsData: Project[] = [
     liveDemo: "#", // Ex: https://taskmanager-demo.com
     technologies: ["React", "Express.js", "Node.js", "PostgreSQL", "TypeScript", "JavaScript", "Python", "Django"],
     featured: true,
-    paidSource: true
+    // paidSource: true
   },
   {
     id: "4",
@@ -84,7 +87,8 @@ export const projectsData: Project[] = [
     liveDemo: "#",
     technologies: ["JavaScript", "CSS", "HTML", "Gemini API"],
     featured: false,
-    paidSource: true
+    paidSource: true,
+    pricing: 75.00
   },
   {
     id: "5",
@@ -101,7 +105,7 @@ export const projectsData: Project[] = [
     liveDemo: "#",
     technologies: ["React", "MongoDB for Register", "JWT for Auth", "Node.js", "Express.js", "TailwindCSS", "Vite", "TypeScript", "JavaScript"],
     featured: true,
-    paidSource: true
+    // paidSource: true
   },
   {
     id: "6",
@@ -110,13 +114,32 @@ export const projectsData: Project[] = [
       en: "Authentication System with Json Web Tokens (JWT)"
     },
     description: {
-      pt: "Um sistema de gerenciamento de conteúdo para blogs com editor rich text, SEO otimizado e sistema de comentários.",
-      en: "A content management system for blogs with rich text editor, SEO optimization and commenting system."
+      pt: "Sistema de Login JWT com integração a banco de dados não relacional MongoDB para registro de usuário.",
+      en: "JWT Login System with integration to MongoDB non-relational database for user registration.."
     },
     image: 'https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/1a1a1a/ef4444?text=Login+JWT',
     github: "https://github.com/josevitor555/register-jwt.git",
     liveDemo: "#",
     technologies: ["MongoDB for Register", "JavaScript", "TailwindCSS", "ReactJS", "NodeJS", "ExpressJS", "Mongoose", "JWT for Auth"],
-    featured: false
-  }
+    featured: false,
+    // paidSource: true
+  },
+  {
+    id: "7",
+    title: {
+      pt: "Sistema de gerenciamento de produtos - Front-End 2.0",
+      en: "Product Management System - Front-End 2.0"
+    },
+    description: {
+      pt: "Segue com a versão 2.0 do sistema de gerenciamento de produtos, seu backend vai ser desenvolvido em Django com Área administrativa",
+      en: "It continues with version 2.0 of the product management system, its backend will be developed in Django with an administrative area"
+    },
+    image: 'https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/1a1a1a/ef4444?text=Product+Management+2.0',
+    github: "https://github.com/josevitor555/if_mais.git",
+    liveDemo: "#",
+    technologies: ["JavaScript", "TailwindCSS", "ReactJS", "NodeJS", "ExpressJS", "PostgreSQL", "Django", "Python"],
+    featured: false,
+    paidSource: true,
+    pricing: 200.00
+  },
 ];

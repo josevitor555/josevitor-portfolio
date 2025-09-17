@@ -171,8 +171,8 @@ export const translations: TranslationData = {
     en: 'GitHub Followers'
   },
   'about.profilePhoto': {
-    pt: 'Foto de Perfil',
-    en: 'Profile Photo'
+    pt: 'Nihil est quod Deus efficere non possit.',
+    en: 'Nihil est quod Deus efficere non possit.'
   },
 
   // Skills
@@ -832,8 +832,8 @@ export const translations: TranslationData = {
     en: 'Application in Development'
   },
   'dev.alert.description': {
-    pt: 'Esta aplicação ainda está em fase de desenvolvimento. Algumas funcionalidades como enviar mensagens, registro de usuários e outras features podem não estar funcionais ou podem apresentar comportamentos inesperados. Obrigado pela compreensão!',
-    en: 'This application is still in development phase. Some features like sending messages, user registration and other functionalities may not be working or may present unexpected behaviors. Thank you for understanding!'
+    pt: 'Esta aplicação ainda está em fase de desenvolvimento. Algumas funcionalidades podem não estar funcionais ou podem apresentar comportamentos inesperados. Obrigado pela compreensão!',
+    en: 'This application is still under development. Some features may not work or may exhibit unexpected behavior. Thank you for your understanding!'
   },
   'dev.alert.understood': {
     pt: 'Entendi',
@@ -854,20 +854,20 @@ export const translations: TranslationData = {
     en: 'Monthly'
   },
   'payment.yearly': {
-    pt: 'Anual',
-    en: 'Yearly'
+    pt: 'Acesso único',
+    en: 'Single sign-on'
   },
   'payment.popular': {
-    pt: 'Popular',
-    en: 'Popular'
+    pt: 'Vitalício',
+    en: 'Lifetime'
   },
   'payment.monthlyPrice': {
     pt: 'R$ 159/mês',
     en: '$32/month'
   },
   'payment.yearlyPrice': {
-    pt: 'R$ 1590/ano',
-    en: '$320/year'
+    pt: 'R$ 100,00',
+    en: 'R$ 100,00'
   },
   'payment.nameOnCard': {
     pt: 'Nome no cartão',
@@ -900,5 +900,9 @@ export const translations: TranslationData = {
   'payment.checkout': {
     pt: 'Finalizar Compra',
     en: 'Checkout'
+  },
+  'payment.defaultProduct': {
+    pt: 'Código Fonte do Projeto',
+    en: 'Project Source Code'
   }
 };

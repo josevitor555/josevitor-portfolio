@@ -20,8 +20,16 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 
-export default function Component({ children }: { children?: React.ReactNode }) {
-  const { t } = useLanguage();
+export default function Component({ 
+  children, 
+  projectTitle,
+  projectPrice 
+}: { 
+  children?: React.ReactNode;
+  projectTitle?: { pt: string; en: string };
+  projectPrice?: number;
+}) {
+  const { t, language } = useLanguage();
   const id = useId()
   const {
     meta,
@@ -34,7 +42,16 @@ export default function Component({ children }: { children?: React.ReactNode }) 
   const [showCouponInput, setShowCouponInput] = useState(false)
   const [couponCode, setCouponCode] = useState("")
 
-  // Auto-focus the coupon input when it's shown
+  // Format price in BRL
+  const formatPrice = (price: number) => {
+    return `R$ ${price.toFixed(2).replace('.', ',')}`;
+  };
+
+  // Get project title in current language
+  const getProjectTitle = () => {
+    if (!projectTitle) return t('payment.defaultProduct');
+    return projectTitle[language];
+  };
   useEffect(() => {
     if (showCouponInput && couponInputRef.current) {
       couponInputRef.current.focus()
@@ -64,9 +81,9 @@ export default function Component({ children }: { children?: React.ReactNode }) 
 
         <form className="space-y-5">
           <div className="space-y-4">
-            <RadioGroup className="grid-cols-2" defaultValue="yearly">
+            <RadioGroup className="" defaultValue="yearly">
               {/* Monthly */}
-              <label className="border-input has-data-[state=checked]:border-primary/50 has-focus-visible:border-ring has-focus-visible:ring-ring/50 relative flex cursor-pointer flex-col gap-1 rounded-md border px-4 py-3 shadow-xs transition-[color,box-shadow] outline-none has-focus-visible:ring-[3px]">
+              {/* <label className="border-input has-data-[state=checked]:border-primary/50 has-focus-visible:border-ring has-focus-visible:ring-ring/50 relative flex cursor-pointer flex-col gap-1 rounded-md border px-4 py-3 shadow-xs transition-[color,box-shadow] outline-none has-focus-visible:ring-[3px]">
                 <RadioGroupItem
                   id="radio-monthly"
                   value="monthly"
@@ -74,19 +91,31 @@ export default function Component({ children }: { children?: React.ReactNode }) 
                 />
                 <p className="text-foreground text-sm font-medium">{t('payment.monthly')}</p>
                 <p className="text-muted-foreground text-sm">{t('payment.monthlyPrice')}</p>
-              </label>
+              </label> */}
               {/* Yearly */}
-              <label className="border-input has-data-[state=checked]:border-primary/50 has-focus-visible:border-ring has-focus-visible:ring-ring/50 relative flex cursor-pointer flex-col gap-1 rounded-md border px-4 py-3 shadow-xs transition-[color,box-shadow] outline-none has-focus-visible:ring-[3px]">
+              <label className="w-full border-input has-data-[state=checked]:border-primary/50 has-focus-visible:border-ring has-focus-visible:ring-ring/50 relative flex cursor-pointer flex-col gap-1 rounded-md border px-4 py-3 shadow-xs transition-[color,box-shadow] outline-none has-focus-visible:ring-[3px]">
                 <RadioGroupItem
                   id="radio-yearly"
                   value="yearly"
                   className="sr-only after:absolute after:inset-0"
                 />
                 <div className="inline-flex items-start justify-between gap-2">
-                  <p className="text-foreground text-sm font-medium">{t('payment.yearly')}</p>
-                  <Badge>{t('payment.popular')}</Badge>
+                  <div className="flex flex-col">
+                    <p className="text-foreground text-sm font-medium">{t('payment.yearly')}</p>
+                    {projectTitle && (
+                      <p className="text-xs text-muted-foreground mt-1">{getProjectTitle()}</p>
+                    )}
+                  </div>
+                  <div className="flex flex-col items-end">
+                    <Badge>{t('payment.popular')}</Badge>
+                    {projectPrice && (
+                      <p className="text-sm font-semibold mt-1">{formatPrice(projectPrice)}</p>
+                    )}
+                  </div>
                 </div>
-                <p className="text-muted-foreground text-sm">{t('payment.yearlyPrice')}</p>
+                <p className="text-muted-foreground text-sm">
+                  {projectPrice ? formatPrice(projectPrice) : t('payment.yearlyPrice')}
+                </p>
               </label>
             </RadioGroup>
             <div className="*:not-first:mt-2">
@@ -155,7 +184,10 @@ export default function Component({ children }: { children?: React.ReactNode }) 
             )}
           </div>
           <Button type="button" className="w-full">
-            {t('payment.subscribe')}
+            {projectPrice ? 
+              `${t('payment.subscribe')} - ${formatPrice(projectPrice)}` : 
+              t('payment.subscribe')
+            }
           </Button>
         </form>
 
