@@ -80,6 +80,7 @@ const Projects = () => {
                                     {project.paidSource && (
                                         <div className="flex items-center px-4 py-1 bg-white text-black text-xs font-medium rounded-full">
                                             {t('projects.paidSource')}
+                                            
                                             {project.pricing && (
                                                 <div className="px-2 py-1 bg-accent-primary text-black text-xs font-medium rounded">
                                                     R$ {project.pricing.toFixed(0)}
