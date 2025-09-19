@@ -16,6 +16,9 @@ import cors from 'cors';
 // Import connectMongo function
 import connectMongo from './connectMongo/connect.js';
 
+// Import auth routes
+import authRoutes from './routes/authRoutes.js';
+
 // Create app express
 const app = express();
 
@@ -26,6 +29,9 @@ app.use(cors({
 
 // Middleware to parse JSON
 app.use(express.json());
+
+// Use auth routes
+app.use('/api/auth', authRoutes);
 
 // Simple route
 // app.get("/", (req, res) => {

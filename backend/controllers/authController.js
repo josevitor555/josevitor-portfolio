@@ -12,10 +12,18 @@ import jwt from "jsonwebtoken";
 import User from "../models/UserModel.js";
 
 // Register User Route
-export const register = ('/register', async (req, res) => {
+export const register = async (req, res) => {
     const { name, email, password } = req.body; // Destructure the request body to get name, email, and password
 
     try {
+        // Validate input fields
+        if (!name || !email || !password) {
+            return res.status(400).json({ message: 'All fields are required' });
+        }
+
+        if (password.length < 8) {
+            return res.status(400).json({ message: 'Password must be at least 8 characters long' });
+        }
 
         // Check if user already exists
         const userExists = await User.findOne({ email });
@@ -30,33 +38,30 @@ export const register = ('/register', async (req, res) => {
         const user = new User({ name, email, password: hashedPassword });
 
         // Save the user to the database
-        await user.save().then(() => {
-            console.log(user);
-        }).catch((error) => {
-            console.log(error);
-        });
+        const savedUser = await user.save();
+        console.log('User saved successfully:', savedUser);
 
         // Generate JWT token with user ID and secret key
-        const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+        const token = jwt.sign({ id: savedUser._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
         // Send response with token and user info
         res.status(201).json({
             token,
             user: {
-                id: user._id,
-                name: user.name,
-                email: user.email
+                id: savedUser._id,
+                name: savedUser.name,
+                email: savedUser.email
             }
         });
 
     } catch (error) {
-        console.error(error);
+        console.error('Registration error:', error);
         return res.status(500).json({ message: 'Server error' });
     }
-});
+};
 
 // Login Router
-export const login = ('/login', async (req, res) => {
+export const login = async (req, res) => {
     const { email, password } = req.body; // Destructure the request body to get email and password
 
     try {
@@ -93,7 +98,7 @@ export const login = ('/login', async (req, res) => {
         console.error(error);
         return res.status(500).json({ message: 'Error fetching user' });
     }
-});
+};
 
 // Logout Router
 export const deleteAccount = async (req, res) => {

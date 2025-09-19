@@ -18,3 +18,6 @@ router.post("/login", authController.login);
 
 // Logout User
 router.post("/logout", VerifyToken, authController.deleteAccount);
+
+// Export router
+export default router;

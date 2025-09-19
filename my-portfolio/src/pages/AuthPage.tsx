@@ -19,29 +19,60 @@ const AuthPage = ({ isModal = false, onClose }: AuthPageProps) => {
     const [error, setError] = useState<string | null>(null);
     const [message, setMessage] = useState<string | null>(null);
     const [name, setName] = useState('');
-    const navigate = useNavigate();
     const { t } = useLanguage();
 
-    // Handle auth function
-    const handleAuth = async (e: React.FormEvent) => {
+    const navigate = useNavigate();
+
+    // Handle register function
+    const handleRegister = async (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true);
         setError(null);
         setMessage(null);
 
-        try {
-            // Simulate loading time
-            await new Promise(resolve => setTimeout(resolve, 1000));
+        // Validate required fields for registration
+        const missingFields: string[] = [];
+        if (!name.trim()) missingFields.push(t('auth.nameRequired') || 'Name is required');
+        if (!email.trim()) missingFields.push(t('auth.emailRequired') || 'Email is required');
+        if (!password.trim()) missingFields.push(t('auth.passwordRequired') || 'Password is required');
 
-            if (isSignUp) {
-                // Sign up logic without database
-                console.log('Sign up attempt:', { email, password, name });
-                setMessage(t('auth.signupSuccess') || 'Account created successfully!');
-            } else {
-                // Sign in logic without database
-                console.log('Sign in attempt:', { email, password });
-                setMessage(t('auth.signinSuccess') || 'Welcome back!');
+        if (missingFields.length > 0) {
+            setError(missingFields.join('\n'));
+            setLoading(false);
+            return;
+        }
+
+        try {
+            const response = await fetch('http://localhost:3000/api/auth/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: name.trim(),
+                    email: email.trim(),
+                    password
+                }),
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.message || 'Registration failed');
             }
+
+            // Store token and user data in localStorage
+            if (data.token) {
+                localStorage.setItem('authToken', data.token);
+                localStorage.setItem('user', JSON.stringify(data.user));
+            }
+
+            setMessage(t('auth.signupSuccess') || 'Account created successfully!');
+
+            // Clear form fields on success
+            setEmail('');
+            setPassword('');
+            setName('');
 
             // Close modal after success if in modal mode
             if (isModal && onClose) {
@@ -54,10 +85,89 @@ const AuthPage = ({ isModal = false, onClose }: AuthPageProps) => {
                     navigate('/');
                 }, 1500);
             }
-        } catch (err) {
-            setError(t('auth.error') || 'Something went wrong. Please try again.');
+
+        } catch (err: any) {
+            console.error('Registration error:', err);
+            setError(err.message || t('auth.error') || 'Something went wrong. Please try again.');
         } finally {
             setLoading(false);
+        }
+    };
+
+    // Handle login function
+    const handleLogin = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setLoading(true);
+        setError(null);
+        setMessage(null);
+
+        // Validate required fields for login
+        const missingFields: string[] = [];
+        if (!email.trim()) missingFields.push(t('auth.emailRequired') || 'Email is required');
+        if (!password.trim()) missingFields.push(t('auth.passwordRequired') || 'Password is required');
+
+        if (missingFields.length > 0) {
+            setError(missingFields.join('\n'));
+            setLoading(false);
+            return;
+        }
+
+        try {
+            const response = await fetch('http://localhost:3000/api/auth/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    email: email.trim(),
+                    password
+                }),
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.message || 'Login failed');
+            }
+
+            // Store token and user data in localStorage
+            if (data.token) {
+                localStorage.setItem('authToken', data.token);
+                localStorage.setItem('user', JSON.stringify(data.user));
+            }
+
+            setMessage(t('auth.signinSuccess') || 'Welcome back!');
+
+            // Clear form fields on success
+            setEmail('');
+            setPassword('');
+
+            // Close modal after success if in modal mode
+            if (isModal && onClose) {
+                setTimeout(() => {
+                    onClose();
+                }, 1500);
+            } else {
+                // Navigate to home if not in modal mode
+                setTimeout(() => {
+                    navigate('/');
+                }, 1500);
+            }
+
+        } catch (err: any) {
+            console.error('Login error:', err);
+            setError(err.message || t('auth.error') || 'Something went wrong. Please try again.');
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    // Handle auth function - routes to appropriate handler
+    const handleAuth = (e: React.FormEvent) => {
+        if (isSignUp) {
+            handleRegister(e);
+        } else {
+            handleLogin(e);
         }
     };
 
@@ -77,7 +187,7 @@ const AuthPage = ({ isModal = false, onClose }: AuthPageProps) => {
                     <div className="absolute inset-0 backdrop-blur-sm bg-black/10" />
                 </div>
             )}
-            
+
             <motion.div
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -186,8 +296,8 @@ const AuthPage = ({ isModal = false, onClose }: AuthPageProps) => {
                         }}
                         className="text-accent-primary hover:text-accent-secondary transition-colors duration-200 cursor-pointer"
                     >
-                        {isSignUp 
-                            ? (t('auth.alreadyHaveAccount') || 'Already have an account? Sign in') 
+                        {isSignUp
+                            ? (t('auth.alreadyHaveAccount') || 'Already have an account? Sign in')
                             : (t('auth.dontHaveAccount') || "Don't have an account? Sign up")
                         }
                     </button>

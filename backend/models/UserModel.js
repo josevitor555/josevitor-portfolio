@@ -18,10 +18,12 @@ const userSchema = new mongoose.Schema({
         minlength: 8, // This field must be at least 8 characters long
     },
 
+}, {
+    collection: 'auth_user' // Explicitly specify the collection name
 });
 
 // Create a new model for the user
-const User = mongoose.model("users", userSchema); // User is the name if the collection in the database
+const User = mongoose.model("User", userSchema); // User model with explicit collection name 'auth_user'
 
 // Export the User model
 export default User;
