@@ -38,11 +38,13 @@ app.use('/api/auth', authRoutes);
 //   res.json({ message: "Welcome to the backend of the project" });
 // })
 
-// Connect to MongoDB
+// Connect to MongoDB immediately on server start
+connectMongo();
+
+// Simple route to test MongoDB connection
 app.get("/", async (req, res) => {
   try {
-    await connectMongo();
-    res.status(200).json({ message: "Connected to MongoDB" });
+    res.status(200).json({ message: "Server is running and MongoDB connection established" });
   } catch (error) {
     res.status(500).json({ message: "Error connecting to MongoDB" });
   }

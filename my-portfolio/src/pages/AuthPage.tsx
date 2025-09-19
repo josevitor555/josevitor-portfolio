@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { X } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import FullScreenLoader from '../components/ui/FullScreenLoader.tsx';
 
 interface AuthPageProps {
     isModal?: boolean;
@@ -19,6 +20,7 @@ const AuthPage = ({ isModal = false, onClose }: AuthPageProps) => {
     const [error, setError] = useState<string | null>(null);
     const [message, setMessage] = useState<string | null>(null);
     const [name, setName] = useState('');
+    const [showFullScreenLoader, setShowFullScreenLoader] = useState(false);
     const { t } = useLanguage();
 
     const navigate = useNavigate();
@@ -74,15 +76,19 @@ const AuthPage = ({ isModal = false, onClose }: AuthPageProps) => {
             setPassword('');
             setName('');
 
+            // Show full screen loader before redirect
+            setShowFullScreenLoader(true);
+
             // Close modal after success if in modal mode
             if (isModal && onClose) {
                 setTimeout(() => {
+                    setShowFullScreenLoader(false);
                     onClose();
                 }, 1500);
             } else {
-                // Navigate to home if not in modal mode
+                // Navigate to welcome page if not in modal mode
                 setTimeout(() => {
-                    navigate('/');
+                    navigate('/welcome');
                 }, 1500);
             }
 
@@ -142,15 +148,19 @@ const AuthPage = ({ isModal = false, onClose }: AuthPageProps) => {
             setEmail('');
             setPassword('');
 
+            // Show full screen loader before redirect
+            setShowFullScreenLoader(true);
+
             // Close modal after success if in modal mode
             if (isModal && onClose) {
                 setTimeout(() => {
+                    setShowFullScreenLoader(false);
                     onClose();
                 }, 1500);
             } else {
-                // Navigate to home if not in modal mode
+                // Navigate to welcome page if not in modal mode
                 setTimeout(() => {
-                    navigate('/');
+                    navigate('/welcome');
                 }, 1500);
             }
 
@@ -180,7 +190,16 @@ const AuthPage = ({ isModal = false, onClose }: AuthPageProps) => {
     };
 
     return (
-        <div className={isModal ? "flex items-center justify-center min-h-full p-4" : "min-h-screen flex items-center justify-center p-4 relative"}>
+        <>
+            {/* Full Screen Loader */}
+            {showFullScreenLoader && (
+                <FullScreenLoader 
+                    message={isSignUp ? (t('auth.creatingAccount') || 'Creating your account...') : (t('auth.signingIn') || 'Signing you in...')} 
+                    variant="fancy" 
+                />
+            )}
+
+            <div className={isModal ? "flex items-center justify-center min-h-full p-4" : "min-h-screen flex items-center justify-center p-4 relative"}>
             {/* Background with blur effect */}
             {!isModal && (
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom right, #0F0E0E 0%, #0F0E0E 60%, #F3F2EC 320%)' }}>
@@ -304,6 +323,7 @@ const AuthPage = ({ isModal = false, onClose }: AuthPageProps) => {
                 </div>
             </motion.div>
         </div>
+        </>
     );
 }
 

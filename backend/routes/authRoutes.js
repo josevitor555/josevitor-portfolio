@@ -16,8 +16,8 @@ router.post("/register", authController.register);
 // Login User
 router.post("/login", authController.login);
 
-// Logout User
-router.post("/logout", VerifyToken, authController.deleteAccount);
+// Delete Account (Protected route)
+router.delete("/account", VerifyToken, authController.deleteAccount);
 
 // Export router
 export default router;

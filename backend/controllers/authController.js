@@ -100,33 +100,42 @@ export const login = async (req, res) => {
     }
 };
 
-// Logout Router
+// Delete Account Router
 export const deleteAccount = async (req, res) => {
     try {
-
-        // Get user ID from request
         const userId = req.user.id;
+        console.log('Attempting to delete user with ID:', userId);
+        
         if (!userId) {
             console.error("No user ID in the request");
             return res.status(400).json({ message: "User ID missing" });
         }
 
-        // Delete user from database using findByIdAndDelete
         const deleteUser = await User.findByIdAndDelete(userId);
         if (!deleteUser) {
             return res.status(404).json({
                 message: "User not found"
             });
-        } else {
-            console.log(`User with ID ${userId} deleted successfully`);
         }
 
-        // Send response
-        res.status(200).json();
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({
-            message: "Error to delete account"
+        console.log(`User with ID ${userId} deleted successfully`);
+        
+        // Return proper JSON response
+        res.status(200).json({
+            message: "Account deleted successfully",
+            success: true,
+            deletedUser: {
+                id: deleteUser._id,
+                name: deleteUser.name,
+                email: deleteUser.email
+            }
         });
-    };
-};
+        
+    } catch (error) {
+        console.error('Delete account error:', error);
+        res.status(500).json({
+            message: "Error deleting account",
+            error: error.message
+        });
+    }
+}

@@ -8,6 +8,7 @@ import DevelopmentAlert from './components/ui/comp-314';
 // Pages
 import MyApp from './pages/HomePage';
 import AuthPage from './pages/AuthPage';
+import WelcomePage from './pages/WelcomePage';
 
 // import AuthPage from './pages/Auth'
 // import NotFoundPage from './pages/NotFoundPage'
@@ -29,6 +30,9 @@ const App = () => {
 
           {/* Page not found */}
           {/* <Route path="*" element={<NotFoundPage />} /> */}
+
+          {/* Welcome Page */}
+          <Route path="/welcome" element={<WelcomePage />} />
         </Routes>
       </Router>
     </LanguageProvider>
