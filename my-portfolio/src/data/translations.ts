@@ -90,6 +90,14 @@ export const translations: TranslationData = {
     pt: 'Carregando...',
     en: 'Loading...'
   },
+  'auth.creatingAccount': {
+    pt: 'Criando conta...',
+    en: 'Creating account...'
+  },
+  'auth.signingIn': {
+    pt: 'Entrando...',
+    en: 'Signing in...'
+  },
   'auth.signupSuccess': {
     pt: 'Conta criada com sucesso!',
     en: 'Account created successfully!'
@@ -109,6 +117,60 @@ export const translations: TranslationData = {
   'auth.dontHaveAccount': {
     pt: 'Não tem uma conta? Cadastre-se',
     en: "Don't have an account? Sign up"
+  },
+
+  // Welcome Page Section
+  'welcome.loading': {
+    pt: 'Carregando...',
+    en: 'Loading...'
+  },
+  'welcome.title': {
+    pt: 'Bem-vindo, {name}!',
+    en: 'Welcome, {name}!'
+  },
+  'welcome.email': {
+    pt: 'Email:',
+    en: 'Email:'
+  },
+  'welcome.protectedRoute': {
+    pt: 'Você está em uma conta free.',
+    en: 'You are on a free account.'
+  },
+  'welcome.backToHome': {
+    pt: 'Voltar ao Início',
+    en: 'Back to Home'
+  },
+  'welcome.deleteAccount': {
+    pt: 'Excluir Conta Permanentemente',
+    en: 'Delete Account Permanently'
+  },
+  'welcome.deleteConfirmation': {
+    pt: 'Tem certeza de que deseja excluir sua conta? Esta ação não pode ser desfeita.',
+    en: 'Are you sure you want to delete your account? This action cannot be undone.'
+  },
+  'welcome.userNotAuthenticated': {
+    pt: 'Usuário não autenticado. Por favor, faça login novamente.',
+    en: 'User not authenticated. Please login again.'
+  },
+  'welcome.deletingAccount': {
+    pt: 'Excluindo sua conta...',
+    en: 'Deleting your account...'
+  },
+  'welcome.accountDeletedSuccess': {
+    pt: 'Conta excluída com sucesso!',
+    en: 'Account deleted successfully!'
+  },
+  'welcome.deleteError': {
+    pt: 'Erro ao excluir conta: {error}. Por favor, tente novamente.',
+    en: 'Error deleting account: {error}. Please try again.'
+  },
+  'welcome.returningToHome': {
+    pt: 'Retornando ao início...',
+    en: 'Returning to home...'
+  },
+  'welcome.processing': {
+    pt: 'Processando...',
+    en: 'Processing...'
   },
 
   // Banner Section

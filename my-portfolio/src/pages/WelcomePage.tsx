@@ -1,14 +1,20 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import FullScreenLoader from '../components/ui/FullScreenLoader.tsx';
+import { useLanguage } from '../contexts/LanguageContext.tsx';
 
 const WelcomePage = () => {
+    
     // Hooks
     const navigate = useNavigate();
+    const { t } = useLanguage();
+
+    // States
     const [user, setUser] = useState({ name: "", email: "" });
     const [isLoading, setIsLoading] = useState(true);
     const [showDeleteLoader, setShowDeleteLoader] = useState(false);
-    const [loaderMessage, setLoaderMessage] = useState("Processing...");
+    const [loaderMessage, setLoaderMessage] = useState(t('welcome.processing'));
 
     // Check if the user is logged in
     useEffect(() => {
@@ -30,14 +36,14 @@ const WelcomePage = () => {
         const token = localStorage.getItem("authToken");
         
         if (!token) {
-            alert("User not authenticated. Please login again.");
+            alert(t('welcome.userNotAuthenticated'));
             navigate("/auth");
             return;
         }
 
         // Show confirmation dialog
         const confirmDelete = window.confirm(
-            "Are you sure you want to delete your account? This action cannot be undone."
+            t('welcome.deleteConfirmation')
         );
         
         if (!confirmDelete) {
@@ -45,7 +51,7 @@ const WelcomePage = () => {
         }
 
         // Activate loading spinner
-        setLoaderMessage("Deleting your account...");
+        setLoaderMessage(t('welcome.deletingAccount'));
         setShowDeleteLoader(true);
 
         try {
@@ -96,7 +102,7 @@ const WelcomePage = () => {
             localStorage.removeItem("user");
             
             // Show success message and redirect
-            const successMessage = result?.message || "Account deleted successfully!";
+            const successMessage = result?.message || t('welcome.accountDeletedSuccess');
             alert(successMessage);
             
             setTimeout(() => {
@@ -107,14 +113,14 @@ const WelcomePage = () => {
         } catch (error) {
             console.error("Error deleting account:", error);
             const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
-            alert(`Error deleting account: ${errorMessage}. Please try again.`);
+            alert(t('welcome.deleteError').replace('{error}', errorMessage));
             setShowDeleteLoader(false);
         }
     };
 
     // Handle back to home with loader
     const handleBackToHome = () => {
-        setLoaderMessage("Returning to home...");
+        setLoaderMessage(t('welcome.returningToHome'));
         setShowDeleteLoader(true);
         setTimeout(() => {
             navigate("/");
@@ -131,19 +137,38 @@ const WelcomePage = () => {
                 />
             )}
 
-            <div className="min-h-screen flex items-center justify-center p-4 relative">
-                {/* Background with blur effect */}
-                <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom right, #0F0E0E 0%, #0F0E0E 60%, #F3F2EC 320%)' }}>
-                    <div className="absolute inset-0 backdrop-blur-sm bg-black/10" />
+            <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
+                {/* Animated Background Elements */}
+                <div className="absolute inset-0">
+                    {[...Array(80)].map((_, i) => (
+                        <motion.div
+                            key={i}
+                            className="absolute w-1 h-1 bg-white/80 rounded-full"
+                            initial={{
+                                x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1200),
+                                y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800),
+                                opacity: 0
+                            }}
+                            animate={{
+                                opacity: [0, 1, 0],
+                                scale: [0, 1, 0],
+                            }}
+                            transition={{
+                                duration: Math.random() * 3 + 2,
+                                repeat: Infinity,
+                                delay: Math.random() * 2,
+                            }}
+                        />
+                    ))}
                 </div>
 
                 {isLoading ? (
-                    <div className="text-gray-300 text-xl relative z-10">Loading...</div>
+                    <div className="text-gray-300 text-xl relative z-10">{t('welcome.loading')}</div>
                 ) : (
                     <div className="user-information w-[500px] mt-10 p-6 rounded-lg bg-black/20 backdrop-blur-sm border border-white/10 relative z-10">
-                        <h2 className="text-2xl text-gray-300 font-bold mb-4"> Welcome, {user.name}! </h2>
-                        <p className="text-gray-100 mb-2"> Email: <span className="font-medium"> {user.email} </span> </p>
-                        <p className="text-gray-200 mb-6"> You are logged in a protected route. </p>
+                        <h2 className="text-2xl text-gray-300 font-bold mb-4">{t('welcome.title').replace('{name}', user.name)}</h2>
+                        <p className="text-gray-100 mb-2">{t('welcome.email')} <span className="font-medium">{user.email}</span></p>
+                        <p className="text-gray-200 mb-6">{t('welcome.protectedRoute')}</p>
 
                         {/* Action buttons */}
                         <div className="flex flex-col gap-4 m-4">
@@ -151,13 +176,13 @@ const WelcomePage = () => {
                                 className="bg-[#FFF2D7] text-black font-semibold py-2 px-4 rounded-full cursor-pointer hover:bg-[#FFF2D7]/80 transition-colors w-full" 
                                 onClick={handleBackToHome}
                             >
-                                Back to Home
+                                {t('welcome.backToHome')}
                             </button>
                             <button 
                                 className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full cursor-pointer transition-colors w-full" 
                                 onClick={handleDeleteAccount}
                             >
-                                Delete Account Permanently
+                                {t('welcome.deleteAccount')}
                             </button>
                         </div>
                     </div>
