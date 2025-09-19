@@ -1,0 +1,28 @@
+Password:
+Username:
+
+mongodb+srv:
+
+//////////////////////////////// MCP Servers ////////////////////////////////
+{
+  "mcpServers": {
+    "Framelink Figma MCP": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "figma-developer-mcp",
+        "--figma-api-key=",
+        "--stdio"
+      ]
+    },
+    "stripe": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@stripe/mcp",
+        "--api-key=",
+        "--tools=all"
+      ]
+    }
+  }
+}

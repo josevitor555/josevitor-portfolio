@@ -1,5 +1,8 @@
-// Import Express
+// Import express
 import express from 'express';
+
+// Import axios
+import axios from 'axios';
 
 // Import env for enviroment variables
 import dotenv from 'dotenv';
@@ -7,12 +10,34 @@ import dotenv from 'dotenv';
 // Configure env
 dotenv.config();
 
+// Import cors
+import cors from 'cors';
+
+// Import connectMongo function
+import connectMongo from './connectMongo/connect.js';
+
 // Create app express
 const app = express();
 
-// Route example show hello world
-app.get('/', (req, res) => {
-  res.send('Hello World!');
+// Configure cors for connection from backend to frontend
+app.use(cors());
+
+// Middleware to parse JSON
+app.use(express.json());
+
+// Simple route
+// app.get("/", (req, res) => {
+//   res.json({ message: "Welcome to the backend of the project" });
+// })
+
+// Connect to MongoDB
+app.get("/", async (req, res) => {
+  try {
+    await connectMongo();
+    res.status(200).json({ message: "Connected to MongoDB" });
+  } catch (error) {
+    res.status(500).json({ message: "Error connecting to MongoDB" });
+  }
 });
 
 // App port

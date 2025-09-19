@@ -1,6 +1,0 @@
-
-MongoDb connection string
-Username: koservitor123_db_user
-passoword: N31iDs51UAWlFI20
-
-Connection String: mongodb+srv://koservitor123_db_user:N31iDs51UAWlFI20@portfolioauth.fydjujx.mongodb.net/?retryWrites=true&w=majority&appName=portfolioauth
