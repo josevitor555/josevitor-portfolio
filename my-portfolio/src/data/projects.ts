@@ -34,7 +34,7 @@ export const projectsData: Project[] = [
     liveDemo: "#",
     technologies: ["React", "TypeScript", "JavaScript", "MongoDB for Manager Task", "MySQL for Register", "JWT for Auth", "Framer Motion"],
     featured: true,
-    paidSource: true,
+    // paidSource: true,
     pricing: 150.00
   },
   {
@@ -52,7 +52,7 @@ export const projectsData: Project[] = [
     liveDemo: "#",
     technologies: ["React", "Node.js", "MySQL for Register", "JWT for Auth", "JavaScript", "TypeScript", "Tailwind CSS", "Gemini Models"],
     featured: false,
-    paidSource: true,
+    // paidSource: true,
     pricing: 250.00
   },
   {
@@ -87,7 +87,7 @@ export const projectsData: Project[] = [
     liveDemo: "#",
     technologies: ["JavaScript", "CSS", "HTML", "Gemini API"],
     featured: false,
-    paidSource: true,
+    // paidSource: true,
     pricing: 75.00
   },
   {
@@ -139,7 +139,43 @@ export const projectsData: Project[] = [
     liveDemo: "#",
     technologies: ["JavaScript", "TailwindCSS", "ReactJS", "NodeJS", "ExpressJS", "PostgreSQL", "Django", "Python"],
     featured: false,
-    paidSource: true,
+    // paidSource: true,
     pricing: 200.00
+  },
+  {
+    id: "8",
+    title: {
+      pt: "Jogo da Cobrinha desenvolvido em Vanilla JS",
+      en: "GameSnake developed in Vanilla JS"
+    },
+    description: {
+      pt: "Jogo da cobrinha desenvolvido em HTML e CSS, contendo mapa randômico para randomização de entidades como maçã. O javaScript foi utilizado para colisão eentre entidades.",
+      en: "Snake game developed in HTML and CSS, containing a random map for randomizing entities such as apples. JavaScript was used for collisions between entities."
+    },
+    image: 'https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/1a1a1a/3b82f6?text=Game+Snake',
+    github: "https://github.com/josevitor555/gameSnake.git",
+    liveDemo: "#",
+    technologies: ["JavaScript", "Nodejs", "Express", "HTML", "CSS"],
+    featured: false,
+    // paidSource: true,
+    pricing: 200.00
+  },
+  {
+    id: "9",
+    title: {
+      pt: "Geração de Imagens com Inteligência Artificial Gemini",
+      en: "Image generation with Artificial Intelligence Gemini"
+    },
+    description: {
+      pt: "GeraÃ§Ã£o de imagens com InteligÃªncia artificial utilizando modelo Gemini",
+      en: "Image generation with Artificial Intelligence using Gemini model"
+    },
+    image: 'https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/1a1a1a/3b82f6?text=Image+Generation',
+    github: "https://github.com/josevitor555/generate_imagens.git",
+    liveDemo: "#",
+    technologies: ["JavaScript", "Nodejs", "Express", "HTML", "CSS", "Gemini API"],
+    featured: false,
+    // paidSource: true,
+    // pricing: 200.00
   },
 ];

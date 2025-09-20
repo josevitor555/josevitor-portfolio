@@ -25,7 +25,14 @@ const Experience = () => {
                 t('experience.highlight1.3'),
                 t('experience.highlight1.4')
             ],
-            technologies: ['React', 'Node.js', 'AWS', 'TypeScript', 'Docker', 'PostgreSQL']
+            technologies: [
+                t('experience.tech.linguagemC'),
+                t('experience.tech.raspberryPiPicoW'),
+                t('experience.tech.microcontroladoresRP2040'),
+                t('experience.tech.gpioInterrupcoes'),
+                t('experience.tech.pwmAdc'),
+                t('experience.tech.iotArchitecture')
+            ]
         },
         {
             id: 2,
@@ -40,7 +47,14 @@ const Experience = () => {
                 t('experience.highlight2.3'),
                 t('experience.highlight2.4')
             ],
-            technologies: ['Vue.js', 'Python', 'Django', 'MongoDB', 'Redis', 'Stripe API']
+            technologies: [
+                t('experience.tech.sistemasEmbarcados'),
+                t('experience.tech.linguagemC'),
+                t('experience.tech.raspberryPiPicoW'),
+                t('experience.tech.robotica'),
+                t('experience.tech.projetosAcademicos'),
+                t('experience.tech.iotArchitecture')
+            ]
         },
         {
             id: 3,
@@ -55,7 +69,14 @@ const Experience = () => {
                 t('experience.highlight3.3'),
                 t('experience.highlight3.4')
             ],
-            technologies: ['JavaScript', 'SCSS', 'GSAP', 'WordPress', 'jQuery', 'Bootstrap']
+            technologies: [
+                t('experience.tech.fundamentosTI'),
+                t('experience.tech.redesComputadores'),
+                t('experience.tech.bancoDados'),
+                t('experience.tech.sistemasOperacionais'),
+                t('experience.tech.desenvolvimentoWeb'),
+                t('experience.tech.infraestrutura')
+            ]
         },
         {
             id: 4,
@@ -70,7 +91,14 @@ const Experience = () => {
                 t('experience.highlight4.3'),
                 t('experience.highlight4.4')
             ],
-            technologies: ['HTML/CSS', 'JavaScript', 'PHP', 'Shopify', 'WooCommerce', 'MySQL']
+            technologies: [
+                t('experience.tech.gestaoEmpresarial'),
+                t('experience.tech.marketingDigital'),
+                t('experience.tech.consultoriaNegocios'),
+                t('experience.tech.empreendedorismo'),
+                t('experience.tech.gestaoPessoas'),
+                t('experience.tech.inovacao')
+            ]
         }
     ];
 

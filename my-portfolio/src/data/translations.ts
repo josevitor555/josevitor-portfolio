@@ -723,151 +723,151 @@ export const translations: TranslationData = {
 
   // Experience Data
   'experience.company1': {
-    pt: 'TechCorp Solutions',
-    en: 'TechCorp Solutions'
+    pt: 'Sistemas Embarcados',
+    en: 'Embedded Systems'
   },
   'experience.position1': {
-    pt: 'Desenvolvedor Full Stack Sênior',
-    en: 'Senior Full Stack Developer'
+    pt: 'Capacitação em Sistemas Embarcados',
+    en: 'Embedded Systems Training'
   },
   'experience.duration1': {
-    pt: '2022 - Atualmente',
-    en: '2022 - Present'
+    pt: '2024 - 2024',
+    en: '2024 - 2024'
   },
   'experience.location1': {
-    pt: 'São Francisco, CA',
-    en: 'San Francisco, CA'
+    pt: 'Piauí, Brasil',
+    en: 'Piauí, Brazil'
   },
   'experience.description1': {
-    pt: 'Liderando o desenvolvimento de aplicações web escaláveis utilizando React, Node.js e AWS. Orientando desenvolvedores juniores e arquitetando soluções de microsserviços para clientes corporativos.',
-    en: 'Leading the development of scalable web applications using React, Node.js, and AWS. Mentoring junior developers and architecting microservices solutions for corporate clients.'
+    pt: 'Capacitação profissional abrangente em sistemas embarcados com foco em microcontroladores, IoT e desenvolvimento de software para hardware. Curso estruturado em unidades progressivas cobrindo desde fundamentos até aplicações práticas com Raspberry Pi Pico W.',
+    en: 'Comprehensive professional training in embedded systems focused on microcontrollers, IoT and software development for hardware. Course structured in progressive units covering from fundamentals to practical applications with Raspberry Pi Pico W.'
   },
   'experience.highlight1.1': {
-    pt: 'Liderei uma equipe de 5 desenvolvedores para entregar 3 grandes projetos antes do prazo',
-    en: 'Led a team of 5 developers to deliver 3 major projects ahead of schedule'
+    pt: 'Unidade 1: Tipos, características e arquitetura de sistemas embarcados',
+    en: 'Unit 1: Types, characteristics and architecture of embedded systems'
   },
   'experience.highlight1.2': {
-    pt: 'Melhorei o desempenho da aplicação em 40% através de estratégias de otimização',
-    en: 'Improved application performance by 40% through optimization strategies'
+    pt: 'Unidade 3: Linguagem C, VS Code, depuração e configuração para Raspberry Pi Pico W',
+    en: 'Unit 3: C Language, VS Code, debugging and configuration for Raspberry Pi Pico W'
   },
   'experience.highlight1.3': {
-    pt: 'Implementei pipelines de CI/CD, reduzindo o tempo de implantação em 60%',
-    en: 'Implemented CI/CD pipelines, reducing deployment time by 60%'
+    pt: 'Unidade 4: GPIO, interrupções, temporizadores, PWM e conversor analógico-digital',
+    en: 'Unit 4: GPIO, interrupts, timers, PWM and analog-to-digital converter'
   },
   'experience.highlight1.4': {
-    pt: 'Arquitei microsserviços lidando com mais de 1 milhão de requisições por dia',
-    en: 'Architected microservices handling over 1 million requests per day'
+    pt: 'Unidades 5-6: IoT - Visão geral, arquitetura e integração com sistemas embarcados',
+    en: 'Units 5-6: IoT - Overview, architecture and integration with embedded systems'
   },
 
   'experience.company2': {
-    pt: 'Startup Innovate',
-    en: 'Startup Innovate'
+    pt: 'Instituto Federal do Piauí (IFPI)',
+    en: 'Federal Institute of Piauí (IFPI)'
   },
   'experience.position2': {
-    pt: 'Desenvolvedor Full Stack',
-    en: 'Full Stack Developer'
+    pt: 'Estudante - Análise e Desenvolvimento de Sistemas',
+    en: 'Student - Systems Analysis and Development'
   },
   'experience.duration2': {
-    pt: '2020 - 2022',
-    en: '2020 - 2022'
+    pt: '2023 - 2026 (Previsão)',
+    en: '2023 - 2026 (Expected)'
   },
   'experience.location2': {
-    pt: 'Austin, TX',
-    en: 'Austin, TX'
+    pt: 'Piauí, Brasil',
+    en: 'Piauí, Brazil'
   },
   'experience.description2': {
-    pt: 'Desenvolvi e mantive múltiplas aplicações voltadas para o cliente em um ambiente de startup acelerado. Colaborei diretamente com os clientes para entender os requisitos e entregar soluções.',
-    en: 'Developed and maintained multiple client-facing applications in a fast-paced startup environment. Collaborated directly with clients to understand requirements and deliver solutions.'
+    pt: 'Cursando Tecnólogo em Análise e Desenvolvimento de Sistemas. Participação ativa em projetos acadêmicos com foco em desenvolvimento de software e tecnologias emergentes.',
+    en: 'Studying Technology in Systems Analysis and Development. Active participation in academic projects focused on software development and emerging technologies.'
   },
   'experience.highlight2.1': {
-    pt: 'Construí 8 aplicações web personalizadas do zero',
-    en: 'Built 8 custom web applications from scratch'
+    pt: 'COINTER PDV 2024 - Monitor de Robótica no evento em Teresina Central',
+    en: 'COINTER PDV 2024 - Robotics Monitor at event in Teresina Central'
   },
   'experience.highlight2.2': {
-    pt: 'Reduzi o tempo de integração de clientes em 50% através de automação',
-    en: 'Reduced client onboarding time by 50% through automation'
+    pt: 'Certificação em Capacitação Profissional em Sistemas Embarcados (FIC)',
+    en: 'Professional Certification in Embedded Systems (FIC)'
   },
   'experience.highlight2.3': {
-    pt: 'Integrei mais de 15 APIs de terceiros e sistemas de pagamento',
-    en: 'Integrated over 15 third-party APIs and payment systems'
+    pt: 'Especialização em Raspberry Pi Pico W e microcontroladores RP2040',
+    en: 'Specialization in Raspberry Pi Pico W and RP2040 microcontrollers'
   },
   'experience.highlight2.4': {
-    pt: 'Estabeleci padrões de codificação e melhores práticas para a equipe',
-    en: 'Established coding standards and best practices for the team'
+    pt: 'Desenvolvimento IoT: Arquitetura, GPIO, PWM, ADC e interfaces de comunicação',
+    en: 'IoT Development: Architecture, GPIO, PWM, ADC and communication interfaces'
   },
 
   'experience.company3': {
-    pt: 'Digital Agency Pro',
-    en: 'Digital Agency Pro'
+    pt: 'Instituto Federal do Piauí (IFPI)',
+    en: 'Federal Institute of Piauí (IFPI)'
   },
   'experience.position3': {
-    pt: 'Desenvolvedor Frontend',
-    en: 'Frontend Developer'
+    pt: 'Técnico em Informática',
+    en: 'Computer Technician'
   },
   'experience.duration3': {
-    pt: '2019 - 2020',
-    en: '2019 - 2020'
+    pt: '2019 - 2023',
+    en: '2019 - 2023'
   },
   'experience.location3': {
-    pt: 'Nova Iorque, NY',
-    en: 'New York, NY'
+    pt: 'Piauí, Brasil',
+    en: 'Piauí, Brazil'
   },
   'experience.description3': {
-    pt: 'Especializado na criação de websites responsivos e pixel-perfect para diversos clientes em diferentes indústrias. Trabalhei em estreita colaboração com designers para dar vida a visões criativas.',
-    en: 'Specialized in creating responsive and pixel-perfect websites for diverse clients across different industries. Worked closely with designers to bring creative visions to life.'
+    pt: 'Formação técnica integrada ao ensino médio em Informática. Base sólida em programação, redes, banco de dados e desenvolvimento web. Conclusão após o período da pandemia.',
+    en: 'Technical training integrated with high school in Computer Science. Strong foundation in programming, networks, databases and web development. Completed after the pandemic period.'
   },
   'experience.highlight3.1': {
-    pt: 'Entreguei mais de 25 websites responsivos com 100% de satisfação do cliente',
-    en: 'Delivered over 25 responsive websites with 100% client satisfaction'
+    pt: 'Formação completa em fundamentos de programação e desenvolvimento',
+    en: 'Complete training in programming fundamentals and development'
   },
   'experience.highlight3.2': {
-    pt: 'Implementei animações e interações avançadas usando GSAP',
-    en: 'Implemented advanced animations and interactions using GSAP'
+    pt: 'Conhecimento em redes de computadores e sistemas operacionais',
+    en: 'Knowledge in computer networks and operating systems'
   },
   'experience.highlight3.3': {
-    pt: 'Otimizei websites alcançando pontuações acima de 90 no Google PageSpeed',
-    en: 'Optimized websites achieving scores above 90 on Google PageSpeed'
+    pt: 'Experiência prática em projetos de desenvolvimento web',
+    en: 'Practical experience in web development projects'
   },
   'experience.highlight3.4': {
-    pt: 'Colaborei com a equipe de design para melhorar os fluxos de trabalho de UI/UX',
-    en: 'Collaborated with design team to improve UI/UX workflows'
+    pt: 'Base técnica para evolução para desenvolvimento de software',
+    en: 'Technical foundation for evolution to software development'
   },
 
   'experience.company4': {
-    pt: 'FreelanceHub',
-    en: 'FreelanceHub'
+    pt: 'Certificações Profissionais',
+    en: 'Professional Certifications'
   },
   'experience.position4': {
-    pt: 'Desenvolvedor Web',
-    en: 'Web Developer'
+    pt: 'Capacitação em Empreendedorismo e Inovação',
+    en: 'Training in Entrepreneurship and Innovation'
   },
   'experience.duration4': {
-    pt: '2018 - 2019',
-    en: '2018 - 2019'
+    pt: '2020 - 2024',
+    en: '2020 - 2024'
   },
   'experience.location4': {
-    pt: 'Remoto',
-    en: 'Remote'
+    pt: 'IF MaisEmpreendedor',
+    en: 'IF MaisEmpreendedor'
   },
   'experience.description4': {
-    pt: 'Trabalhei como desenvolvedor web freelancer, ajudando pequenas empresas a estabelecer sua presença online através de websites personalizados e soluções de e-commerce.',
-    en: 'Worked as a freelance web developer, helping small businesses establish their online presence through custom websites and e-commerce solutions.'
+    pt: 'Participação em programa de capacitação empreendedora focado em micro e pequenos negócios, desenvolvendo habilidades em gestão, marketing digital e consultoria empresarial.',
+    en: 'Participation in entrepreneurial training program focused on micro and small businesses, developing skills in management, digital marketing and business consulting.'
   },
   'experience.highlight4.1': {
-    pt: 'Completei mais de 30 projetos freelancer com avaliações 5 estrelas',
-    en: 'Completed over 30 freelance projects with 5-star ratings'
+    pt: 'FIC 01 - Consultoria em Micro e Pequenos Negócios: Estratégias de consultoria empresarial',
+    en: 'FIC 01 - Consulting in Micro and Small Businesses: Business consulting strategies'
   },
   'experience.highlight4.2': {
-    pt: 'Especializado em soluções de e-commerce usando Shopify e WooCommerce',
-    en: 'Specialized in e-commerce solutions using Shopify and WooCommerce'
+    pt: 'FIC 02 - Impulsionando Micro e Pequenos Negócios: Técnicas de crescimento empresarial',
+    en: 'FIC 02 - Boosting Micro and Small Businesses: Business growth techniques'
   },
   'experience.highlight4.3': {
-    pt: 'Forneci manutenção e suporte contínuos para mais de 20 websites',
-    en: 'Provided ongoing maintenance and support for over 20 websites'
+    pt: 'FIC 03 - Marketing Digital para Microempreendedor: Estratégias digitais e redes sociais',
+    en: 'FIC 03 - Digital Marketing for Microentrepreneurs: Digital strategies and social media'
   },
   'experience.highlight4.4': {
-    pt: 'Construí relacionamentos de longo prazo com clientes recorrentes',
-    en: 'Built long-term relationships with recurring clients'
+    pt: 'FIC 04 - Gestão de Materiais e Pessoas: Administração de recursos e equipes',
+    en: 'FIC 04 - Materials and People Management: Resource and team administration'
   },
 
   // Footer Section
@@ -984,5 +984,99 @@ export const translations: TranslationData = {
   'trust.developers': {
     pt: 'desenvolvedores',
     en: 'developers'
+  },
+
+  // Experience Technology Tags
+  'experience.tech.linguagemC': {
+    pt: 'Linguagem C',
+    en: 'C Language'
+  },
+  'experience.tech.raspberryPiPicoW': {
+    pt: 'Raspberry Pi Pico W',
+    en: 'Raspberry Pi Pico W'
+  },
+  'experience.tech.microcontroladoresRP2040': {
+    pt: 'Microcontroladores RP2040',
+    en: 'RP2040 Microcontrollers'
+  },
+  'experience.tech.gpioInterrupcoes': {
+    pt: 'GPIO & Interrupções',
+    en: 'GPIO & Interrupts'
+  },
+  'experience.tech.pwmAdc': {
+    pt: 'PWM & ADC',
+    en: 'PWM & ADC'
+  },
+  'experience.tech.iotArchitecture': {
+    pt: 'IoT Architecture',
+    en: 'IoT Architecture'
+  },
+  'experience.tech.sistemasEmbarcados': {
+    pt: 'Sistemas Embarcados',
+    en: 'Embedded Systems'
+  },
+  'experience.tech.robotica': {
+    pt: 'Robótica',
+    en: 'Robotics'
+  },
+  'experience.tech.projetosAcademicos': {
+    pt: 'Projetos Acadêmicos',
+    en: 'Academic Projects'
+  },
+  'experience.tech.pesquisaDesenvolvimento': {
+    pt: 'Pesquisa e Desenvolvimento',
+    en: 'Research & Development'
+  },
+  'experience.tech.tecnologiasEmergentes': {
+    pt: 'Tecnologias Emergentes',
+    en: 'Emerging Technologies'
+  },
+  'experience.tech.fundamentosTI': {
+    pt: 'Fundamentos de TI',
+    en: 'IT Fundamentals'
+  },
+  'experience.tech.redesComputadores': {
+    pt: 'Redes de Computadores',
+    en: 'Computer Networks'
+  },
+  'experience.tech.bancoDados': {
+    pt: 'Banco de Dados',
+    en: 'Database Systems'
+  },
+  'experience.tech.sistemasOperacionais': {
+    pt: 'Sistemas Operacionais',
+    en: 'Operating Systems'
+  },
+  'experience.tech.desenvolvimentoWeb': {
+    pt: 'Desenvolvimento Web',
+    en: 'Web Development'
+  },
+  'experience.tech.infraestrutura': {
+    pt: 'Infraestrutura',
+    en: 'Infrastructure'
+  },
+  'experience.tech.gestaoEmpresarial': {
+    pt: 'Gestão Empresarial',
+    en: 'Business Management'
+  },
+  'experience.tech.marketingDigital': {
+    pt: 'Marketing Digital',
+    en: 'Digital Marketing'
+  },
+  'experience.tech.consultoriaNegocios': {
+    pt: 'Consultoria de Negócios',
+    en: 'Business Consulting'
+  },
+  'experience.tech.empreendedorismo': {
+    pt: 'Empreendedorismo',
+    en: 'Entrepreneurship'
+  },
+  'experience.tech.gestaoPessoas': {
+    pt: 'Gestão de Pessoas',
+    en: 'People Management'
+  },
+  'experience.tech.inovacao': {
+    pt: 'Inovação',
+    en: 'Innovation'
   }
 };
