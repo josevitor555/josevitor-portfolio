@@ -186,10 +186,10 @@ const Navigation = () => {
                                 <div className="flex items-center gap-3">
                                     <div className="relative group">
                                         <Component />
-                                        <div className="absolute top-full right-0 mt-8 w-48 bg-white/[0.05] backdrop-blur-3xl border border-white/[0.3] rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                        <div className="absolute top-full right-0 mt-8 w-48 bg-accent backdrop-blur-3xl border border-white/[0.3] rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                                             <div className="p-3 border-b border-white/[0.1]">
                                                 <p className="text-sm font-medium text-white">{user.name}</p>
-                                                <p className="text-xs text-gray-400">{user.email}</p>
+                                                <p className="text-xs text-gray-200">{user.email}</p>
                                             </div>
                                             <button
                                                 onClick={() => navigate('/welcome')}

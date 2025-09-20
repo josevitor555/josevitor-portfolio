@@ -54,6 +54,15 @@ const Banner = ({ isPlaying, setIsPlaying }: BannerProps) => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/Curriculo.pdf';
+    link.download = 'Curriculo.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <>
       {/* Reusing existing comp-296 with music props */}
@@ -149,6 +158,7 @@ const Banner = ({ isPlaying, setIsPlaying }: BannerProps) => {
               </motion.button>
 
               <motion.button
+                onClick={handleDownloadResume}
                 className="px-8 py-3 border border-gray-600 hover:border-accent-primary text-gray-300 hover:text-accent-primary font-medium rounded-lg transition-all duration-200 flex items-center gap-2 cursor-pointer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
