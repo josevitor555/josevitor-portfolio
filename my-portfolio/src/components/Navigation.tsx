@@ -1,12 +1,12 @@
 // Imports
-import { Menu, X, LogOut, ChevronDown, Globe } from 'lucide-react';
+import { Menu, X, LogOut, ChevronDown, Globe, Settings } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useEffect, useState, useRef } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 // Import components
-// import { Avatar, AvatarFallback } from './ui/avatar';
+import Component from './ui/comp-390';
 
 const Navigation = () => {
 
@@ -15,6 +15,7 @@ const Navigation = () => {
     const [activeSection, setActiveSection] = useState('home');
     const [isScrolled, setIsScrolled] = useState(false);
     const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
+    const [user, setUser] = useState<{name: string, email: string} | null>(null);
 
     const { language, setLanguage, t } = useLanguage();
 
@@ -25,7 +26,16 @@ const Navigation = () => {
 
     const isHomePage = location.pathname === "/";
 
-    // const { user, signOut, loading } = useAuth();
+    // Check authentication status
+    useEffect(() => {
+        const token = localStorage.getItem("authToken");
+        const userData = localStorage.getItem("user");
+        if (token && userData) {
+            setUser(JSON.parse(userData));
+        } else {
+            setUser(null);
+        }
+    }, [location.pathname]);
 
     // Navigation items
     const navItems = [
@@ -107,9 +117,6 @@ const Navigation = () => {
         return languageOptions.find(lang => lang.code === language) || languageOptions[0];
     };
 
-    // Here handles SignIn and SignOut
-    // ...
-
     // Animation variants for header scroll response
     const getHeaderStyle = () => {
         if (isScrolled) {
@@ -174,20 +181,35 @@ const Navigation = () => {
                                 </motion.button>
                             ))}
 
-                            {/* Button Sign In */}
-                            <motion.button
-                                onClick={handleLoginClick}
-                                className="px-4 py-2 text-sm font-medium cursor-pointer bg-gray-100 text-black rounded-full flex items-center gap-2"
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                            >
-                                <LogOut size={16} /> {t('nav.login')}
-                            </motion.button>
-
-                            {/* Avatar user */}
-                            {/* <Avatar className="h-8 w-8 ml-4">
-                                <AvatarFallback>JV</AvatarFallback>
-                            </Avatar> */}
+                            {/* Conditional rendering based on authentication */}
+                            {user ? (
+                                <div className="flex items-center gap-3">
+                                    <div className="relative group">
+                                        <Component />
+                                        <div className="absolute top-full right-0 mt-8 w-48 bg-white/[0.05] backdrop-blur-3xl border border-white/[0.3] rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                            <div className="p-3 border-b border-white/[0.1]">
+                                                <p className="text-sm font-medium text-white">{user.name}</p>
+                                                <p className="text-xs text-gray-400">{user.email}</p>
+                                            </div>
+                                            <button
+                                                onClick={() => navigate('/welcome')}
+                                                className="w-full flex items-center gap-2 px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/[0.1] transition-colors duration-200"
+                                            >
+                                                <Settings size={14} /> {t('nav.settings') || 'Settings'}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            ) : (
+                                <motion.button
+                                    onClick={handleLoginClick}
+                                    className="px-4 py-2 text-sm font-medium cursor-pointer bg-gray-100 text-black rounded-full flex items-center gap-2"
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                >
+                                    <LogOut size={16} /> {t('nav.login')}
+                                </motion.button>
+                            )}
 
                             {/* Language Selector */}
                             <div className="relative" ref={languageDropdownRef}>
@@ -335,14 +357,35 @@ const Navigation = () => {
                                     </AnimatePresence>
                                 </div>
 
-                                <motion.button
-                                    onClick={handleLoginClick}
-                                    className="w-full text-left px-3 py-2 text-lg font-medium cursor-pointer bg-gray-100 text-black rounded-full flex items-center justify-center gap-2 mt-4"
-                                    whileHover={{ scale: 1.02 }}
-                                    whileTap={{ scale: 0.98 }}
-                                >
-                                    <LogOut size={20} /> {t('nav.login')}
-                                </motion.button>
+                                {/* Mobile authentication section */}
+                                {user ? (
+                                    <div className="mt-4 p-3 bg-white/[0.05] rounded-lg border border-white/[0.1]">
+                                        <div className="flex items-center gap-3 mb-3">
+                                            <Component />
+                                            <div>
+                                                <p className="text-sm font-medium text-white">{user.name}</p>
+                                                <p className="text-xs text-gray-400">{user.email}</p>
+                                            </div>
+                                        </div>
+                                        <motion.button
+                                            onClick={() => navigate('/welcome')}
+                                            className="w-full flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium bg-white hover:bg-gray-100 text-black rounded-full transition-colors duration-200"
+                                            whileHover={{ scale: 1.02 }}
+                                            whileTap={{ scale: 0.98 }}
+                                        >
+                                            <Settings size={16} /> {t('nav.settings') || 'Settings'}
+                                        </motion.button>
+                                    </div>
+                                ) : (
+                                    <motion.button
+                                        onClick={handleLoginClick}
+                                        className="w-full text-left px-3 py-2 text-lg font-medium cursor-pointer bg-gray-100 text-black rounded-full flex items-center justify-center gap-2 mt-4"
+                                        whileHover={{ scale: 1.02 }}
+                                        whileTap={{ scale: 0.98 }}
+                                    >
+                                        <LogOut size={20} /> {t('nav.login')}
+                                    </motion.button>
+                                )}
                             </div>
                         </motion.div>
                     )}

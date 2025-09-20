@@ -36,6 +36,14 @@ export const translations: TranslationData = {
     pt: 'Entrar',
     en: 'Login'
   },
+  'nav.logout': {
+    pt: 'Sair',
+    en: 'Logout'
+  },
+  'nav.settings': {
+    pt: 'Configurações',
+    en: 'Settings'
+  },
 
   // Authentication Section
   'auth.createAccount': {
@@ -966,5 +974,15 @@ export const translations: TranslationData = {
   'payment.defaultProduct': {
     pt: 'Código Fonte do Projeto',
     en: 'Project Source Code'
+  },
+
+  // Trust indicator (comp-412)
+  'trust.trustedBy': {
+    pt: 'Confiado por',
+    en: 'Trusted by'
+  },
+  'trust.developers': {
+    pt: 'desenvolvedores',
+    en: 'developers'
   }
 };

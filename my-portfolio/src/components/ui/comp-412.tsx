@@ -1,4 +1,8 @@
+import { useLanguage } from '../../contexts/LanguageContext';
+
 export default function Component() {
+  const { t } = useLanguage();
+
   return (
     <div className="bg-trasparent flex items-center rounded-full border p-2 shadow-sm">
       <div className="flex -space-x-1.5">
@@ -32,8 +36,8 @@ export default function Component() {
         />
       </div>
       <p className="text-light-100 px-2 text-xs">
-        Confiado por <strong className="text-light-300 font-medium">60K+</strong>{" "}
-        desenvolvedores.
+        {t('trust.trustedBy')} <strong className="text-light-300 font-medium">20K+</strong>{" "}
+        {t('trust.developers')}.
       </p>
     </div>
   )
