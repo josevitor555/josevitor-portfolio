@@ -898,12 +898,12 @@ export const translations: TranslationData = {
 
   // Development Alert
   'dev.alert.title': {
-    pt: 'Aplicação em Desenvolvimento',
-    en: 'Application in Development'
+    pt: 'Nova funcionalidade!',
+    en: 'New functionality!'
   },
   'dev.alert.description': {
-    pt: 'Esta aplicação ainda está em fase de desenvolvimento. Algumas funcionalidades podem não estar funcionais ou podem apresentar comportamentos inesperados. Obrigado pela compreensão!',
-    en: 'This application is still under development. Some features may not work or may exhibit unexpected behavior. Thank you for your understanding!'
+    pt: 'Experimente a nova funcionalidade! Crie uma conta gratuita com sessão válida por 1 hora. Após esse período, será necessário realizar login novamente ou, se preferir, excluir sua conta. O site ainda está em desenvolvimento.',
+    en: 'Try the new feature! Create a free account with a 1-hour session. After that, you will need to log in again or, if you prefer, delete your account. The site is still under development.'
   },
   'dev.alert.understood': {
     pt: 'Entendi',
