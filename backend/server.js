@@ -24,7 +24,13 @@ const app = express();
 
 // Configure cors for connection from backend to frontend
 app.use(cors({
-    origin: ['http://localhost:5173'],
+    origin: [
+        'http://localhost:5173', // Development
+        'https://josevitor-portfolio.onrender.com' // Production
+    ],
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 // Middleware to parse JSON
