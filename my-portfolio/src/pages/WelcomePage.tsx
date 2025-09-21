@@ -1,8 +1,11 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import FullScreenLoader from '../components/ui/FullScreenLoader.tsx';
 import { useLanguage } from '../contexts/LanguageContext.tsx';
+
+// Apply backend URL from env variables
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 const WelcomePage = () => {
     
@@ -58,7 +61,7 @@ const WelcomePage = () => {
             console.log('Attempting to delete account...');
             
             // Make API call to delete account
-            const response = await fetch('http://localhost:3000/api/auth/account', {
+            const response = await fetch(`${backendUrl}/api/auth/account`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`,
