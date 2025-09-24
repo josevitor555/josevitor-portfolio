@@ -127,18 +127,18 @@ export const projectsData: Project[] = [
   {
     id: "7",
     title: {
-      pt: "Sistema de gerenciamento de produtos - Front-End 2.0",
-      en: "Product Management System - Front-End 2.0"
+      pt: "Sistema de gerenciamento de produtos",
+      en: "Product Management System"
     },
     description: {
-      pt: "Segue com a versão 2.0 do sistema de gerenciamento de produtos, seu backend vai ser desenvolvido em Django com Área administrativa",
-      en: "It continues with version 2.0 of the product management system, its backend will be developed in Django with an administrative area"
+      pt: "Segue com a versão 2.0 do sistema de gerenciamento de produtos, seu backend foi desenvolvido em Django com Área administrativa.",
+      en: "It continues with version 2.0 of the product management system, its backend was developed in Django with an administrative area."
     },
     image: 'https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/1a1a1a/ef4444?text=Product+Management+2.0',
-    github: "https://github.com/josevitor555/if_mais.git",
+    github: "https://github.com/josevitor555/sistema-de-gerenciamento.git",
     liveDemo: "#",
-    technologies: ["JavaScript", "TailwindCSS", "ReactJS", "NodeJS", "ExpressJS", "PostgreSQL", "Django", "Python"],
-    featured: false,
+    technologies: ["JavaScript", "TypeScript", "TailwindCSS", "ReactJS", "PostgreSQL", "Django", "Python"],
+    featured: true,
     // paidSource: true,
     pricing: 200.00
   },
@@ -167,7 +167,7 @@ export const projectsData: Project[] = [
       en: "Image generation with Artificial Intelligence Gemini"
     },
     description: {
-      pt: "GeraÃ§Ã£o de imagens com InteligÃªncia artificial utilizando modelo Gemini",
+      pt: "Geração de imagens com Inteligência artificial utilizando modelo Gemini",
       en: "Image generation with Artificial Intelligence using Gemini model"
     },
     image: 'https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/1a1a1a/3b82f6?text=Image+Generation',
@@ -176,6 +176,6 @@ export const projectsData: Project[] = [
     technologies: ["JavaScript", "Nodejs", "Express", "HTML", "CSS", "Gemini API"],
     featured: false,
     // paidSource: true,
-    // pricing: 200.00
+    pricing: 200.00
   },
 ];

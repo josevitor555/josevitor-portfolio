@@ -64,8 +64,7 @@ const Contact = () => {
             console.error("Form submission error:", error);
             setSubmitStatus({
                 success: false,
-                message:
-                    t('contact.unexpectedError'),
+                message: t('contact.unexpectedError'),
             });
         } finally {
             setIsSubmitting(false);

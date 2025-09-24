@@ -5,7 +5,7 @@ import { Badge } from './ui/badge';
 import { useLanguage } from '../contexts/LanguageContext';
 
 // Image
-import me from "../../public/images/me.jpg"
+import me from "../../public/images/me2.jpg"
 
 interface SkillCardProps {
     icon: React.ElementType;
