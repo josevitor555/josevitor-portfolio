@@ -141,8 +141,8 @@ export const translations: TranslationData = {
     en: 'Email:'
   },
   'welcome.protectedRoute': {
-    pt: 'Você está em uma conta free.',
-    en: 'You are on a free account.'
+    pt: 'Você está em uma conta free. Seja premium!',
+    en: "You're on a free account. Go premium!"
   },
   'welcome.backToHome': {
     pt: 'Voltar ao Início',

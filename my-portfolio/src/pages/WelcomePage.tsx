@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import FullScreenLoader from '../components/ui/FullScreenLoader.tsx';
 import { useLanguage } from '../contexts/LanguageContext.tsx';
+import Spline from '@splinetool/react-spline';
 
 // Apply backend URL from env variables
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
@@ -141,30 +141,15 @@ const WelcomePage = () => {
             )}
 
             <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
-                {/* Animated Background Elements */}
-                <div className="absolute inset-0">
-                    {[...Array(80)].map((_, i) => (
-                        <motion.div
-                            key={i}
-                            className="absolute w-1 h-1 bg-white/80 rounded-full"
-                            initial={{
-                                x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1200),
-                                y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800),
-                                opacity: 0
-                            }}
-                            animate={{
-                                opacity: [0, 1, 0],
-                                scale: [0, 1, 0],
-                            }}
-                            transition={{
-                                duration: Math.random() * 3 + 2,
-                                repeat: Infinity,
-                                delay: Math.random() * 2,
-                            }}
-                        />
-                    ))}
+                {/* Spline Animation */}
+                <div className="absolute inset-0 z-0">
+                    <Spline
+                        // scene="https://prod.spline.design/CzK92Dk0nmkxt6Vm/scene.splinecode" // Animation 1
+                        // scene="https://prod.spline.design/a3RBWQKHXNnNMlkr/scene.splinecode" // Animation 2
+                        scene="https://prod.spline.design/M6g1zfrHtQTDweYc/scene.splinecode" // Animation 3
+                    />
                 </div>
-
+                {/* Animated Background Elements */}
                 {isLoading ? (
                     <div className="text-gray-300 text-xl relative z-10">{t('welcome.loading')}</div>
                 ) : (

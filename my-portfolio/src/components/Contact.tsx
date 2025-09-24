@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Send, Github, Linkedin, Instagram } from 'lucide-react';
+import { Mail, MapPin, Send, Github, Linkedin, Instagram, Youtube } from 'lucide-react';
 import { Badge } from './ui/badge';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -95,7 +95,7 @@ const Contact = () => {
     const socialLinks = [
         { icon: Instagram, href: 'https://www.instagram.com/_kick.buttowski468/', label: 'Instagram' },
         { icon: Linkedin, href: 'https://www.linkedin.com/in/jos%C3%A9-vitor-sousa2003/', label: 'LinkedIn' },
-        // { icon: Twitter, href: '#', label: 'Twitter' },
+        { icon: Youtube, href: 'https://www.youtube.com/@pen-coding', label: 'YouTube' },
     ];
 
     const containerVariants = {
