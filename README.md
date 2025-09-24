@@ -37,6 +37,6 @@ Este portfólio é uma ponte entre a universidade e o mercado de trabalho. Além
 
 ---
 
-Observação importante: Todos os projetos que subi no portfólio são reais, alguns que já trabalhei em projetos pessoais e outros em conjunto com outras pessoas. Porém tanto do Figma quanto das experiências ainda são dados fictícios.
+Observação importante: Todos os projetos que subi no portfólio são reais, alguns que já trabalhei em projetos pessoais e outros em conjunto com outras pessoas. Porém tanto os da sessão Figma ainda são dados fictícios.
 
-Observação 2: O formulário de contato ainda está em desenvolvimento, portanto não é possível enviar mensagens diretamente pela plataforma neste momento.
+Observação 2: Agora você pode enviar mensagens através do formulário de contato :D
