@@ -15,7 +15,7 @@ const Navigation = () => {
     const [activeSection, setActiveSection] = useState('home');
     const [isScrolled, setIsScrolled] = useState(false);
     const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
-    const [user, setUser] = useState<{name: string, email: string} | null>(null);
+    const [user, setUser] = useState<{ name: string, email: string } | null>(null);
 
     const { language, setLanguage, t } = useLanguage();
 

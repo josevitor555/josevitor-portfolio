@@ -149,6 +149,7 @@ const WelcomePage = () => {
                         scene="https://prod.spline.design/M6g1zfrHtQTDweYc/scene.splinecode" // Animation 3
                     />
                 </div>
+                
                 {/* Animated Background Elements */}
                 {isLoading ? (
                     <div className="text-gray-300 text-xl relative z-10">{t('welcome.loading')}</div>
