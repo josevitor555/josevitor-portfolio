@@ -1,6 +1,7 @@
 // react-router-dom
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import AudioPlayer from './components/AudioPlayer';
+// import ChatIcon from './components/ChatIcon';
 import { useState } from 'react';
 import { LanguageProvider } from './contexts/LanguageContext';
 import DevelopmentAlert from './components/ui/comp-314';
@@ -24,6 +25,7 @@ const App = () => {
       <Router>
         <AudioPlayer isPlaying={isPlaying} />
         <DevelopmentAlert />
+        {/* <ChatIcon /> */}
         <Routes>
           <Route path="/" element={<MyApp isPlaying={isPlaying} setIsPlaying={setIsPlaying} />} />
           <Route path="/auth" element={<AuthPage />} />

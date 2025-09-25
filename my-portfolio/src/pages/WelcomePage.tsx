@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import FullScreenLoader from '../components/ui/FullScreenLoader.tsx';
 import { useLanguage } from '../contexts/LanguageContext.tsx';
 import Spline from '@splinetool/react-spline';
+import { motion } from 'framer-motion';
 
 // Apply backend URL from env variables
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
@@ -142,13 +143,17 @@ const WelcomePage = () => {
 
             <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
                 {/* Spline Animation */}
-                <div className="absolute inset-0 z-0">
+                <motion.div 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1.5, delay: 4 }}
+                    className="absolute inset-0 z-0">
                     <Spline
                         scene="https://prod.spline.design/CzK92Dk0nmkxt6Vm/scene.splinecode" // Animation 1
                         // scene="https://prod.spline.design/a3RBWQKHXNnNMlkr/scene.splinecode" // Animation 2
                         // scene="https://prod.spline.design/M6g1zfrHtQTDweYc/scene.splinecode" // Animation 3
                     />
-                </div>
+                </motion.div>
                 
                 {/* Animated Background Elements */}
                 {isLoading ? (

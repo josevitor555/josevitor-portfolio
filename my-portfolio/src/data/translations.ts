@@ -241,8 +241,8 @@ export const translations: TranslationData = {
     en: 'GitHub Followers'
   },
   'about.profilePhoto': {
-    pt: 'Nihil est quod Deus efficere non possit.',
-    en: 'Nihil est quod Deus efficere non possit.'
+    pt: 'Foto de Perfil',
+    en: 'Profile photo'
   },
 
   // Skills
