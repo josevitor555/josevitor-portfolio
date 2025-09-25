@@ -50,7 +50,7 @@ export const projectsData: Project[] = [
     image: 'https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/1a1a1a/10b981?text=Miranda+AI',
     github: "https://github.com/josevitor555/TheMiranda.git",
     liveDemo: "#",
-    technologies: ["React", "Node.js", "MySQL for Register", "JWT for Auth", "JavaScript", "TypeScript", "Tailwind CSS", "Gemini Models"],
+    technologies: ["React", "Node.js", "MySQL for Register", "JWT for Auth", "JavaScript", "Tailwind CSS", "Gemini Models"],
     featured: false,
     // paidSource: true,
     pricing: 250.00
@@ -69,7 +69,7 @@ export const projectsData: Project[] = [
     github: "https://github.com/josevitor555/DegustaZap.git",
     liveDemo: "#", // Ex: https://taskmanager-demo.com
     technologies: ["React", "Express.js", "Node.js", "PostgreSQL", "TypeScript", "JavaScript", "Python", "Django"],
-    featured: true,
+    featured: false,
     // paidSource: true
   },
   {
@@ -86,7 +86,7 @@ export const projectsData: Project[] = [
     github: "https://github.com/josevitor555/shiny-adventure.git",
     liveDemo: "#",
     technologies: ["JavaScript", "CSS", "HTML", "Gemini API"],
-    featured: false,
+    featured: true,
     // paidSource: true,
     pricing: 75.00
   },
@@ -104,7 +104,7 @@ export const projectsData: Project[] = [
     github: "https://github.com/josevitor555/mathematicando.git",
     liveDemo: "#",
     technologies: ["React", "MongoDB for Register", "JWT for Auth", "Node.js", "Express.js", "TailwindCSS", "Vite", "TypeScript", "JavaScript"],
-    featured: true,
+    featured: false,
     // paidSource: true
   },
   {
@@ -174,7 +174,7 @@ export const projectsData: Project[] = [
     github: "https://github.com/josevitor555/generate_imagens.git",
     liveDemo: "#",
     technologies: ["JavaScript", "Nodejs", "Express", "HTML", "CSS", "Gemini API"],
-    featured: false,
+    featured: true,
     // paidSource: true,
     pricing: 200.00
   },

@@ -144,9 +144,9 @@ const WelcomePage = () => {
                 {/* Spline Animation */}
                 <div className="absolute inset-0 z-0">
                     <Spline
-                        // scene="https://prod.spline.design/CzK92Dk0nmkxt6Vm/scene.splinecode" // Animation 1
+                        scene="https://prod.spline.design/CzK92Dk0nmkxt6Vm/scene.splinecode" // Animation 1
                         // scene="https://prod.spline.design/a3RBWQKHXNnNMlkr/scene.splinecode" // Animation 2
-                        scene="https://prod.spline.design/M6g1zfrHtQTDweYc/scene.splinecode" // Animation 3
+                        // scene="https://prod.spline.design/M6g1zfrHtQTDweYc/scene.splinecode" // Animation 3
                     />
                 </div>
                 
