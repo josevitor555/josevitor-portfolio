@@ -48,9 +48,9 @@ export const projectsData: Project[] = [
       en: "Miranda is a virtual assistant specialized in teaching programming, developed to support students in their learning process. Project in development with a focus on innovative pedagogical methods."
     },
     image: 'https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/1a1a1a/10b981?text=Miranda+AI',
-    github: "https://github.com/josevitor555/TheMiranda.git",
+    github: "https://github.com/josevitor555/TheMiranda2.0.git",
     liveDemo: "#",
-    technologies: ["React", "Node.js", "MySQL for Register", "JWT for Auth", "JavaScript", "Tailwind CSS", "Gemini Models"],
+    technologies: ["React", "Node.js", "MongoDb for Register", "JWT for Auth", "JavaScript", "CSS", "Gemini Models"],
     featured: false,
     // paidSource: true,
     pricing: 250.00
