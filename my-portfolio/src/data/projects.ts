@@ -58,17 +58,17 @@ export const projectsData: Project[] = [
   {
     id: "3",
     title: {
-      pt: "DegustaZap - Cardápio Online",
-      en: "DegustaZap - Online Menu"
+      pt: "VibeFy - Clonando SpotiFy",
+      en: "VibeFy - Cloning Spotify "
     },
     description: {
-      pt: "Aplicação em desenvolvimento que atende uma demanda real do mercado gastronômico, permitindo a finalização de pedidos através da integração com WhatsApp. Sistema focado na experiência do usuário sem processamento de pagamentos.",
-      en: "An application under development that meets a real demand in the food market, enabling order completion through WhatsApp integration. This system focuses on user experience without payment processing."
+      pt: "Uma aplicação em React e TypeScript sobre o músicas, playlists e artistas. O objetivo seria demostrar as habilidades de desenvolvedor Web por meio de projeto prático, utilizando MongoDb como banco de dados.",
+      en: "A React and TypeScript application about music, playlists, and artists. The goal would be to demonstrate web developer skills through a practical project using MongoDb as a database."
     },
-    image: 'https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/1a1a1a/f59e0b?text=DegustaZap',
-    github: "https://github.com/josevitor555/DegustaZap.git",
+    image: 'https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/1a1a1a/f59e0b?text=VibeFy',
+    github: "https://github.com/josevitor555/vibefyProject.git",
     liveDemo: "#", // Ex: https://taskmanager-demo.com
-    technologies: ["React", "Express.js", "Node.js", "PostgreSQL", "TypeScript", "JavaScript", "Python", "Django"],
+    technologies: ["React", "Express.js", "Node.js", "TypeScript", "JavaScript", "MongoDB"],
     featured: false,
     // paidSource: true
   },

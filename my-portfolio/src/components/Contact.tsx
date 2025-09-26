@@ -4,7 +4,6 @@ import { Mail, MapPin, Send, Github, Linkedin, Instagram, Youtube } from 'lucide
 import { Badge } from './ui/badge';
 import { useLanguage } from '../contexts/LanguageContext';
 
-
 const Contact = () => {
 
     const { t } = useLanguage();

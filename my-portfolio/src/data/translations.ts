@@ -1078,5 +1078,129 @@ export const translations: TranslationData = {
   'experience.tech.inovacao': {
     pt: 'Inovação',
     en: 'Innovation'
+  },
+  'experience.company5': {
+    pt: 'Conhecimentos Adicionais',
+    en: 'Additional Knowledge'
+  },
+  'experience.position5': {
+    pt: 'Inteligência Artificial & Machine Learning',
+    en: 'Artificial Intelligence & Machine Learning'
+  },
+  'experience.duration5': {
+    pt: '2025 - Sem data prevista',
+    en: '2025 - Ongoing'
+  },
+  'experience.location5': {
+    pt: 'Experiência Pessoal',
+    en: 'Personal Experience'
+  },
+  'experience.description5': {
+    pt: 'Aprofundamento em conceitos e ferramentas de IA, incluindo redes neurais, processamento de linguagem natural e visão computacional, através de projetos práticos e estudos autodidatas.',
+    en: 'In-depth study of AI concepts and tools, including neural networks, natural language processing, and computer vision, through practical projects and self-study.'
+  },
+  'experience.highlight5.1': {
+    pt: 'Estudo e aplicação de modelos de Deep Learning com PyTorch e TensorFlow',
+    en: 'Study and application of Deep Learning models with PyTorch and TensorFlow'
+  },
+  'experience.highlight5.2': {
+    pt: 'Desenvolvimento de soluções de NLP para análise de texto e geração de linguagem',
+    en: 'Development of NLP solutions for text analysis and language generation'
+  },
+  'experience.highlight5.3': {
+    pt: 'Exploração de Visão Computacional para reconhecimento de imagem e detecção de objetos',
+    en: 'Exploration of Computer Vision for image recognition and object detection'
+  },
+  'experience.highlight5.4': {
+    pt: 'Implementação de algoritmos de Machine Learning com Scikit-Learn para análise preditiva',
+    en: 'Implementation of Machine Learning algorithms with Scikit-Learn for predictive analysis'
+  },
+  'experience.tech.pytorch': {
+    pt: 'PyTorch',
+    en: 'PyTorch'
+  },
+  'experience.tech.tensorflow': {
+    pt: 'TensorFlow',
+    en: 'TensorFlow'
+  },
+  'experience.tech.scikitLearn': {
+    pt: 'Scikit-Learn',
+    en: 'Scikit-Learn'
+  },
+  'experience.tech.llms': {
+    pt: 'LLMs',
+    en: 'LLMs'
+  },
+  'experience.tech.nlp': {
+    pt: 'NLP',
+    en: 'NLP'
+  },
+  'experience.tech.deepLearning': {
+    pt: 'Deep Learning',
+    en: 'Deep Learning'
+  },
+  'experience.tech.machineLearning': {
+    pt: 'Machine Learning',
+    en: 'Machine Learning'
+  },
+  'experience.tech.computerVision': {
+    pt: 'Computer Vision',
+    en: 'Computer Vision'
+  },
+  'experience.company6': {
+    pt: 'Certificado de Participação',
+    en: 'Certificate of Participation'
+  },
+  'experience.position6': {
+    pt: 'Jornada Full Stack da Hashtag',
+    en: 'Hashtag Full Stack Journey'
+  },
+  'experience.duration6': {
+    pt: '2024',
+    en: '2024'
+  },
+  'experience.location6': {
+    pt: 'Online',
+    en: 'Online'
+  },
+  'experience.description6': {
+    pt: 'A Hashtag Treinamentos confere o presente certificado a José Vitor pela conclusão do evento Jornada Full Stack com duração de 8 horas, concluído no dia 13/02/25.',
+    en: 'Hashtag Treinamentos confers this certificate to José Vitor for completing the Full Stack Journey event, with a duration of 8 hours, completed on 02/13/25.'
+  },
+  'experience.highlight6.1': {
+    pt: 'Clonagem do layout do Spotify serviu de inspiração para o projeto VibeFy, demonstrando habilidades de desenvolvimento frontend.',
+    en: 'Cloned Spotify layout served as inspiration for the VibeFy project, demonstrating frontend development skills.'
+  },
+  'experience.highlight6.2': {
+    pt: 'Utilização de React e TypeScript para construir interfaces de usuário dinâmicas.',
+    en: 'Used React and TypeScript to build dynamic user interfaces.'
+  },
+  'experience.highlight6.3': {
+    pt: 'Implementação de banco de dados MongoDB para gerenciar músicas, playlists e artistas.',
+    en: 'Implemented MongoDB database to manage songs, playlists, and artists.'
+  },
+  'experience.tech.react': {
+    pt: 'React',
+    en: 'React'
+  },
+  'experience.tech.typescript': {
+    pt: 'TypeScript',
+    en: 'TypeScript'
+  },
+  'experience.tech.css': {
+    pt: 'CSS',
+    en: 'CSS'
+  },
+  'experience.tech.mongodb': {
+    pt: 'MongoDB',
+    en: 'MongoDB'
+  },
+  'experience.tech.frontendDevelopment': {
+    pt: 'Desenvolvimento Frontend',
+    en: 'Frontend Development'
+  },
+  'experience.tech.databaseManagement': {
+    pt: 'Gerenciamento de Banco de Dados',
+    en: 'Database Management'
   }
 };

@@ -99,6 +99,51 @@ const Experience = () => {
                 t('experience.tech.gestaoPessoas'),
                 t('experience.tech.inovacao')
             ]
+        },
+        {
+            id: 5,
+            company: t('experience.company5'),
+            position: t('experience.position5'),
+            duration: t('experience.duration5'),
+            location: t('experience.location5'),
+            description: t('experience.description5'),
+            highlights: [
+                t('experience.highlight5.1'),
+                t('experience.highlight5.2'),
+                t('experience.highlight5.3'),
+                t('experience.highlight5.4')
+            ],
+            technologies: [
+                t('experience.tech.pytorch'),
+                t('experience.tech.tensorflow'),
+                t('experience.tech.scikitLearn'),
+                t('experience.tech.llms'),
+                t('experience.tech.nlp'),
+                t('experience.tech.deepLearning'),
+                t('experience.tech.machineLearning'),
+                t('experience.tech.computerVision')
+            ]
+        },
+        {
+            id: 6,
+            company: t('experience.company6'),
+            position: t('experience.position6'),
+            duration: t('experience.duration6'),
+            location: t('experience.location6'),
+            description: t('experience.description6'),
+            highlights: [
+                t('experience.highlight6.1'),
+                t('experience.highlight6.2'),
+                t('experience.highlight6.3')
+            ],
+            technologies: [
+                t('experience.tech.react'),
+                t('experience.tech.typescript'),
+                t('experience.tech.css'),
+                t('experience.tech.mongodb'),
+                t('experience.tech.frontendDevelopment'),
+                t('experience.tech.databaseManagement')
+            ]
         }
     ];
 
